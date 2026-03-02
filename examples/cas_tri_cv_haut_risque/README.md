@@ -1,205 +1,216 @@
-# Cas d'Usage : Tri Automatique de CV (Haut Risque)
+# 🎯 Cas d'Usage de Référence : Système de Tri de CV (Haut Risque)
 
-**Référence**: examples/cas_tri_cv_haut_risque/  
-**Classification**: 🔴 Haut Risque (Annexe III.3 - Emploi)  
-**Date**: 2026-03-02
+> Exemple complet d'application de l'écosystème AI Governance Suite pour un workflow RH utilisant un LLM pour la pré-sélection de candidatures.
 
----
-
-## 🎯 Contexte
-
-**Entreprise**: HR Tech Solutions (PME, 50 employés)  
-**Système**: RecrutIA Pro - Système de présélection automatique de CV  
-**Cas d'usage**: Analyse automatique des CV pour présélectionner les candidats
+📋 **Classification** : 🔴 Haut risque (Annexe III, point 4(b) : recrutement)  
+👥 **Public cible** : Responsables RH, DPO, RSSI, Auditeurs  
+⏱️ **Durée estimée** : 2-3 semaines pour mise en conformité initiale
 
 ---
 
-## 📋 Étape 1 : Classification AI Act
+## 📋 Fiche Workflow (ISO 42001 Framework)
 
-### Résultat Checklist Article 6
+### Identification
 
-| Étape | Question | Réponse |
-|:------|:---------|:--------|
-| 1 | Article 5 (interdit) | ❌ Non |
-| 2 | Annexe I (sécurité) | ❌ Non |
-| 3 | Annexe III.3 (emploi) | ✅ **Oui** |
-| 4 | Exemption Art 6(3) | ❌ Non applicable (profilage) |
-| 5 | Article 50 | ❌ Non |
-
-### Classification Finale
-
-```
-🔴 HAUT RISQUE
-├── Annexe III point 3(a) : Recrutement/sélection
-├── Exemption Art 6(3) : Non (profilage détecté)
-└── Obligations : Régime complet AI Act
+```yaml
+id: IA-RH-001
+nom: Pré-sélection automatisée des candidatures
+département: Ressources Humaines
+responsable_métier: [Nom, prénom, fonction]
+responsable_technique: [Nom, prénom, fonction]
+date_création: 2026-03-01
+statut: Production
 ```
 
+### Finalité (Intended Purpose - Art. 3 AI Act)
+
+**Objectif** : Aider les recruteurs à identifier les candidatures les plus pertinentes pour un poste donné, en analysant les CV reçus selon des critères objectifs prédéfinis.
+
+**Fonctionnement** :
+1. Ingestion des CV (PDF, DOCX) via le SIRH
+2. Extraction structurée des compétences, expériences, formations
+3. Matching sémantique avec la fiche de poste (LLM + règles métier)
+4. Score de pertinence (0-100) + justification textuelle
+5. Présentation au recruteur avec tri suggéré (jamais de décision automatique)
+
+**Limites explicites** :
+- Le système ne prend jamais de décision finale d'embauche/rejet
+- Toutes les candidatures sont conservées et consultables
+- Un recruteur humain valide chaque étape du processus
+
 ---
 
-## 🔍 Étape 2 : Audit Technique
+## Classification AI Act - Article 6
 
-### Commandes exécutées
+### Analyse Article 6(1)
+- [ ] Composant de sécurité d'un produit réglementé (Annexe I) ? → NON
+- [x] Usage prévu dans l'Annexe III ? → OUI (point 4(b) : accès à l'emploi)
+
+### Vérification Exemption Article 6(3)
+
+| Condition | Évaluation | Justification |
+|:----------|:-----------|:--------------|
+| Tâche procédurale étroite | ❌ NON | Analyse sémantique complexe, pas purement procédurale |
+| Améliore uniquement résultat humain | ⚠️ PARTIEL | Le tri suggéré influence fortement le processus |
+| Revue humaine significative | ✅ OUI | Recruteur valide chaque sélection, peut outrepasser |
+| Aucune activité de profilage | ❌ NON | Le matching crée un profil de compétence du candidat |
+
+→ **Résultat** : 🔴 **Haut risque** (exemption non applicable)
+
+### Obligations associées
+- [x] Système de gestion de la qualité (Art. 17)
+- [x] Documentation technique (Annexe IV)
+- [x] Enregistrement automatique des logs (Art. 12)
+- [x] Transparence et information des personnes (Art. 13)
+- [x] Supervision humaine effective (Art. 14)
+- [x] Robustesse, cybersécurité, exactitude (Art. 15)
+- [x] Déclaration UE de conformité (Art. 19)
+- [x] Inscription au registre UE (Art. 49)
+
+---
+
+## 🔍 Résultats d'Audit (AI Act Audit Tool)
+
+### Commande exécutée
 
 ```bash
-# Classification
-ai-act-audit classify \
-  --name "RecrutIA Pro" \
-  --description "Tri automatique de CV" \
-  --domain "RH" \
-  --employment-related \
-  --uses-personal-data \
-  --automated-decision-making
-
-# Résultat: HIGH_RISK
-
-# Tests robustesse
-ai-act-audit jailbreak --target http://recruita-api.local
-
-# Résultat: 2/8 vecteurs réussis (roleplay, encoding)
+python -m ai_act_audit classify \
+  --workflow IA-RH-001 \
+  --model-ref GPAI-LLM-FR-003 \
+  --output audit/IA-RH-001-result.json
 ```
 
-### Vulnérabilités identifiées
+### Extrait du résultat
 
-| Vecteur | Sévérité | Statut |
-|:--------|:---------|:-------|
-| DAN Roleplay | 🔴 Critique | ❌ Vulnérable |
-| Base64 Encoding | 🟠 Haute | ❌ Vulnérable |
-| Prompt Injection | 🟡 Moyenne | ✅ Résistant |
+```json
+{
+  "workflow_id": "IA-RH-001",
+  "classification": {
+    "level": "high_risk",
+    "legal_basis": "AI Act Article 6(1)(b) + Annex III point 4(b)",
+    "exemption_art6_3_applied": false,
+    "exemption_reason": "Conditions cumulatives non remplies"
+  },
+  "technical_compliance": {
+    "logging_article_12": {
+      "status": "compliant",
+      "score": 95,
+      "recommendations": ["Ajouter hash des prompts système"]
+    },
+    "robustness_tests": {
+      "jailbreak_resistance": {
+        "score": 88,
+        "vulnerabilities": [
+          {
+            "vector": "roleplay_hypothetical",
+            "severity": "medium"
+          }
+        ]
+      },
+      "bias_detection": {
+        "score": 82,
+        "findings": "Écart de 7% entre francophones/non-francophones"
+      }
+    }
+  }
+}
+```
+
+### Actions correctives prioritaires
+
+**🔴 Critique** (avant déploiement)
+- [ ] Documenter l'architecture de mitigation des biais
+- [ ] Implémenter le monitoring de drift
+
+**🟠 Important** (sous 30 jours)
+- [ ] Corriger l'écart de performance linguistique
+- [ ] Ajouter le hash des prompts dans les logs
 
 ---
 
-## 🛡️ Étape 3 : Analyse EBIOS RM Enrichie
+## 🛡️ Analyse EBIOS RM Enrichie
 
-### Atelier 1 - Cadrage
+### Atelier 1 : Cadrage
 
-**Périmètre** : Système de scoring CV + API interne  
-**Biens essentiels** : Base CV, Algorithme de matching, Interface RH  
-**Classification AI Act** : 🔴 Haut risque (intégrée au rapport)
+**Biens essentiels** :
+| Bien | Criticité |
+|:-----|:----------|
+| Intégrité du processus de recrutement | 🔴 Haute |
+| Confidentialité des données candidats | 🔴 Haute |
+| Disponibilité du système de tri | 🟠 Moyenne |
+| Explicabilité des scores | 🟠 Moyenne |
 
-### Atelier 2 - Sources de Menace
-
-Sources classiques + Sources IA :
-- Biais dans données training (historique de recrutement)
-- Attaquants exploitant les failles du LLM
-- Dérive des compétences recherchées
-
-### Atelier 3 - Scénarios de Risque
-
-#### Scénarios EBIOS classiques
-- SR-001 : Fuite de la base CV
-- SR-002 : Indisponibilité du service
-
-#### Scénarios IA spécifiques (ce module)
+### Atelier 3 : Scénarios de Risque IA
 
 **SR-IA-03 : Biais discriminatoire**
-- Source : Données historiques biaisées (80% candidats masculins retenus)
-- Impact : Discrimination systémique
-- Gravité : 🔴 Critique (droits fondamentaux)
+- Impact : Discrimination indirecte
+- Gravité : 🔴 Critique
 - Mesure : Tests équité trimestriels + revue humaine
 
 **SR-IA-04 : Prompt injection**
-- Source : Vulnérabilités détectées aux tests
-- Impact : Contournement des critères de sélection
-- Gravité : 🟠 Élevé
-- Mesure : Filtrage entrée/sortie + tests mensuels
+- Impact : Fausse le processus de sélection
+- Gravité : 🟠 Élevée
+- Mesure : Filtrage entrée + validation croisée
 
-### Atelier 4 - Plan de Traitement
-
-| Risque | Mesure EBIOS | Mesure AI Act | Priorité |
-|:-------|:-------------|:--------------|:---------|
-| Biais | Tests pénétration | M-10-03 (tests équité) | P1 |
-| Injection | Pare-feu applicatif | M-15-04 (tests jailbreak) | P1 |
-| Fuite données | Chiffrement | M-10-05 (anonymisation) | P2 |
-
-### Atelier 5 - Feuille de Route
-
-**Fréquence** : Trimestrielle (haut risque)  
-**Indicateurs** :
-- Taux de drift des prédictions
-- Écart de sélection genre/âge
-- Résultats tests jailbreak
+**SR-IA-01 : Concept drift**
+- Impact : Baisse qualité des sélections
+- Gravité : 🟠 Élevée
+- Mesure : Monitoring hebdomadaire + ré-entraînement
 
 ---
 
-## 📄 Étape 4 : Documentation Technique (Annexe IV)
+## 📋 Documentation Technique Annexe IV
 
-### Structure produite
+### Structure
 
 ```
-documentation-technique/
-├── 01-informations-generales.md
-├── 02-description-systeme.md
-├── 03-elements-conception.md
-├── 04-donnees-training.md
-├── 05-mesures-risques.md
-├── 06-modification-systeme.md
-├── 07-systeme-qualite.md
-├── 08-surveillance-post-marche.md
-├── 09-informations-deployeur.md
-├── 10-previsibilite.md
-├── 11-logique-systeme.md
-└── 12-cybersecurite.md
+01. Description générale
+02. Éléments du système
+03. Surveillance et validation
+04. Instructions d'utilisation
+05. Annexes
 ```
 
-### Extrait - Section Biais (point 4)
+### Métriques de performance
 
-```markdown
-## 4.4 Analyse des Biais
+| Métrique | Cible | Actuel | Fréquence |
+|:---------|:------|:-------|:----------|
+| Précision matching | > 85% | 87.2% | Mensuelle |
+| Écart entre groupes | < 5% | 7.1% ⚠️ | Trimestrielle |
+| Dérive détectée | < 2%/mois | 1.3% | Hebdomadaire |
 
-### Biais détectés
-- **Genre** : Sous-représentation femmes (DI = 0.82)
-- **Âge** : Favorisation 25-40 ans (DI = 0.75)
+---
 
-### Mesures de mitigation
-- Rééchantillonnage dataset
-- Seuil décision ajusté par groupe
-- Revue humaine obligatoire
+## 🔄 Plan de Surveillance Post-Marché
 
-### Résiduel accepté
-- Écart toléré : 5% max
-- Justification : [documentée]
+### Monitoring Continu
+
+| Indicateur | Seuil | Action | Fréquence |
+|:-------------|:------|:-------|:----------|
+| Drift performance | > 3% | Alerte technique | Hebdo |
+| Écart équité | > 5% | Suspension + investigation | Mensuel |
+| Incidents sécurité | Tout | Procédure incident | Immédiat |
+
+### Ré-évaluation Formelle
+- **Fréquence** : Trimestrielle
+- **Responsable** : Comité conformité IA
+- **Déclencheurs** : Modification modèle, incident, évolution réglementaire
+
+---
+
+## 📁 Arborescence
+
+```
+cas_tri_cv_haut_risque/
+├── README.md
+├── 01_workflow_iso42001/
+├── 02_audit_technique/
+├── 03_ebios_rm_enrichi/
+├── 04_documentation_annexe_iv/
+├── 05_surveillance_post_marche/
+└── scripts/
 ```
 
 ---
 
-## ✅ Livrables Finaux
-
-### Dossier EBIOS RM Complet
-- [✅] Atelier 1 : Cadrage + Classification AI Act
-- [✅] Atelier 2 : Sources menace (classiques + IA)
-- [✅] Atelier 3 : Scénarios (EBIOS + IA spécifiques)
-- [✅] Atelier 4 : Plan traitement (mesures EBIOS + AI Act)
-- [✅] Atelier 5 : Feuille route trimestrielle
-
-### Documentation AI Act
-- [✅] Classification Article 6
-- [✅] Documentation technique Annexe IV
-- [✅] Déclaration UE conformité
-- [✅] Registre UE système
-
-### Rapport Audit
-- [✅] Classification automatique
-- [✅] Tests jailbreak
-- [✅] Recommandations correctives
-
----
-
-## 📊 Synthèse
-
-| Aspect | Avant | Après |
-|:-------|:------|:------|
-| Conformité AI Act | ❌ Non évaluée | ✅ Haut risque documenté |
-| Tests sécurité | ❌ Aucun | ✅ 8 vecteurs testés |
-| Gestion biais | ❌ Informelle | ✅ Processus trimestriel |
-| Documentation | ❌ Partielle | ✅ Annexe IV complète |
-
----
-
-**Temps total mission** : 5 jours  
-**Coût** : 15K€ (consultant + outils)  
-**Prochaine revue** : T1 2026
-
----
-
-*Exemple complet généré avec l'écosystème AI Governance*
+> 💡 **Conseil** : Utilisez ce cas comme template pour vos autres workflows haut risque.
