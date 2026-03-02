@@ -1,166 +1,356 @@
-# Guide de Formation : EBIOS RM "Spécial IA"
+# 🎓 Guide de Formation : EBIOS RM Spécial IA pour Auditeurs
 
-**Référence**: docs/GUIDE_FORMATION_EBIOS_IA.md  
-**Version**: 1.0  
-**Date**: 2026-03-02  
-**Durée**: 2 jours
+> Former les auditeurs à appliquer la méthode EBIOS RM aux systèmes d'IA, en intégrant les exigences spécifiques de l'AI Act et de l'ISO 42001.
 
----
-
-## 🎯 Objectifs de la Formation
-
-À l'issue de cette formation, les auditeurs seront capables de :
-1. Classifier un système IA selon l'AI Act dans le cadre EBIOS
-2. Identifier les scénarios de risque spécifiques à l'IA
-3. Intégrer les mesures AI Act dans le plan de traitement EBIOS
-4. Produire un dossier de conformité combiné
+👥 **Public cible** : Auditeurs internes/externes, RSSI, consultants risque  
+⏱️ **Durée** : 2 jours (14 heures) + exercices pratiques  
+🎯 **Objectif pédagogique** : À l'issue de la formation, l'auditeur doit être capable de :
+- Classifier un système IA selon l'Article 6 AI Act dans le cadre d'un audit EBIOS
+- Identifier et évaluer les menaces cyber spécifiques à l'IA
+- Produire un rapport d'audit combiné EBIOS + documentation AI Act
 
 ---
 
-## 📚 Programme
+## 📚 Programme Détaillé
 
-### Jour 1 : Fondamentaux
+### Jour 1 : Fondamentaux Réglementaires & Méthodologie
 
-#### Matin (4h) : Contexte Réglementaire
+#### 🕘 Module 1 : Contexte Réglementaire IA (2h)
 
-**Module 1 : L'AI Act Décrypté (1h30)**
-- Article 5 : Pratiques interdites
-- Article 6 : Classification des risques
-- Annexes I, III : Secteurs concernés
-- Article 6(3) : Exemptions et pièges
-- Article 50 : Obligations de transparence
+**Objectifs**
+- Comprendre l'articulation AI Act / ISO 42001 / EBIOS RM
+- Identifier les exigences spécifiques aux systèmes IA
 
-**Module 2 : Intégration EBIOS ↔ AI Act (1h30)**
-- Pourquoi enrichir EBIOS ?
-- Mapping des 5 ateliers
-- Nouveau dossier `09_integration_ai_act_iso42001/`
-- Processus en 3 étapes
+**Contenu**
 
-**Atelier Pratique (1h)**
-- Classification de 3 systèmes :
-  - Chatbot support client
-  - Système de scoring crédit
-  - Correcteur orthographique
+**1.1 L'AI Act en 10 points clés**
+- Champ d'application territorial et matériel
+- Les 4 niveaux de risque + interdits (Art. 5)
+- Classification Article 6 : arbre de décision pratique
+- Exemptions Article 6(3) : les 4 conditions cumulatives
+- Obligations par rôle (provider / deployer / distributor)
 
-#### Après-midi (4h) : Scénarios de Risque IA
+**1.2 ISO 42001 : Le management système de l'IA**
+- Structure HLS : intégration avec ISO 27001/9001
+- Clause 8 : opérationnalisation des contrôles IA
+- Statement of Applicability : adapter la grille aux risques IA
 
-**Module 3 : Menaces Spécifiques IA (2h)**
+**1.3 Articulation avec EBIOS RM**
 
-| Catégorie | Menace | Exemple |
-|:----------|:-------|:--------|
-| Intégrité | Concept drift | Modèle obsolète |
-| Équité | Biais discriminatoire | Recrutement sexiste |
-| Sécurité | Prompt injection | Jailbreak LLM |
-| Confidentialité | Extraction données | Fuite training data |
-| Gouvernance | Opacité | Boîte noire inexplicable |
+| Atelier EBIOS | Enrichissement IA | Livrable combiné |
+|:--------------|:------------------|:-----------------|
+| Atelier 1 : Cadrage | Classification Article 6 + intended purpose | Fiche workflow + socle sécurité IA |
+| Atelier 2 : Sources | Menaces IA (biais, drift, injection) | Cartographie risques enrichie |
+| Atelier 3 : Scénarios | Templates SR-IA-XX + critères gravité IA | Scénarios risque IA validés |
+| Atelier 4 : Traitement | Mesures AI Act (transparence, supervision) | Plan traitement réglementaire |
+| Atelier 5 : Feuille route | Surveillance Art. 72 + monitoring IA | Feuille route conformité |
 
-**Module 4 : Les 8 Scénarios SR-IA (1h30)**
-- SR-IA-01 : Dérive des performances
-- SR-IA-02 : Données adversariales
-- SR-IA-03 : Biais discriminatoire ⭐
-- SR-IA-04 : Prompt injection ⭐
-- SR-IA-05 : Extraction données
-- SR-IA-06 : Manipulation scénarios
-- SR-IA-07 : Opacité
-- SR-IA-08 : Dépendance GPAI
-
-⭐ Scénarios prioritaires pour haut risque
-
-**Atelier Pratique (30min)**
-- Sélection des scénarios pertinents pour un cas réel
+**Exercice pratique (30 min)**
+> Classifiez 3 workflows fictifs avec la `checklist_art6_ebios.md` :
+> 1. Chatbot FAQ interne → Risque limité (Art. 50)
+> 2. Scoring de crédit clients → Haut risque (Annexe III)
+> 3. Assistant rédaction juridique → Minimal (support)
 
 ---
 
-### Jour 2 : Opérationnel
+#### 🕐 Module 2 : Menaces Cyber Spécifiques à l'IA (3h)
 
-#### Matin (4h) : Mesures et Livrables
+**Objectifs**
+- Identifier les vecteurs d'attaque propres aux systèmes IA
+- Évaluer leur impact sur les biens essentiels
 
-**Module 5 : Mesures de Traitement (2h)**
+**Contenu**
 
-| Article AI Act | Mesure | Intégration EBIOS |
-|:---------------|:-------|:------------------|
-| Art. 10 | Gouvernance données | Atelier 4 |
-| Art. 12 | Logs traçabilité | Atelier 4 |
-| Art. 13 | Transparence | Atelier 4 |
-| Art. 14 | Supervision humaine | Atelier 4 |
-| Art. 15 | Robustesse | Atelier 4 |
+**2.1 Typologie des menaces IA**
 
-**Module 6 : Documentation Annexe IV (1h30)**
-- Structure des 12 points
-- Articulation avec EBIOS
-- Exemple : Point 4 (données) + Point 5 (risques)
+```
+Menaces IA
+├── Intégrité du modèle
+│   ├── Concept drift
+│   ├── Données adversariales
+│   └── Poisoning d'entraînement
+├── Équité et non-discrimination
+│   ├── Biais algorithmique
+│   └── Discrimination indirecte
+├── Robustesse et sécurité
+│   ├── Prompt injection
+│   ├── Jailbreak par roleplay
+│   └── Extraction de prompts
+├── Confidentialité
+│   ├── Inférence données training
+│   └── Fuite via sorties
+└── Gouvernance
+    ├── Opacité des décisions
+    └── Impossibilité de recours
+```
 
-**Atelier Pratique (30min)**
-- Rédaction d'une section Annexe IV
+**2.2 Grille d'évaluation de gravité enrichie**
 
-#### Après-midi (4h) : Cas Pratique Complet
+| Critère | Question clé | Impact |
+|:--------|:-------------|:-------|
+| **Droits fondamentaux** | Impact sur accès emploi/crédit/justice ? | 🔴 Critique si OUI |
+| **Profilage** | Création de profil pour décision ? | Maintient haut risque |
+| **Supervision humaine** | Revue effective ou formelle ? | Réduit gravité si veto |
+| **Explicabilité** | Peut-on expliquer la décision ? | Augmente gravité si opaque |
+| **Réversibilité** | Erreur corrigeable a posteriori ? | Réduit gravité si oui |
 
-**Mission Simulation : Tri de CV (4h)**
+**2.3 Cas pratique : Prompt injection**
 
-| Phase | Durée | Activité |
-|:------|:------|:---------|
-| 1 | 30min | Classification AI Act |
-| 2 | 45min | Atelier 1 EBIOS enrichi |
-| 3 | 45min | Ateliers 2-3 (scénarios IA) |
-| 4 | 45min | Atelier 4 (mesures) |
-| 5 | 30min | Atelier 5 (feuille route) |
-| 6 | 45min | Documentation Annexe IV |
+**Contexte** : LLM utilisé pour le tri de CV (IA-RH-001)
 
-**Restitution et Q/R (30min)**
+**Scénario SR-IA-04** :
+1. Un candidat insère des instructions cachées dans son CV
+2. Le LLM applique ces consignes
+3. Score artificiellement gonflé
 
----
+**Évaluation EBIOS** :
+- Source : Candidat malveillant
+- Impact : Intégrité processus recrutement
+- Gravité : 🟠 Élevée
+- Vraisemblance : 🟡 Moyenne
 
-## 📖 Ressources Pédagogiques
+**Mesures** :
+- Technique : Filtrage regex + détection sémantique
+- Organisationnel : Formation recruteurs
+- Réglementaire : Documentation Annexe IV + tests Art. 15
 
-### Documents fournis
-- [✅] `mapping_ebios_aiact.md` - Correspondance méthodologique
-- [✅] `checklist_art6_ebios.md` - Checklist classification
-- [✅] `template_scenario_ia.md` - 8 scénarios de référence
-- [✅] `mesures_traitement_aiact.md` - Mesures par article
-- [✅] `grille_evaluation_gravite_ia.md` - Évaluation impact
-- [✅] `livrables_combines.md` - Structure dossier final
-
-### Outils pratiques
-- ai-act-audit-tool (classification + tests)
-- Template EBIOS RM standard
-- Exemple cas tri CV
-
----
-
-## ✅ Évaluation des Acquis
-
-### QCM (20 questions)
-
-**Exemples** :
-1. Un système de scoring crédit est-il concerné par l'Annexe III ?
-2. Quelles sont les 4 conditions cumulatives de l'Article 6(3) ?
-3. Quel scénario IA pour un biais de genre en recrutement ?
-4. Quelle fréquence de ré-évaluation pour un haut risque ?
-
-### Cas Pratique (2h)
-
-Classifier et analyser un système IA fourni par le formateur.
-
-### Seuil de réussite
-- QCM : 14/20 minimum
-- Cas pratique : Classification correcte + 3 scénarios pertinents
+**Exercice pratique (45 min)**
+> Analysez le scénario SR-IA-03 (biais discriminatoire) pour un scoring de crédit.
 
 ---
 
-## 🎓 Certification
+#### 🕒 Module 3 : Atelier 1 & 3 EBIOS Appliqués à l'IA (3h)
 
-**Attestation de formation** délivrée par [Organisme]  
-**Validité** : 2 ans  
-**Renouvellement** : Module actualisation réglementaire (4h)
+**Objectifs**
+- Appliquer concrètement les templates enrichis IA
+- Valider la cohérence classification EBIOS ↔ AI Act
+
+**Contenu**
+
+**3.1 Atelier 1 : Cadrage avec classification AI Act**
+
+**Checklist de validation croisée** :
+```
+1. L'intended purpose correspond-il à la finalité réelle ?
+2. La classification Article 6 a-t-elle été faite avec la checklist complète ?
+3. Si exemption Art. 6(3) : les 4 conditions sont-elles cumulatives ?
+4. Le profilage a-t-il été correctement identifié ?
+5. Les biens essentiels incluent-ils les droits fondamentaux ?
+```
+
+**3.2 Atelier 3 : Sélection et évaluation des scénarios IA**
+
+**Méthode de priorisation** :
+1. Lister tous les scénarios SR-IA-XX pertinents
+2. Évaluer gravité avec la grille enrichie
+3. Évaluer vraisemblance : expertise + exposition
+4. Prioriser : 🔴 Critique + 🟠 Élevée vraisemblance
+5. Documenter les scénarios écartés
+
+**Piège à éviter** :
+- ❌ Sous-estimer les scénarios "non techniques" (biais, opacité)
+- ✅ Traiter équitablement risques cyber classiques ET risques IA
+
+**3.3 Production du livrable combiné**
+
+**Structure recommandée** :
+```
+Rapport d'Audit Combiné
+├── 1. Synthèse exécutive
+├── 2. Méthodologie
+├── 3. Résultats détaillés
+│   ├── 3.1 Classification et conformité
+│   ├── 3.2 Analyse risques cyber EBIOS
+│   └── 3.3 Mesures de traitement
+├── 4. Conclusion et recommandations
+└── Annexes
+```
+
+**Exercice pratique (60 min)**
+> Produisez la section "Classification" et l'évaluation de 2 scénarios SR-IA.
 
 ---
 
-## 📞 Contact Formation
+### Jour 2 : Mise en Pratique & Validation
 
-Pour organiser une session :  
-📧 formation@ai-governance-ecosystem.ai
+#### 🕘 Module 4 : Audit Technique avec l'AI Act Audit Tool (2h)
+
+**Objectifs**
+- Utiliser l'outil CLI pour valider la conformité technique
+- Interpréter les résultats dans le cadre EBIOS
+
+**Contenu**
+
+**4.1 Prise en main de l'outil**
+
+```bash
+# Installation
+pip install ai-act-audit
+
+# Commandes essentielles
+ai-act-audit classify --workflow IA-XXX
+ai-act-audit logs --check-article-12
+ai-act-audit jailbreak --vectors 3
+ai-act-audit generate --artifact annex-iv
+```
+
+**4.2 Interprétation des résultats**
+
+| Score | Interprétation | Action auditeur |
+|:------|:---------------|:----------------|
+| 90-100 | Conforme | Valider + documenter |
+| 75-89 | Partiellement conforme | Écarts mineurs |
+| 50-74 | Non conforme partiel | Action corrective prioritaire |
+| < 50 | Non conforme critique | Suspension recommandée |
+
+**4.3 Intégration dans le rapport EBIOS**
+
+> "Les tests de robustesse ont révélé une vulnérabilité au vecteur 'roleplay_hypothetical' (score 88/100). Ce résultat alimente le scénario SR-IA-04 de l'Atelier 3 EBIOS, avec une vraisemblance réévaluée à 🟠 Élevée."
+
+**Exercice pratique (45 min)**
+> Exécutez l'audit tool sur un workflow de test et produisez un paragraphe de rapport.
 
 ---
 
-**Version**: 1.0  
-**Dernière mise à jour**: 2026-03-02
+#### 🕐 Module 5 : Production du Rapport Combiné (3h)
+
+**Objectifs**
+- Structurer un rapport d'audit professionnel
+- Préparer la soutenance devant la direction / autorité de contrôle
+
+**Contenu**
+
+**5.1 Règles de rédaction pour auditeurs**
+
+**Principes clés** :
+- ✅ Fait vérifiable → Source documentée → Conclusion justifiée
+- ✅ Distinguer constat de recommandation
+- ✅ Hiérarchiser : critique / important / recommandé
+- ✅ Anticiper les questions de l'autorité de contrôle
+
+**Phrases types** :
+```diff
+- ❌ "Le système semble conforme"
++ ✅ "Sur la base des éléments examinés, le système satisfait aux exigences"
+
+- ❌ "Il faudrait améliorer la documentation"
++ ✅ "La documentation ne contient pas l'architecture de mitigation des biais"
+```
+
+**5.2 Checklist de validation finale**
+
+- [ ] Classification AI Act justifiée par l'arbre de décision
+- [ ] Exemptions Article 6(3) avec 4 conditions cumulatives
+- [ ] Scénarios IA couvrant les menaces spécifiques
+- [ ] Gravité avec grille enrichie (droits fondamentaux prioritaires)
+- [ ] Chaque mesure référence l'exigence AI Act
+- [ ] Écarts hiérarchisés avec plan d'action daté
+- [ ] Preuves techniques annexées et traçables
+- [ ] Rapport compréhensible par un non-expert
+
+**5.3 Préparation à la soutenance**
+
+**Questions fréquentes** :
+
+| Question | Réponse attendue |
+|:---------|:-----------------|
+| "Pourquoi pas haut risque ?" | Arbre de décision + exemption + absence profilage |
+| "Comment garantir l'absence de discrimination ?" | Métriques + fréquence tests + mitigation + supervision |
+| "Que se passe-t-il si dérive ?" | Monitoring + alerte + escalade + rollback |
+
+**Exercice final (90 min)**
+> Simulation d'audit complet : "Analyse de sentiment des feedbacks employés"
+> Livrables : Classification + 2 scénarios + Synthèse + 3 réponses aux questions
+
+---
+
+#### 🕒 Module 6 : Clôture & Ressources (1h)
+
+**Synthèse des bonnes pratiques**
+
+```
+Pré-audit → Classification AI Act → Sélection scénarios IA
+    → Audit technique tool → Rapport combiné
+    → Validation croisée → Recommandations actionnables
+```
+
+**Ressources post-formation**
+
+- 📁 `checklist_art6_ebios.md`
+- 📁 `template_scenario_ia.md`
+- 📁 `grille_evaluation_gravite_ia.md`
+
+**Veille réglementaire**
+
+- 📬 Commission Européenne : AI Act updates
+- 🔔 ANSSI EBIOS : RSS Feed
+- 📚 ISO 42001 : ISO Store
+
+**Certification**
+
+✅ **Attestation** délivrée après validation de l'exercice final  
+🔄 **Mise à jour annuelle** recommandée  
+🎓 **Parcours avancé** : "Auditeur Lead IA" (3 jours supplémentaires)
+
+---
+
+## 📎 Annexes
+
+### Annexe A : Glossaire
+
+| Terme | Définition |
+|:------|:-----------|
+| **Intended purpose** | Finalité documentée du système, base classification Article 6 |
+| **Profilage** | Traitement automatisé pour évaluer aspects personnels |
+| **Supervision humaine** | Intervention effective avec pouvoir de veto |
+| **Concept drift** | Dégradation performances due à évolution données |
+| **Prompt injection** | Technique pour contourner consignes système |
+| **Métrique d'équité** | Mesure quantitative absence biais (DIR, Equal Opportunity) |
+
+### Annexe B : Template fiche d'entretien pré-audit
+
+```
+Fiche d'entretien - Système IA [ID]
+
+Participants
+- Responsable métier : ______
+- Responsable technique : ______
+- DPO / RSSI : ______
+- Auditeur : ______
+
+Questions clés
+1. Quelle est la finalité exacte ? (intended purpose)
+2. Décisions automatisées ? Niveau d'autonomie ?
+3. Données personnelles traitées ? Lesquelles ?
+4. Quel modèle ? (foundation / fine-tuned / from scratch)
+5. Données d'entraînement : sélection et validation ?
+6. Mécanismes de monitoring de performance / dérive ?
+7. Qui est responsable en cas d'erreur ?
+8. Comment contester une suggestion du système ?
+9. Procédure de mise à jour du modèle ?
+
+Documents à collecter
+- [ ] Fiche workflow ISO 42001
+- [ ] Documentation technique
+- [ ] DPIA RGPD
+- [ ] Logs d'exploitation
+- [ ] Procédures supervision humaine
+```
+
+### Annexe C : Grille de maturité conformité IA
+
+| Niveau | Description |
+|:-------|:------------|
+| **1 : Ad-hoc** | Classification non documentée, pas de monitoring, réaction aux incidents |
+| **2 : Défini** | Classification justifiée, scénarios IA identifiés, supervision formalisée |
+| **3 : Géré** | Documentation Annexe IV complète, monitoring continu, tests périodiques |
+| **4 : Optimisé** | SMSI unifié, automatisation CI/CD, veille proactive, adaptation continue |
+
+---
+
+> 💡 **Conseil pédagogique** : Alternez théorie (30%) et pratique (70%). Les auditeurs retiennent mieux en faisant qu'en écoutant.
+
+🔗 **Ressources complémentaires** :
+- [`examples/cas_tri_cv_haut_risque/`](../examples/cas_tri_cv_haut_risque/)
+- [`scripts/validation/`](../scripts/validation/)
+- [`docs/RETEx-conformite-IA.md`](../docs/RETEx-conformite-IA.md)
