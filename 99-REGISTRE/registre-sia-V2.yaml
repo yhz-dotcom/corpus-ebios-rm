@@ -1,0 +1,504 @@
+<!-- === EN-TÊTE DOCUMENTAIRE ISO-GRADE === -->
+
+| Métadonnées | Valeur |
+|-------------|--------|
+| **Référence** | `REGISTRE-SIA-V2` |
+| **Titre** | Registre SIA Version 2 - Enrichi |
+| **Version** | `2.0-beta` |
+| **Date** | `06/03/2026` |
+| **Propriétaire** | `Direction Conformité` |
+| **Classification** | `Confidentiel - Exploration` |
+
+---
+
+# Registre SIA V2 - Structure Enrichie
+
+**Statut** : Version alternative en exploration
+
+---
+
+## 📝 Fichier YAML V2 Complet
+
+```yaml
+# =============================================================================
+# REGISTRE SIA V2 — Structure Enrichie (Exploration)
+# =============================================================================
+# Améliorations par rapport à V1:
+# - Exception Art. 6(3) AI Act documentée
+# - Indicateurs de suivi détaillés
+# - Fiches variantes techniques pour fine-tuning
+# - Réversibilité des modifications
+# - Tests réalisés documentés
+# - Validation DPO explicite
+# =============================================================================
+
+metadata:
+  version: "2.0-beta"
+  schema_version: "2.0.0"
+  dernier_update: "2026-03-06"
+  responsable_registre: "[Nom/Fonction]"
+  frequence_revue: "Trimestrielle"
+  outil_qualification: "00-USAGE-QUALIFIER-V2.md"
+  nb_entrees_actives: 0
+  nb_entrees_test: 0
+  nb_entrees_archivees: 0
+
+# =============================================================================
+# ENTRÉES ACTIVES
+# =============================================================================
+
+sia_entries:
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 2 V2 : Usage Workflow 🟡 avec exception Art. 6(3)
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-RH-002"
+    
+    identification:
+      nom_usage: "Pré-sélection assistée de CV"
+      description: "Qwen3.5 analyse les CV et propose une liste courte + justifications"
+      equipe_responsable: "Recrutement Tech"
+      date_qualification: "2026-03-05"
+      qualifié_par: "Sophie Laurent, Alex Chen, DPO"
+      version_fiche: "2.1"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud"
+      interface: "API interne + interface web RH"
+      modification_modele: false
+      variante_technique: null
+      version_modele: "2025-12-01"
+      fiche_technique: "docs/tech-specs-qwen35-api.pdf"
+    
+    usage:
+      niveau_automatisation: "Semi-automatisé"
+      impact_sortie: "Décisionnel (avec validation)"
+      donnees_manipulees: 
+        - "Données personnelles (CV)"
+        - "Données professionnelles"
+      supervision_humaine: "Validation systématique par recruteur"
+      domaine_metier: "Ressources Humaines"
+    
+    qualification:
+      niveau_ebios: "🟡 Standard"
+      template_utilise: "fiche-workflow.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/fiche-workflow-SIA-RH-002-v2.1.md"
+      date_prochaine_qualification: "2026-09-05"
+    
+    ai_act:
+      annex_iii: true
+      annex_iii_point: "4(a) - Recrutement"
+      role: "Deployer"
+      
+      # NOUVEAU : Exception Art. 6(3)
+      exception_art6_3: true
+      exception_justification: |
+        L'usage entre dans le champ de l'Annexe III (recrutement) mais 
+        bénéficie de l'exception de l'article 6(3) car :
+        1. La validation humaine est systématique et documentée
+        2. L'IA ne prend pas de décision définitive d'élimination
+        3. Le recruteur conserve le contrôle final sur la sélection
+        4. Les candidats peuvent contester et obtenir réexamen humain
+      
+      obligations_specifiques:
+        - "Supervision humaine appropriée (Art. 26)"
+        - "Monitoring des biais (guidelines ENISA)"
+        - "Registre Art. 12 (cet entry)"
+        - "Information candidats sur l'usage de l'IA"
+        - "Droit de contestation de la décision"
+      
+      date_derniere_verification_conformite: "2026-03-05"
+    
+    rgpd:
+      concerne: true
+      aipd_reference: "AIPD-RH-2025-v2.1"
+      categorie_donnees:
+        - "Données d'identité"
+        - "Données professionnelles"
+        - "Données de contact"
+      base_legale: "Intérêt légitime (recrutement)"
+      dpo_valide: true
+      droits_sujets:
+        - "Droit d'accès"
+        - "Droit de rectification"
+        - "Droit d'opposition"
+        - "Droit à l'explication (Art. 22 RGPD)"
+    
+    gouvernance:
+      responsable_metier: "Sophie Laurent (DRH)"
+      responsable_technique: "Alex Chen (Data)"
+      sponsor_direction: "DG"
+      dpo_valide: true
+      comite_ethique: "Validé le 2026-02-20"
+      date_deploiement: "2026-04-01"
+      statut: "En test pilote"
+      prochaine_revue: "2026-09-01"
+    
+    # NOUVEAU : Déclencheurs détaillés
+    declencheurs_reevaluation:
+      - type: "technique"
+        description: "Mise à jour du modèle Qwen3.5"
+        priorite: "Haute"
+      - type: "metier"
+        description: "Changement de critères de sélection"
+        priorite: "Haute"
+      - type: "risque"
+        description: "Incident de biais détecté"
+        priorite: "Critique"
+      - type: "reglementaire"
+        description: "Évolution réglementation AI Act"
+        priorite: "Moyenne"
+    
+    risques_synthese:
+      risques_prioritaires:
+        - id: "RISK-001"
+          nom: "Biais involontaire sur profil type"
+          niveau: "Moyen"
+          mitigation: "Monitoring mensuel des taux par segment"
+          responsable: "Alex Chen"
+        - id: "RISK-002"
+          nom: "Hallucination sur compétence"
+          niveau: "Moyen"
+          mitigation: "Validation humaine + log justifications"
+          responsable: "Sophie Laurent"
+        - id: "RISK-003"
+          nom: "Fuite contexte CV"
+          niveau: "Faible"
+          mitigation: "Sanitization inputs + isolation sessions"
+          responsable: "IT Security"
+      
+      mesures_cles:
+        - "Guide des prompts pour recruteurs"
+        - "Logs prompts/sorties (conservation 2 ans)"
+        - "Revue aléatoire de 10% des pré-sélections"
+        - "Formation recruteurs aux biais IA"
+      
+      incidents_signales: 0
+      
+      # NOUVEAU : Indicateurs de suivi détaillés
+      indicateurs_suivi:
+        - nom: "Taux de validation humaine"
+          cible: "100%"
+          methode_mesure: "Log système"
+          frequence: "Continue"
+          derniere_valeur: "100%"
+          alerte_si: "< 100%"
+        - nom: "Délai moyen de traitement"
+          cible: "< 48h"
+          methode_mesure: "Dashboard RH"
+          frequence: "Hebdomadaire"
+          derniere_valeur: "36h"
+          alerte_si: "> 48h"
+        - nom: "Taux de contestation candidats"
+          cible: "< 5%"
+          methode_mesure: "Feedback candidats"
+          frequence: "Mensuelle"
+          derniere_valeur: "2%"
+          alerte_si: "> 5%"
+    
+    tags: ["workflow", "rh", "recrutement", "annex-iii", "art6-3", "rgpd", "qwen3.5", "pilote"]
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 3 V2 : Usage Décisionnel 🔴 avec fine-tuning détaillé
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-FIN-003"
+    
+    identification:
+      nom_usage: "Scoring automatique de demandes de crédit"
+      description: "Variante LoRA de Qwen3.5 score les demandes et décide seuil d'approbation"
+      equipe_responsable: "Risque Crédit"
+      date_qualification: "2026-03-04"
+      qualifié_par: "Comité IA + DPO + Conformité"
+      version_fiche: "1.0"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud"
+      interface: "API intégrée au système de gestion crédit"
+      modification_modele: true
+      
+      # NOUVEAU : Fiche variante technique détaillée
+      variante_technique:
+        nom: "qwen3.5-lora-credit-v1"
+        methode: "LoRA"
+        parametres:
+          rank: 16
+          alpha: 32
+          dropout: 0.05
+          learning_rate: "2e-4"
+          batch_size: 32
+          epochs: 5
+        pourcentage_parametres_entraines: "0.8%"
+        
+        donnees_finetuning:
+          source: "Historique décisions crédit 2020-2025"
+          volume_exemples: 15000
+          anonymisation: "K-anonymity k=5"
+          qualite_data: "Nettoyée, équilibrée, auditée"
+        
+        # NOUVEAU : Tests réalisés
+        tests_realises:
+          - type: "Performance"
+            description: "Accuracy sur jeu de test"
+            resultat: "+12% vs modèle base sur tâche cible"
+            statut: "✅ OK"
+          - type: "Robustesse"
+            description: "Tests adversariaux"
+            resultat: "Résistance aux evasion attacks validée"
+            statut: "✅ OK"
+          - type: "Biais"
+            description: "Fairness par segment démographique"
+            resultat: "Monitoring activé, écart < 5%"
+            statut: "⚠️ Surveillance"
+          - type: "Explicabilité"
+            description: "SHAP values par décision"
+            resultat: "Top 3 features identifiées"
+            statut: "✅ OK"
+        
+        # NOUVEAU : Réversibilité
+        reversibilite:
+          possible: true
+          methode: "LoRA détachable → retour à base possible"
+          duree_rollback: "< 1 heure"
+          tests_rollback: "Validé le 2026-02-15"
+        
+        fiche_reference: "11-SIA/20-OUTILS/archives/fiche-variante-SIA-FIN-003.md"
+        responsable_variante: "Dr. Li Wei (Lead ML)"
+      
+      version_modele: "qwen3.5-lora-credit-v1.0"
+    
+    usage:
+      niveau_automatisation: "Automatisé avec supervision sur alerte"
+      impact_sortie: "Réglementaire + financier"
+      donnees_manipulees:
+        - "Données personnelles"
+        - "Données financières critiques"
+        - "Historique crédit"
+      supervision_humaine: "Sur alerte (seuil confiance < 80%) + échantillonnage 5%"
+      domaine_metier: "Services financiers"
+    
+    qualification:
+      niveau_ebios: "🔴 Renforcé"
+      template_utilise: "dossier-decisionnel.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/dossier-renforce-SIA-FIN-003/"
+      date_prochaine_qualification: "2026-06-04"
+    
+    ai_act:
+      annex_iii: true
+      annex_iii_point: "5 - Évaluation scoring crédit"
+      role: "Deployer"
+      exception_art6_3: false
+      obligations_specifiques:
+        - "Supervision humaine effective (Art. 14)"
+        - "Droit d'explication aux clients (Art. 13)"
+        - "Traçabilité complète (Art. 12)"
+        - "FRIA réalisé (Art. 27a)"
+        - "Tests biais réguliers (Art. 10)"
+        - "Documentation technique modèle (Art. 11)"
+      fria_reference: "FRIA-FIN-003-2026"
+      date_derniere_verification_conformite: "2026-03-04"
+    
+    rgpd:
+      concerne: true
+      aipd_reference: "AIPD-FIN-2026-003"
+      categorie_donnees:
+        - "Données financières"
+        - "Données de santé (assurance)"
+        - "Données de comportement"
+      base_legale: "Exécution contrat + obligation légale"
+      dpo_valide: true
+      droits_sujets:
+        - "Droit d'accès"
+        - "Droit de rectification"
+        - "Droit d'opposition"
+        - "Droit à l'explication détaillée"
+        - "Droit à la portabilité"
+    
+    gouvernance:
+      responsable_metier: "Directeur Risque Crédit"
+      responsable_technique: "Chief Data Officer"
+      responsable_variante: "Dr. Li Wei (Lead ML)"
+      sponsor_direction: "DG + Directeur Risques"
+      dpo_valide: true
+      comite_ethique: "Validé le 2026-02-10"
+      comite_risques: "Suivi mensuel obligatoire"
+      date_deploiement: "2026-03-01"
+      statut: "Actif"
+      prochaine_revue: "2026-04-04"
+    
+    declencheurs_reevaluation:
+      - type: "technique"
+        description: "Dégradation performance modèle"
+        priorite: "Critique"
+      - type: "risque"
+        description: "Biais détecté sur segment client"
+        priorite: "Critique"
+      - type: "reglementaire"
+        description: "Nouvelle exigence régulateur"
+        priorite: "Haute"
+      - type: "metier"
+        description: "Changement politique crédit"
+        priorite: "Moyenne"
+    
+    risques_synthese:
+      risques_prioritaires:
+        - id: "RISK-101"
+          nom: "Discrimination algorithmique"
+          niveau: "Élevé"
+          mitigation: "Fairness testing mensuel + comité arbitrage"
+          responsable: "CDO"
+        - id: "RISK-102"
+          nom: "Overfitting du modèle fine-tuné"
+          niveau: "Moyen"
+          mitigation: "Validation croisée temporelle + monitoring drift"
+          responsable: "Lead ML"
+        - id: "RISK-103"
+          nom: "Attaque adversariale sur scoring"
+          niveau: "Moyen"
+          mitigation: "Tests robustesse trimestriels + input validation"
+          responsable: "Security"
+      
+      mesures_cles:
+        - "Fairness testing mensuel par segment"
+        - "Comité arbitrage décisions contestées"
+        - "Kill switch automatique si drift détecté"
+        - "Documentation explicabilité par décision"
+        - "Audit externe annuel"
+      
+      incidents_signales: 0
+      
+      indicateurs_suivi:
+        - nom: "Taux de décisions automatisées"
+          cible: "85-95%"
+          methode_mesure: "Log décisions"
+          frequence: "Continue"
+          derniere_valeur: "91%"
+          alerte_si: "< 80% ou > 98%"
+        - nom: "Écart fairness par segment"
+          cible: "< 5%"
+          methode_mesure: "Analyse mensuelle"
+          frequence: "Mensuelle"
+          derniere_valeur: "3.2%"
+          alerte_si: "> 5%"
+        - nom: "Taux de contestation clients"
+          cible: "< 2%"
+          methode_mesure: "Service réclamation"
+          frequence: "Mensuelle"
+          derniere_valeur: "0.8%"
+          alerte_si: "> 2%"
+        - nom: "Performance modèle (AUC-ROC)"
+          cible: "> 0.85"
+          methode_mesure: "Test mensuel"
+          frequence: "Mensuelle"
+          derniere_valeur: "0.89"
+          alerte_si: "< 0.85"
+    
+    tags: ["decisionnel", "finance", "credit", "high-risk", "lora", "finetuning", "annex-iii", "fria", "rgpd"]
+
+# =============================================================================
+# STATISTIQUES V2
+# =============================================================================
+
+statistiques:
+  repartition_par_niveau:
+    light: 8
+    standard: 6
+    renforce: 3
+  
+  repartition_par_statut:
+    actif: 15
+    en_test_pilote: 2
+    en_deploiement: 0
+    archive: 0
+  
+  repartition_par_domaine:
+    rh: 4
+    finance: 3
+    support: 6
+    marketing: 3
+    juridique: 1
+    operations: 2
+  
+  variantes_techniques: 2
+  exceptions_art6_3: 1
+  fria_realises: 2
+  
+  incidents_12_mois: 0
+  revues_effectuees_trimestre: 4
+
+# =============================================================================
+# COMPARAISON V1 vs V2
+# =============================================================================
+
+comparaison_versions:
+  v1:
+    forces:
+      - "Simplicité et lisibilité"
+      - "Rapide à remplir"
+      - "Couvre 80% des besoins"
+    limites:
+      - "Exception Art. 6(3) implicite"
+      - "Indicateurs peu détaillés"
+      - "Variantes techniques sous-documentées"
+  
+  v2:
+    ameliorations:
+      - "Exception Art. 6(3) explicite et justifiée"
+      - "Indicateurs de suivi détaillés avec seuils d'alerte"
+      - "Fiches variantes techniques complètes"
+      - "Tests réalisés documentés"
+      - "Réversibilité des modifications"
+      - "Déclencheurs priorisés"
+    couts:
+      - "Plus complexe à remplir"
+      - "Nécessite expertise technique"
+      - "Temps de qualification plus long"
+  
+  recommandation: |
+    Utiliser V1 pour usages 🟢 Light et 🟡 Standard simples.
+    Utiliser V2 pour usages 🟡 Standard avec exception Art. 6(3) 
+    et tous usages 🔴 Renforcé avec variantes techniques.
+
+# =============================================================================
+# NOTES ET ÉVOLUTIONS
+# =============================================================================
+
+changelog:
+  - date: "2026-03-06"
+    version: "2.0-beta"
+    auteur: "Direction Conformité"
+    modification: "Création V2 avec enrichissements"
+    raison: "Besoin de granularité pour exceptions Art. 6(3) et fine-tuning"
+```
+
+---
+
+## 📊 Différences V1 vs V2
+
+| Aspect | V1 | V2 (Cette version) |
+|:-------|:---|:-------------------|
+| **Exception Art. 6(3)** | Champ booléen simple | Justification détaillée |
+| **Indicateurs** | Liste simple | Métriques avec seuils d'alerte |
+| **Variantes techniques** | Nom seul | Fiche complète (LoRA, tests, réversibilité) |
+| **Déclencheurs** | Liste texte | Priorisés (Critique/Haute/Moyenne) |
+| **Risques** | Nom + mitigation | ID, niveau, responsable assigné |
+| **Complexité** | Modérée | Élevée |
+| **Temps remplissage** | ~10 min | ~20-30 min |
+
+---
+
+## 🎯 Recommandation d'Usage
+
+| Type d'usage | Version recommandée | Justification |
+|:-------------|:--------------------|:--------------|
+| 🟢 Light | **V1** | Simplicité suffisante |
+| 🟡 Standard simple | **V1** | Pas besoin de granularité |
+| 🟡 Standard + Art. 6(3) | **V2** | Justification obligatoire |
+| 🔴 Renforcé classique | **V1 ou V2** | Selon complexité |
+| 🔴 Renforcé + fine-tuning | **V2** | Tests et réversibilité nécessaires |
+
+---
+
+*Registre SIA V2 — Version 2.0-beta (Exploration)*  
+*Réf. REGISTRE-SIA-V2*
