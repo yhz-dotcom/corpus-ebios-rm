@@ -1,0 +1,379 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://corpus-ebios-rm.ai/schemas/registry-v2.0.json",
+  "title": "Registre SIA V2.0",
+  "description": "Schéma de validation du registre des Systèmes d'Intelligence Artificielle",
+  "type": "object",
+  "required": ["metadata", "sia_entries"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "schema_version", "last_update"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+(-\\w+)?$",
+          "description": "Version du registre (ex: 2.0.0)"
+        },
+        "schema_version": {
+          "type": "string",
+          "enum": ["2.0.0"],
+          "description": "Version du schéma de validation"
+        },
+        "last_update": {
+          "type": "string",
+          "format": "date",
+          "description": "Date de dernière mise à jour (YYYY-MM-DD)"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Responsable du registre"
+        },
+        "review_frequency": {
+          "type": "string",
+          "enum": ["Monthly", "Quarterly", "Semi-annual", "Annual"],
+          "default": "Quarterly",
+          "description": "Fréquence de revue du registre"
+        },
+        "active_entries": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Nombre d'entrées actives (auto-calculé)"
+        }
+      }
+    },
+    "sia_entries": {
+      "type": "array",
+      "description": "Liste des usages SIA qualifiés",
+      "items": {
+        "$ref": "#/definitions/SIAEntry"
+      }
+    }
+  },
+  "definitions": {
+    "SIAEntry": {
+      "type": "object",
+      "required": ["sia_id", "identification", "technical", "usage", "assessment", "governance"],
+      "properties": {
+        "sia_id": {
+          "type": "string",
+          "pattern": "^SIA-[A-Z]{3}-\\d{3}$",
+          "description": "Identifiant unique (ex: SIA-RH-001)"
+        },
+        "identification": {
+          "type": "object",
+          "required": ["name", "team", "qualification_date"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 5,
+              "maxLength": 100,
+              "description": "Nom de l'usage"
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 500,
+              "description": "Description succincte"
+            },
+            "team": {
+              "type": "string",
+              "description": "Équipe responsable"
+            },
+            "qualification_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "qualified_by": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1,
+              "description": "Personnes ayant qualifié"
+            },
+            "version": {
+              "type": "string",
+              "default": "1.0",
+              "description": "Version de la fiche"
+            }
+          }
+        },
+        "technical": {
+          "type": "object",
+          "required": ["base_model", "provider", "interface"],
+          "properties": {
+            "base_model": {
+              "type": "string",
+              "description": "Modèle de base (ex: GPT-4, Qwen3.5)"
+            },
+            "provider": {
+              "type": "string",
+              "description": "Fournisseur du modèle"
+            },
+            "interface": {
+              "type": "string",
+              "description": "Interface d'accès (API, web, etc.)"
+            },
+            "modified": {
+              "type": "boolean",
+              "default": false,
+              "description": "Modèle modifié (fine-tuning, etc.)"
+            },
+            "technical_variant": {
+              "type": ["object", "null"],
+              "properties": {
+                "name": { "type": "string" },
+                "method": {
+                  "type": "string",
+                  "enum": ["LoRA", "Full fine-tuning", "RAG", "Prompt engineering", "Other"]
+                },
+                "parameters": { "type": "object" },
+                "trained_percentage": {
+                  "type": "string",
+                  "pattern": "^\\d+(\\.\\d+)?%$"
+                },
+                "training_data": {
+                  "type": "object",
+                  "properties": {
+                    "source": { "type": "string" },
+                    "volume": { "type": "integer" }
+                  }
+                },
+                "tests": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": { "type": "string" },
+                      "result": { "type": "string" },
+                      "status": {
+                        "type": "string",
+                        "enum": ["✅ OK", "⚠️ Warning", "❌ Failed"]
+                      }
+                    }
+                  }
+                },
+                "reversibility": {
+                  "type": "object",
+                  "properties": {
+                    "possible": { "type": "boolean" },
+                    "rollback_time": { "type": "string" }
+                  }
+                }
+              }
+            },
+            "model_version": {
+              "type": "string",
+              "description": "Version spécifique du modèle"
+            }
+          }
+        },
+        "usage": {
+          "type": "object",
+          "required": ["automation_level", "impact", "data_types"],
+          "properties": {
+            "automation_level": {
+              "type": "string",
+              "enum": [
+                "Conversational only",
+                "Assisted",
+                "Semi-automated",
+                "Automated with supervision",
+                "Fully automated"
+              ]
+            },
+            "impact": {
+              "type": "string",
+              "enum": ["None", "Low", "Medium", "High", "Critical", "Regulatory"]
+            },
+            "data_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Public data",
+                  "Internal non-sensitive",
+                  "Personal data (GDPR)",
+                  "Sensitive personal data",
+                  "Financial data",
+                  "Health data",
+                  "Critical business data",
+                  "Trade secrets"
+                ]
+              },
+              "minItems": 1
+            },
+            "human_oversight": {
+              "type": "string",
+              "description": "Niveau de supervision humaine"
+            },
+            "business_domain": {
+              "type": "string",
+              "description": "Domaine métier"
+            }
+          }
+        },
+        "assessment": {
+          "type": "object",
+          "required": ["ebios_level", "template_used"],
+          "properties": {
+            "ebios_level": {
+              "type": "string",
+              "enum": ["🟢 Level 1", "🟡 Level 2", "🔴 Level 3", "⚪️ Unqualified"]
+            },
+            "template_used": {
+              "type": "string",
+              "enum": ["template-level-1", "template-level-2", "template-level-3"]
+            },
+            "reference_file": {
+              "type": "string",
+              "description": "Chemin vers la fiche complète"
+            },
+            "next_assessment": {
+              "type": "string",
+              "format": "date",
+              "description": "Date de prochaine qualification"
+            }
+          }
+        },
+        "ai_act": {
+          "type": "object",
+          "properties": {
+            "annex_iii": {
+              "type": ["boolean", "string"],
+              "description": "Concerne l'Annexe III AI Act"
+            },
+            "annex_iii_point": {
+              "type": ["string", "null"],
+              "description": "Point spécifique de l'Annexe III"
+            },
+            "role": {
+              "type": ["string", "null"],
+              "enum": ["Provider", "Provider (for own use)", "Deployer", "To be determined"]
+            },
+            "role_justification": {
+              "type": ["string", "null"]
+            },
+            "ce_marking_required": {
+              "type": ["boolean", "null"]
+            },
+            "ce_marking_justification": {
+              "type": ["string", "null"]
+            },
+            "specific_obligations": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "gdpr": {
+          "type": "object",
+          "properties": {
+            "applies": {
+              "type": ["boolean", "string"]
+            },
+            "dpia_reference": {
+              "type": ["string", "null"],
+              "description": "Référence AIPD/DPIA"
+            },
+            "dpo_validated": {
+              "type": ["boolean", "null"]
+            }
+          }
+        },
+        "governance": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "business_owner": {
+              "type": ["string", "null"],
+              "description": "Responsable métier"
+            },
+            "technical_owner": {
+              "type": ["string", "null"],
+              "description": "Responsable technique"
+            },
+            "dpo_validated": {
+              "type": ["boolean", "null"]
+            },
+            "compliance_validated": {
+              "type": ["boolean", "null"]
+            },
+            "oversight_committee": {
+              "type": ["string", "null"],
+              "description": "Comité de supervision"
+            },
+            "deployment_date": {
+              "type": ["string", "null"],
+              "format": "date"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "Exploration",
+                "Qualification in progress",
+                "Active",
+                "Pilot",
+                "Under review",
+                "Archived"
+              ]
+            },
+            "next_review": {
+              "type": ["string", "null"],
+              "format": "date"
+            },
+            "reevaluation_triggers": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "risk_summary": {
+          "type": "object",
+          "properties": {
+            "primary_risk": {
+              "type": ["string", "null"]
+            },
+            "key_measure": {
+              "type": ["string", "null"]
+            },
+            "incidents_reported": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "priority_risks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "string" },
+                  "name": { "type": "string" },
+                  "mitigation": { "type": "string" }
+                }
+              }
+            },
+            "key_measures": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "tracking_indicators": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "target": { "type": "string" },
+                  "measurement_method": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Tags pour filtrage"
+        }
+      }
+    }
+  }
+}
