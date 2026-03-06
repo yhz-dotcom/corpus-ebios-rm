@@ -129,13 +129,13 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    C1[Dataset 1M CVs<br/>Historique biaisé<br/>Tech = 80% hommes]
-    --> M1[Fine-tuning Llama 3.1<br/>Reproduit biais]
-    --> D1[Score "fit culturel"<br/>Pénalise femmes]
-    --> S1[Shortlists<br/>< 20% femmes]
-    --> I1[Client PME<br/>Se plaint discrimination]
-    --> M2[Scandale médiatique<br/>#OptiRecrutBiais]
-    --> F1[Sanction CNIL<br/>-5% CA<br/>Perte 50 clients]
+    C1["Dataset 1M CVs<br/>Historique biaisé<br/>Tech = 80% hommes"]
+    --> M1["Fine-tuning Llama 3.1<br/>Reproduit biais"]
+    --> D1["Score 'fit culturel'<br/>Pénalise femmes"]
+    --> S1["Shortlists<br/>< 20% femmes"]
+    --> I1["Client PME<br/>Se plaint discrimination"]
+    --> M2["Scandale médiatique<br/>#OptiRecrutBiais"]
+    --> F1["Sanction CNIL<br/>-5% CA<br/>Perte 50 clients"]
     
     style C1 fill:#e3f2fd,stroke:#1565c0
     style M1 fill:#fff3e0,stroke:#ef6c00
