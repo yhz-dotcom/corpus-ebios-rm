@@ -502,3 +502,187 @@ changelog:
 
 *Registre SIA V2 — Version 2.0-beta (Exploration)*  
 *Réf. REGISTRE-SIA-V2*
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 3BIS : Usage Provider (for own use) 🔴
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-FIN-004"
+    
+    identification:
+      nom_usage: "Scoring interne de demandes de crédit (fine-tuning propriétaire)"
+      description: "Variante LoRA propriétaire pour scoring interne, usage strictement interne"
+      equipe_responsable: "Risque Crédit"
+      date_qualification: "2026-03-06"
+      qualifié_par: "Comité IA + Conformité"
+      version_fiche: "1.0"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud"
+      interface: "API interne scoring"
+      modification_modele: true
+      variante_technique:
+        nom: "qwen3.5-lora-credit-interne-v1"
+        methode: "LoRA"
+        parametres:
+          rank: 16
+          alpha: 32
+        pourcentage_parametres_entraines: "0.8%"
+        donnees_finetuning:
+          source: "Historique interne anonymisé"
+          volume_exemples: 20000
+        tests_realises:
+          - type: "Performance"
+            resultat: "+15% vs base"
+            statut: "✅ OK"
+          - type: "Biais"
+            resultat: "Monitoring activé"
+            statut: "⚠️ Surveillance"
+        reversibilite:
+          possible: true
+          duree_rollback: "< 1 heure"
+        fiche_reference: "11-SIA/20-OUTILS/archives/fiche-variante-SIA-FIN-004.md"
+      version_modele: "qwen3.5-lora-credit-interne-v1.0"
+    
+    usage:
+      niveau_automatisation: "Automatisé avec supervision sur alerte"
+      impact_sortie: "Réglementaire + financier"
+      donnees_manipulees:
+        - "Données personnelles"
+        - "Données financières critiques"
+      supervision_humaine: "Sur alerte (seuil confiance < 80%)"
+      domaine_metier: "Services financiers"
+    
+    qualification:
+      niveau_ebios: "🔴 Renforcé"
+      template_utilise: "dossier-decisionnel.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/dossier-decisionnel-SIA-FIN-004-v1.0.md"
+      date_prochaine_qualification: "2026-09-06"
+    
+    ai_act:
+      annex_iii: true
+      annex_iii_point: "5 - Accès à services financiers essentiels"
+      
+      # NOUVEAU : Rôle Provider (for own use)
+      role: "Provider (for own use)"
+      role_justification: |
+        Fine-tuning substantiel sur usage haut risque, 
+        usage interne strict, pas de mise sur le marché.
+        L'entreprise devient Provider pour son propre usage.
+      
+      marquage_ce_requis: false
+      marquage_ce_justification: |
+        Usage strictement interne, pas de mise sur le marché.
+        Le système n'est pas fourni à des tiers.
+      
+      obligations_specifiques:
+        - "Documentation technique de la variante"
+        - "Gestion des risques (EBIOS-RM complet)"
+        - "Monitoring post-déploiement"
+        - "Registre Art. 12 (cet entry)"
+      
+      date_derniere_verification_conformite: "2026-03-06"
+    
+    rgpd:
+      concerne: true
+      aipd_reference: "AIPD-CREDIT-2026-v1.0"
+      dpo_valide: true
+    
+    gouvernance:
+      responsable_metier: "Directeur Risques"
+      responsable_technique: "Lead ML Engineer"
+      dpo_valide: true
+      conformite_valide: true
+      comite_supervision: "Comité IA Mensuel"
+      date_deploiement: "2026-06-01"
+      statut: "En développement"
+      prochaine_revue: "2026-06-01"
+    
+    risques_synthese:
+      risques_prioritaires:
+        - id: "RISK-201"
+          nom: "Biais systémique"
+          mitigation: "Tests pré-déploiement + monitoring continu"
+        - id: "RISK-202"
+          nom: "Drift de performance"
+          mitigation: "Alertes métriques mensuelles"
+        - id: "RISK-203"
+          nom: "Prompt injection"
+          mitigation: "Filtrage + sandboxing"
+        - id: "RISK-204"
+          nom: "Explicabilité insuffisante"
+          mitigation: "Justifications minimales générées"
+      
+      mesures_cles:
+        - "Tests adversariaux avant chaque déploiement"
+        - "Explicabilité : justification score pour chaque décision"
+        - "Versioning strict + reproductibilité des sorties"
+        - "Procédure de recours client documentée"
+      
+      incidents_signales: 0
+      
+      indicateurs_suivi:
+        - nom: "Taux d'approbation par segment"
+          cible: "Écart < 5% vs référence humaine"
+          methode_mesure: "Dashboard conformité"
+        - nom: "Délai de détection d'anomalie"
+          cible: "< 24h"
+          methode_mesure: "Monitoring automatisé"
+        - nom: "Taux de recours clients"
+          cible: "< 2%"
+          methode_mesure: "Service client"
+    
+    tags: ["decisionnel", "finance", "credit", "annex-iii", "provider", "lora", "rgpd"]
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 4 : Usage en attente de qualification ⚪️
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-EXP-004"
+    
+    identification:
+      nom_usage: "Prototype : Agent de support technique autonome"
+      description: "POC pour résolution automatique de tickets niveau 1"
+      equipe_responsable: "Innovation Lab"
+      date_qualification: "2026-03-06"
+      qualifié_par: "À définir"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud"
+      interface: "Prototype interne"
+      modification_modele: null
+      variante_technique: null
+    
+    usage:
+      niveau_automatisation: "Non défini (POC)"
+      impact_sortie: "Non évalué"
+      donnees_manipulees: ["À qualifier"]
+      supervision_humaine: "À définir"
+      domaine_metier: "Support technique"
+    
+    qualification:
+      niveau_ebios: "⚪️ Non qualifié"
+      template_utilise: null
+      fiche_reference: null
+    
+    ai_act:
+      annex_iii: "À évaluer"
+      role: "À qualifier"
+      obligations_specifiques: []
+    
+    rgpd:
+      concerne: "À évaluer"
+      aipd_reference: null
+    
+    gouvernance:
+      responsable_metier: "À nommer"
+      responsable_technique: "Innovation Lab"
+      statut: "En exploration"
+      prochaine_revue: "2026-04-06"
+    
+    risques_synthese:
+      risques_prioritaires: []
+      mesures_cles: []
+      incidents_signales: 0
+    
+    tags: ["prototype", "poc", "support", "non-qualifie", "exploration"]
