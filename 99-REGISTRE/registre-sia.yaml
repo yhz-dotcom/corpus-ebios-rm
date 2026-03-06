@@ -1,0 +1,467 @@
+<!-- === EN-TÊTE DOCUMENTAIRE ISO-GRADE === -->
+
+| Métadonnées | Valeur |
+|-------------|--------|
+| **Référence** | `REGISTRE-SIA-TEMPLATE` |
+| **Titre** | Template : registre-sia.yaml — Registre des Systèmes d'IA |
+| **Version** | `1.0` |
+| **Date** | `06/03/2026` |
+| **Propriétaire** | `Direction Conformité / AI Officer` |
+| **Classification** | `Confidentiel` |
+
+---
+
+# 📋 Template : registre-sia.yaml — Registre des Systèmes d'IA
+
+---
+
+## 📝 Fichier YAML Complet
+
+```yaml
+# =============================================================================
+# REGISTRE DES SYSTÈMES D'IA — EBIOS-RM "Usage-First"
+# =============================================================================
+# Objectif : Tracker tous les usages IA qualifiés dans l'organisation
+# Alignement : AI Act Art. 12 + EBIOS-RM + ISO 42001
+# Format : YAML (versionnable dans Git, lisible par humain et machine)
+# =============================================================================
+
+metadata:
+  version: "1.0"
+  dernier_update: "YYYY-MM-DD"
+  responsable_registre: "[Nom/Fonction]"
+  frequence_revue: "Trimestrielle"
+  outil_qualification: "00-USAGE-QUALIFIER.md"
+  nb_entrees_actives: 0
+  nb_entrees_archivees: 0
+
+# =============================================================================
+# ENTRÉES DU REGISTRE (une par usage qualifié)
+# =============================================================================
+
+sia_entries:
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 1 : Usage Conversationnel 🟢
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-COM-001"
+    
+    identification:
+      nom_usage: "Assistant de rédaction emails"
+      description: "Génération de brouillons d'emails clients via prompts"
+      equipe_responsable: "Support Client"
+      date_qualification: "2026-03-06"
+      qualifié_par: "Marie Dupont"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud (API)"
+      interface: "Chat interne + prompts templates"
+      modification_modele: false
+      variante_technique: null
+      version_modele: "2025-12-01"
+    
+    usage:
+      niveau_automatisation: "Conversationnel"
+      impact_sortie: "Informel"
+      donnees_manipulees: ["Internes non sensibles"]
+      supervision_humaine: "Systématique (humain envoie)"
+      domaine_metier: "Relation client"
+    
+    qualification:
+      niveau_ebios: "🟢 Light"
+      template_utilise: "fiche-light.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/fiche-light-SIA-COM-001.md"
+      date_prochaine_qualification: "2027-03-06"
+    
+    ai_act:
+      annex_iii: false
+      role: "Deployer"
+      obligations_specifiques: []
+      date_derniere_verification_conformite: "2026-03-06"
+    
+    rgpd:
+      concerne: false
+      aipd_reference: null
+      categorie_donnees: []
+      base_legale: null
+    
+    gouvernance:
+      responsable_metier: "Marie Dupont"
+      responsable_technique: "IT Support"
+      sponsor_direction: null
+      date_deploiement: "2026-02-01"
+      statut: "Actif"
+      prochaine_revue: "2027-03-06"
+    
+    risques_synthese:
+      risque_principal: "Hallucination dans un email client"
+      niveau_risque: "Faible"
+      mesure_cle: "Validation humaine obligatoire avant envoi"
+      incidents_signales: 0
+      dernier_incident: null
+    
+    declencheurs_reevaluation:
+      - "Incident de fuite de données"
+      - "Changement d'usage vers automatisation"
+      - "Évolution réglementaire"
+    
+    tags: ["conversationnel", "support", "low-risk", "qwen3.5", "light"]
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 2 : Usage Workflow 🟡
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-RH-001"
+    
+    identification:
+      nom_usage: "Pré-sélection assistée de CV"
+      description: "Qwen3.5 analyse les CV et propose une liste courte + justifications"
+      equipe_responsable: "Recrutement Tech"
+      date_qualification: "2026-03-05"
+      qualifié_par: "Jean Martin, DPO"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud (API)"
+      interface: "Interface web interne + RAG sur base de compétences"
+      modification_modele: false
+      variante_technique: null
+      version_modele: "2025-12-01"
+    
+    usage:
+      niveau_automatisation: "Semi-automatisé"
+      impact_sortie: "Décisionnel (avec validation)"
+      donnees_manipulees: ["Données personnelles (CV)", "Internes RH"]
+      supervision_humaine: "Validation systématique par recruteur"
+      domaine_metier: "Ressources Humaines"
+    
+    qualification:
+      niveau_ebios: "🟡 Standard"
+      template_utilise: "fiche-workflow.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/fiche-workflow-SIA-RH-001.md"
+      date_prochaine_qualification: "2026-09-05"
+    
+    ai_act:
+      annex_iii: true
+      categorie_annex_iii: "Point 4(a) - Recrutement"
+      role: "Deployer"
+      obligations_specifiques:
+        - "Supervision humaine effective (Art. 14)"
+        - "Information des candidats (Art. 13)"
+        - "Traçabilité des décisions (Art. 12)"
+      date_derniere_verification_conformite: "2026-03-05"
+    
+    rgpd:
+      concerne: true
+      aipd_reference: "AIPD-RH-2026-001"
+      categorie_donnees: ["Données d'identité", "Données professionnelles"]
+      base_legale: "Intérêt légitime (recrutement)"
+      dpo_contact: "dpo@entreprise.fr"
+    
+    gouvernance:
+      responsable_metier: "Sophie Bernard (DRH)"
+      responsable_technique: "IT RH"
+      sponsor_direction: "DG"
+      comite_ethique: "Validé le 2026-02-15"
+      date_deploiement: "2026-01-15"
+      statut: "Actif"
+      prochaine_revue: "2026-09-05"
+    
+    risques_synthese:
+      risque_principal: "Biais de genre dans la sélection"
+      niveau_risque: "Moyen"
+      mesure_cle: "Audit biais trimestriel + dataset diversifié"
+      incidents_signales: 0
+      dernier_incident: null
+    
+    declencheurs_reevaluation:
+      - "Audit biais révélant anomalie"
+      - "Plainte candidat"
+      - "Changement de modèle"
+      - "Évolution AI Act"
+    
+    tags: ["rh", "recrutement", "medium-risk", "qwen3.5", "standard", "annex-iii", "rgpd"]
+
+  # ---------------------------------------------------------------------------
+  # EXEMPLE 3 : Usage Renforcé 🔴
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-FIN-001"
+    
+    identification:
+      nom_usage: "Scoring crédit consommation"
+      description: "Évaluation automatisée du risque crédit avec décision pré-approuvée"
+      equipe_responsable: "Analyse Crédit"
+      date_qualification: "2026-02-20"
+      qualifié_par: "Pierre Leroy, RSSI + DPO + Juridique"
+    
+    technique:
+      modele_base: "Modèle propriétaire interne"
+      provider_modele: "Interne (on-premise)"
+      interface: "API interne + interface décideur"
+      modification_modele: true
+      variante_technique: "Fine-tuning mensuel sur données internes"
+      version_modele: "v2.3.1"
+      documentation_technique: "docs/SIA-FIN-001-tech-specs.pdf"
+    
+    usage:
+      niveau_automatisation: "Automatisé avec supervision échantillon"
+      impact_sortie: "Réglementaire (accès au crédit)"
+      donnees_manipulees: 
+        - "Données personnelles sensibles (revenus, patrimoine)"
+        - "Données bancaires"
+        - "Historique crédit"
+      supervision_humaine: "Échantillonnage 10% + alertes seuil"
+      domaine_metier: "Services Financiers"
+    
+    qualification:
+      niveau_ebios: "🔴 Renforcé"
+      template_utilise: "dossier-decisionnel.md"
+      fiche_reference: "11-SIA/20-OUTILS/archives/dossier-renforce-SIA-FIN-001/"
+      date_prochaine_qualification: "2026-05-20"
+    
+    ai_act:
+      annex_iii: true
+      categorie_annex_iii: "Point 5 - Évaluation scoring crédit"
+      role: "Deployer"
+      obligations_specifiques:
+        - "Supervision humaine effective (Art. 14)"
+        - "Droit d'explication aux clients (Art. 13)"
+        - "Traçabilité complète (Art. 12)"
+        - "FRIA réalisé (Art. 27a)"
+        - "Tests biais réguliers (Art. 10)"
+      fria_reference: "FRIA-FIN-001-2026"
+      date_derniere_verification_conformite: "2026-02-20"
+    
+    rgpd:
+      concerne: true
+      aipd_reference: "AIPD-FIN-2026-003"
+      categorie_donnees: 
+        - "Données financières"
+        - "Données de santé (assurance)"
+        - "Données de comportement"
+      base_legale: "Exécution contrat + obligation légale"
+      dpo_contact: "dpo@banque.fr"
+      droits_sujets: "Droit explication, contestation décision"
+    
+    gouvernance:
+      responsable_metier: "Directeur Analyse Crédit"
+      responsable_technique: "Chief Data Officer"
+      sponsor_direction: "DG + Directeur Risques"
+      comite_ethique: "Validé le 2026-01-10"
+      comite_risques: "Suivi mensuel"
+      date_deploiement: "2025-11-01"
+      statut: "Actif"
+      prochaine_revue: "2026-05-20"
+    
+    risques_synthese:
+      risque_principal: "Discrimination algorithmique"
+      niveau_risque: "Élevé"
+      mesure_cle: "Fairness testing mensuel + comité arbitrage"
+      incidents_signales: 1
+      dernier_incident: "2026-01-15 - Biais détecté sur population jeune, corrigé"
+    
+    declencheurs_reevaluation:
+      - "Détection biais significatif"
+      - "Plainte client avec médiation"
+      - "Contrôle régulateur"
+      - "Changement modèle majeur"
+      - "Évolution législation"
+    
+    tags: ["finance", "credit", "high-risk", "proprietaire", "renforce", "annex-iii", "rgpd", "fria"]
+
+# =============================================================================
+# ARCHIVES (usages désactivés ou remplacés)
+# =============================================================================
+
+sia_archives:
+  - sia_id: "SIA-COM-000"
+    nom_usage: "Ancien chatbot support"
+    date_desactivation: "2026-01-15"
+    motif: "Remplacé par SIA-COM-001"
+    conservation_donnees: "Archivage 3 ans conformément RGPD"
+
+# =============================================================================
+# STATISTIQUES ET MÉTRIQUES
+# =============================================================================
+
+statistiques:
+  repartition_par_niveau:
+    light: 12
+    standard: 5
+    renforce: 2
+  
+  repartition_par_statut:
+    actif: 18
+    en_deploiement: 1
+    archive: 1
+  
+  repartition_par_domaine:
+    rh: 3
+    finance: 2
+    support: 8
+    marketing: 4
+    juridique: 2
+  
+  incidents_12_mois: 1
+  revues_effectuees_trimestre: 5
+
+# =============================================================================
+# NOTES ET ÉVOLUTIONS
+# =============================================================================
+
+changelog:
+  - date: "2026-03-06"
+    version: "1.0"
+    auteur: "Direction Conformité"
+    modification: "Création registre initial"
+  
+  - date: "2026-03-06"
+    version: "1.0"
+    auteur: "Marie Dupont"
+    modification: "Ajout SIA-COM-001"
+```
+
+---
+
+## 📊 Structure du Registre
+
+```
+registre-sia.yaml
+│
+├── metadata                    # Infos gestion registre
+├── sia_entries[]              # Liste usages actifs
+│   ├── sia_id                 # Identifiant unique
+│   ├── identification         # Nom, description, équipe
+│   ├── technique              # Modèle, provider, version
+│   ├── usage                  # Automatisation, impact, données
+│   ├── qualification          # Niveau EBIOS, template, référence
+│   ├── ai_act                 # Conformité AI Act
+│   ├── rgpd                   # Conformité RGPD
+│   ├── gouvernance            # Responsables, statut, revues
+│   ├── risques_synthese       # Risque principal, mesures
+│   ├── declencheurs_reevaluation
+│   └── tags[]                 # Mots-clés
+├── sia_archives[]             # Usages désactivés
+├── statistiques               # KPIs et métriques
+└── changelog                  # Historique modifications
+```
+
+---
+
+## 🔄 Intégration avec la Qualification
+
+### Workflow Complet
+
+```mermaid
+flowchart LR
+    A[🆕 Nouvel usage] --> B[📋 Usage-Qualifier
+                                   5 min]
+    B --> C[🎯 Niveau identifié
+             🟢🟡🔴]
+    C --> D[📝 Template
+             rempli]
+    D --> E[📁 Registre
+             sia_entries]
+    E --> F[🔄 Revue
+             trimestrielle]
+    
+    style B fill:#fff9c4,stroke:#f57f17
+    style E fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+```
+
+### Commandes Git Utiles
+
+```bash
+# Créer une branche pour mise à jour registre
+git checkout -b update-registre-SIA-XXX
+
+# Modifier registre-sia.yaml
+# ... modifications ...
+
+# Commit avec trace
+git commit -m "registre: Add SIA-XXX - [nom usage] - [niveau]"
+
+# Push et merge request
+git push origin update-registre-SIA-XXX
+```
+
+---
+
+## 📈 Exemples de Requêtes (YAML)
+
+### Lister tous les usages 🔴 Renforcé
+
+```bash
+yq '.sia_entries[] | select(.qualification.niveau_ebios == "🔴 Renforcé") | .sia_id' registre-sia.yaml
+```
+
+### Compter incidents par domaine
+
+```bash
+yq '.sia_entries | group_by(.usage.domaine_metier) | map({domaine: .[0].usage.domaine_metier, incidents: map(.risques_synthese.incidents_signales) | add})' registre-sia.yaml
+```
+
+### Extraire usages RGPD concernés
+
+```bash
+yq '.sia_entries[] | select(.rgpd.concerne == true) | [.sia_id, .identification.nom_usage, .rgpd.aipd_reference]' registre-sia.yaml
+```
+
+---
+
+## 🗂️ Emplacement dans le Corpus
+
+```
+corpus-ebios-rm/
+├── 00-METHODOLOGIE/
+│   ├── 00.2-usage-first-qualifier.md
+│   ├── 00.2-usage-first-qualifier-V2.md
+│   └── ...
+│
+├── 99-REGISTRE/                    ← NOUVEAU
+│   ├── registre-sia.yaml           ← Template + données
+│   ├── README.md                   # Guide d'utilisation
+│   └── scripts/
+│       ├── validate-yaml.py        # Validation schéma
+│       ├── export-csv.py           # Export pour Excel
+│       └── dashboard-metrics.py    # Génération stats
+│
+└── 20-OUTILS/
+    └── templates/
+        ├── fiche-light.md
+        ├── fiche-workflow.md
+        └── dossier-decisionnel.md
+```
+
+---
+
+## ✅ Checklist Maintenance Registre
+
+| Fréquence | Action | Responsable |
+|:----------|:-------|:------------|
+| **Continue** | Ajout nouvel usage qualifié | Équipe métier |
+| **Trimestrielle** | Revue entrées actives | AI Officer |
+| **Annuelle** | Archivage usages obsolètes | Conformité |
+| **Sur incident** | Mise à jour statut + mesures | RSSI |
+
+---
+
+## 7. RÉVISION
+
+| Version | Date | Auteur | Modifications |
+|:--------|:-----|:-------|:--------------|
+| 1.0 | 06/03/2026 | Direction Conformité | Création template registre |
+
+---
+
+**Document approuvé par :**
+- [ ] AI Officer
+- [ ] RSSI
+- [ ] DPO
+
+**Date d'approbation :** _______________
+
+---
+
+*Template Registre SIA — Version 1.0 ISO-Grade*  
+*Réf. REGISTRE-SIA-TEMPLATE*
