@@ -179,13 +179,13 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    C1[Classification interne<br/>"Limited risk" erronée]
-    --> D1[Déploiement sans<br/>conformité haut risque]
-    --> A1[Audit autorité<br/>2026-2027]
-    --> N1[Non-conformité<br/>Art. 8-15 détectée]
-    --> S1[Sanction AI Act<br/>35M€ ou 7% CA]
-    --> I1[Interdiction service<br/>en UE temporaire]
-    --> F1[Faillite<br/>Impossible à lever]
+    C1["Classification interne<br/>"Limited risk" erronée"]
+    --> D1["Déploiement sans<br/>conformité haut risque"]
+    --> A1["Audit autorité<br/>2026-2027"]
+    --> N1["Non-conformité<br/>Art. 8-15 détectée"]
+    --> S1["Sanction AI Act<br/>35M€ ou 7% CA"]
+    --> I1["Interdiction service<br/>en UE temporaire"]
+    --> F1["Faillite<br/>Impossible à lever"]
     
     style C1 fill:#e3f2fd,stroke:#1565c0
     style D1 fill:#fff3e0,stroke:#ef6c00
