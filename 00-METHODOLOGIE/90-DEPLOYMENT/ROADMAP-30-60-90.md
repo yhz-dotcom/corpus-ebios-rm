@@ -124,54 +124,120 @@
 | 30 min | Propositions d'amélioration des templates |
 | 30 min | Priorisation des ajustements pour Phase 2 |
 
-#### Questions Clés
+#### Questions Clés (REX)
 
-- La grille USAGE-QUALIFIER est-elle claire ? (temps réel, résultat)
-- Les templates sont-ils adaptés à notre contexte ?
-- Quels sont les blocages récurrents ?
-- Quelle communication pour généraliser ?
+- La grille de qualification était-elle claire et rapide ?
+- Les templates étaient-ils adaptés au temps disponible ?
+- Quelles sections ont été difficiles à remplir ? Pourquoi ?
+- Qu'est-ce qui a manqué pour prendre une décision ?
 
----
+#### Ajustements Typiques
 
-## 🗓 PHASE 2 : Jours 31-60 — Industrialisation
+| Problème | Solution |
+|:---------|:---------|
+| Templates trop lourds | Simplifier encore certaines sections 🟡/🔴 |
+| Manque de contexte | Ajouter des exemples concrets dans les références |
+| Frontières floues | Préciser les critères de basculement entre niveaux |
+| Facilitation difficile | Créer un 'cheat sheet' facilitateur pour les ateliers |
 
-> 🎯 **Objectif** : Passer à l'échelle sur un domaine métier complet, former des référents locaux, automatiser les exports.
+#### Livrable Fin Phase 1
 
-### Semaines 5-6 : Formation des Référents
-
-#### Programme de Formation (1/2 journée)
-
-| Module | Durée | Contenu |
-|:-------|:------|:--------|
-| Contexte réglementaire | 30 min | AI Act, RGPD, responsabilités |
-| Méthode Usage-First | 45 min | Grille, niveaux, proportionnalité |
-| Atelier pratique | 60 min | Qualification d'un usage réel |
-| Outils | 45 min | Registre, templates, exports |
-
-#### Cible : 5-10 référents métier
-
-- 1 par équipe/direction
-- Profil : à l'aise avec l'outil informatique, compréhension métier
-- Rôle : qualifier les usages de leur périmètre, remonter les cas limites
+- [ ] **Rapport de pilote** (2 pages max) : résultats, apprentissages, recommandations
+- [ ] **Corpus v1.1** avec templates ajustés
+- [ ] **Feuille de route validée** pour la Phase 2
 
 ---
 
-### Semaines 7-8 : Qualification à l'Échelle
+## 🗓 PHASE 2 : Jours 31-60 — Scale & Formalisation
 
-#### Objectif : 15-20 usages qualifiés
+> 🎯 **Objectif** : Étendre à 15-20 usages, formaliser les processus de gouvernance, intégrer les articulations réglementaires.
 
-| Activité | Fréquence | Qui |
-|:---------|:----------|:----|
-| Sessions de qualification | 2x/semaine | Référents + support conformité |
-| Revue des cas limites | Hebdo | Équipe pilote |
-| Mise à jour registre | Continue | Référents |
-| Support technique | Quotidien | Équipe pilote (1h/jour) |
+### Semaines 5-6 : Extension Contrôlée
 
-#### Automatisation
+#### Stratégie d'Extension
 
-- [ ] Script d'export CSV opérationnel
-- [ ] Dashboard simple (Google Sheets ou interne)
-- [ ] Alertes revues à venir (≤ 30 jours)
+| Approche | Description |
+|:---------|:------------|
+| **Par domaine métier** | Pas par volume |
+| **Exemple** | Si le pilote RH a fonctionné → étendre à Marketing, puis Support |
+
+#### Pour chaque nouveau domaine
+
+1. **Identifier un "champion métier"** qui porte la démarche localement
+2. **Former le champion** à la qualification (1h) + animation atelier (2h)
+3. **Lui fournir** les templates + exemples du domaine pilote
+4. **Prévoir un point de support** avec l'équipe centrale (30 min / usage)
+
+#### Cible Phase 2
+
+- **15-20 usages qualifiés** au total
+- **Au moins 2 domaines métier** couverts
+- **100% des usages 🔴** (haut risque) identifiés et analysés
+- **Registre SIA** utilisé comme source de vérité par les champions
+
+---
+
+### Semaine 7 : Articulations Réglementaires
+
+#### Intégrations à Formaliser
+
+**RGPD / AIPD**
+- Créer un mapping champ par champ : EBIOS-RM IA ↔️ AIPD
+- Dans les templates 🟡/🔴 : champ obligatoire `aipd_reference`
+- Former les DPO / référents RGPD à la lecture du registre
+
+**AI Act**
+- Enrichir `AI-ACT-ANNEX-III-MAPPING.md` avec des exemples métier
+- Ajouter une checklist "Deployer Art. 26" dans le template 🟡
+- Documenter la procédure de basculement Deployer → Provider
+
+**ISO 42001**
+- Mapper les sections EBIOS-RM IA vers les clauses ISO 42001
+- Utiliser le registre SIA comme entrée du clause 8.2 (modifications)
+- Préparer un argumentaire pour l'audit de certification
+
+#### Livrable
+
+- **Guide d'articulation réglementaire** (3 pages) : "Un seul effort, plusieurs conformités"
+- **Templates mis à jour** avec champs conformité obligatoires
+- **Session de formation croisée** : équipe IA + DPO + Conformité
+
+---
+
+### Semaine 8 : Gouvernance & Cadence de Revue
+
+#### Mettre en Place la Boucle PDCA
+
+**Revue Trimestrielle du Registre**
+
+| Élément | Description |
+|:--------|:------------|
+| **Responsable** | Équipe centrale EBIOS-RM IA |
+| **Ordre du jour type** | Lister entrées avec prochaine_revue < aujourd'hui |
+| | Valider les mises à jour proposées par les champions |
+| | Archiver les usages obsolètes ou remplacés |
+| | Exporter un rapport direction (format audit) |
+
+**Indicateurs de Suivi**
+
+| KPI | Description |
+|:----|:------------|
+| Taux de qualification | usages qualifiés / usages identifiés |
+| Délai moyen de qualification | de l'identification à l'analyse |
+| Taux de conformité | fiches avec toutes les validations requises |
+| Incidents IA détectés | via le monitoring défini |
+
+**Communication**
+
+- **Newsletter interne trimestrielle** : "Point sur les usages IA"
+- **Page Confluence / Wiki** : "Comment qualifier mon usage IA ?"
+- **Session Q&R mensuelle ouverte** (30 min, sans préparation)
+
+#### Livrable
+
+- **Charte de gouvernance EBIOS-RM IA** (2 pages) : rôles, cadences, escalade
+- **Tableau de bord minimal** (tableur ou dashboard simple)
+- **Calendrier partagé** des revues et formations
 
 ---
 
@@ -188,55 +254,153 @@
 
 ---
 
-## 🗓 PHASE 3 : Jours 61-90 — Optimisation & Gouvernance
+## 🗓 PHASE 3 : Jours 61-90 — Institutionnalisation & Automatisation
 
-> 🎯 **Objectif** : Intégrer dans la gouvernance, optimiser les processus, préparer la pérennisation.
+> 🎯 **Objectif** : Ancrer la démarche dans les processus métier, automatiser les tâches répétitives, préparer l'audit.
 
-### Semaines 9-10 : Intégration Gouvernance
+### Semaines 9-10 : Intégration aux Processus Métier
 
-#### Points à Formaliser
+#### Ancrage Opérationnel
 
-| Élément | Description |
-|:--------|:------------|
-| **Comité IA** | Réunion trimestrielle : revue registre, cas limites, évolutions |
-| **Processus de qualification** | Workflow validé : qui qualifie, qui valide, délais |
-| **Critères d'escalade** | Quand passer de 🟡 à 🔴 ? Quand impliquer le Comité ? |
-| **Communication interne** | Newsletter, FAQ, supports de formation |
+**Dans le Cycle de Vie Projet**
+- Ajouter une étape "Qualification usage IA" dans le gate de démarrage
+- Rendre obligatoire la référence au registre SIA pour tout déploiement IA
+- Intégrer la fiche EBIOS-RM IA aux livrables de recette / MEP
 
-#### Documentation
+**Dans la Gestion des Risques Entreprise**
+- Mapper les risques IA prioritaires vers le registre des risques corporate
+- Prévoir un point "Risques IA" dans les comités risques trimestriels
+- Former les risk managers à la lecture des fiches 🔴
 
-- [ ] Procédure qualité "Qualification des usages IA"
-- [ ] Guide référent (20 pages max)
-- [ ] FAQ usagers (10 questions)
-- [ ] Présentation direction (10 slides)
+**Dans la Formation et Onboarding**
+- Créer un module e-learning "Qualification usage IA" (15 min)
+- Ajouter un chapitre "IA responsable" dans l'onboarding nouveaux arrivants
+- Prévoir un atelier "Cas pratiques" pour les nouveaux champions
 
----
+#### Livrable
 
-### Semaines 11-12 : Optimisation & Pérennisation
-
-#### Améliorations Processus
-
-| Amélioration | Description |
-|:-------------|:------------|
-| **Templates v2.0** | Intégration des retours des 90 jours |
-| **Registre avancé** | V2 avec vues filtrées, exports automatisés |
-| **Intégration CI/CD** | Qualification automatique des nouveaux déploiements IA |
-| **KPIs temps réel** | Dashboard avec alertes |
-
-#### Revue à 90 Jours
-
-**Participants** : Sponsor, équipe pilote, référents, direction  
-**Ordre du jour** :
-1. Bilan quantitatif (usages, temps, satisfaction)
-2. Retour d'expérience qualitatif
-3. Identification des usages à requalifier
-4. Planification Phase 4 (90-180 jours)
+- **Procédures mises à jour** : Gestion de projet, Gestion des risques, Formation
+- **Module e-learning** "Qualification usage IA" (script + quiz)
+- **Kit d'onboarding** : "Mon premier usage IA en 3 étapes"
 
 ---
 
-## 📊 Tableau de Bord de Suivi
+### Semaine 11 : Automatisation & Outillage
 
-### Vue d'Ensemble
+#### Automatisations Prioritaires
+
+**Validation Registre**
+- Script Python pour vérifier la complétude des entrées (champs obligatoires)
+- Alerte automatique 30 jours avant prochaine_revue (email / Slack)
+- Export automatique mensuel vers CSV pour reporting direction
+
+**Liaison Fiches ↔️ Registre**
+- Script qui vérifie que fiche_reference pointe vers un fichier existant
+- Génération automatique d'un sommaire lié depuis le registre
+
+**Monitoring Simple**
+- Dashboard basique : nombre d'usages par niveau, par domaine, par statut
+- Alerte si un usage 🔴 n'a pas de mesures de monitoring documentées
+
+#### Outillage Recommandé
+
+| Niveau | Outils |
+|:-------|:-------|
+| **Minimal** | Git + Python + tableur (déjà suffisant pour démarrer) |
+| **Intermédiaire** | Wiki (Confluence/BookStack) + notifications Slack |
+| **Avancé** | Intégration GRC (ServiceNow, OneTrust) via API |
+
+#### Livrable
+
+- **Scripts d'automatisation** dans /scripts/ du corpus
+- **Documentation** "Outillage minimal pour démarrer"
+- **POC d'intégration** avec l'outil GRC / wiki de l'entreprise (si pertinent)
+
+---
+
+### Semaine 12 : Préparation Audit & Capitalisation
+
+#### Préparer l'Audit
+
+**Checklist Audit-Ready**
+
+- [ ] Registre SIA à jour avec toutes les entrées 'Actif' qualifiées
+- [ ] Fiches EBIOS-RM liées, validées, avec historique des versions
+- [ ] Preuves de formation des champions et utilisateurs clés
+- [ ] Procédures de gouvernance documentées et appliquées
+- [ ] Rapports de revue trimestrielle disponibles
+- [ ] Mapping des obligations AI Act / RGPD / ISO 42001 explicité
+
+**Simulation d'Audit**
+- Organiser un "audit blanc" avec un pair externe ou un auditeur interne
+- Tester la traçabilité : retrouver en < 5 min la fiche d'un usage donné
+- Vérifier la cohérence : un usage 🔴 a-t-il bien toutes les mesures requises ?
+
+#### Capitaliser pour la V2
+
+**Retex Global 90 Jours**
+- Qu'est-ce qui a le plus apporté de valeur ?
+- Quels freins organisationnels ont émergé ?
+- Quelles évolutions réglementaires anticiper pour la v2 ?
+
+**Roadmap V2 Esquisse**
+- Étendre à d'autres domaines métier (ex: Production, R&D)
+- Intégrer la gestion des variants techniques (LoRA, RAG) de façon plus fine
+- Préparer l'articulation avec l'AI Liability Directive (en cours)
+- Explorer l'automatisation de la qualification (NLP sur les descriptions d'usage)
+
+#### Livrable Fin Phase 3
+
+- **Dossier "Audit Ready"** : tous les artefacts organisés et référencés
+- **Rapport de capitalisation 90 jours** (5 pages) : succès, apprentissages, v2
+- **Présentation direction** : "EBIOS-RM IA : bilan et perspectives"
+
+---
+
+## 📊 Tableau de Bord de Suivi (Template Minimal)
+
+*À maintenir dans un tableur ou dashboard simple*
+
+```yaml
+# registre-dashboard.yaml (ou .csv)
+metadata:
+  date_extraction: "YYYY-MM-DD"
+  periode_couverte: "T1 2026"
+
+kpi_globaux:
+  total_usages_identifies: 42
+  total_usages_qualifies: 38  # → Taux: 90%
+  
+  repartition_niveaux:
+    light: 18
+    standard: 15
+    renforce: 5
+    non_qualifie: 4
+  
+  repartition_statut:
+    actif: 32
+    en_test: 4
+    en_developpement: 2
+    archive: 4
+
+conformite:
+  usages_annex_iii: 7
+  usages_rgpd_concernes: 21
+  fiches_avec_validation_complete: 35/38  # → Taux: 92%
+
+activite_trimestre:
+  nouvelles_qualifications: 12
+  fiches_mises_a_jour: 8
+  incidents_ia_signales: 2  # → Tous traités via mesures correctives
+  revues_realisees_dans_les_temps: 14/16  # → Taux: 88%
+
+alertes_action:
+  - "4 usages non qualifiés : prioriser la qualification"
+  - "2 revues en retard : relancer les responsables"
+  - "1 usage 🔴 sans mesure de monitoring : compléter la fiche"
+```
+
+### Vue d'Ensemble Visuelle
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -269,6 +433,16 @@
 | Référents actifs | 3 | 5 | 8 | 10 |
 | Temps qualif. 🟡 | 4h | 2h | 1h30 | 1h30 |
 | Satisfaction | - | 7/10 | 8/10 | 8/10 |
+
+---
+
+## 🎯 Critères de Succès par Phase (Go/No-Go)
+
+| Phase | Critère de succès "Go/No-Go" pour passer à la suite |
+|:------|:----------------------------------------------------|
+| **Phase 1 (J30)** | ✅ 3 usages pilotes qualifiés + analysés + validés<br>✅ Retex documenté avec ajustements appliqués<br>✅ Sponsor confirme l'extension |
+| **Phase 2 (J60)** | ✅ 15+ usages qualifiés, dont 100% des 🔴<br>✅ Articulations RGPD/AI Act formalisées<br>✅ Gouvernance trimestrielle opérationnelle |
+| **Phase 3 (J90)** | ✅ Démarche intégrée aux processus projet / risques<br>✅ Automations minimales en place<br>✅ Organisation "audit-ready" sur les usages IA |
 
 ---
 
@@ -324,6 +498,87 @@
 
 ---
 
+## 💡 Conseils pour l'Animation du Changement
+
+### Communication
+
+| Élément | Recommandation |
+|:--------|:---------------|
+| **Message clé** | "Qualifier l'usage, pas juger la technologie" |
+| **Ton** | Pragmatique, proportionné, orienté solution |
+| **Canal** | Court + visuel : checklist A4, vidéo 2 min, exemple concret |
+
+### Implication
+
+- **Champions métier** : Leur donner de la visibilité — "Expert qualification IA"
+- **Retours utilisateurs** : Créer un canal simple de feedback (Slack, formulaire)
+- **Reconnaissance** : Célébrer les premières fiches validées, les bonnes pratiques
+
+### Gestion des Résistances
+
+| Obstacle | Réponse |
+|:---------|:--------|
+| "C'est trop lourd" | Montrer le template 🟢 : 15 min, 1 page |
+| "On n'est pas concernés" | Qualifier 1 usage de l'équipe en live → déclic |
+| "Ça va changer tout le temps" | Expliquer la révision planifiée, pas l'urgence permanente |
+| "C'est le job de la conformité" | Rappeler : la qualification métier est indispensable |
+
+---
+
+## 🔄 Boucle d'Amélioration Continue (Post-90 jours)
+
+```mermaid
+graph LR
+    A[Qualification continue<br/>des nouveaux usages] --> B[Revue trimestrielle<br/>du registre]
+    B --> C[Capitalisation des retours<br/>et incidents]
+    C --> D[Ajustement des templates<br/>et processus]
+    D --> E[Communication / Formation<br/>des nouvelles pratiques]
+    E --> A
+    
+    F[Veille réglementaire<br/>AI Act, ENISA, ANSSI] --> D
+    G[Évolution technologique<br/>nouveaux modèles, outils] --> D
+```
+
+> 📌 **Principe** : La méthodologie elle-même est soumise au PDCA.  
+> Ce que vous apprenez en l'appliquant doit nourrir son amélioration.
+
+---
+
+## 📦 Livrables Totaux de la Roadmap
+
+```
+corpus-ebios-rm/
+├── 11-SIA/
+│   ├── 00-METHODOLOGIE/
+│   │   ├── 10-PROCESSUS/
+│   │   │   ├── 00-USAGE-QUALIFIER.md
+│   │   │   ├── 01-EBIOS-LIGHT.md
+│   │   │   ├── 02-EBIOS-STANDARD.md
+│   │   │   └── 03-EBIOS-RENFORCE.md
+│   │   ├── 20-OUTILS/
+│   │   │   ├── templates/
+│   │   │   │   ├── fiche-light.md
+│   │   │   │   ├── fiche-workflow.md
+│   │   │   │   ├── dossier-decisionnel.md
+│   │   │   │   └── README-templates.md
+│   │   │   └── decision-tree-usage.png
+│   │   ├── 30-REFERENCES/
+│   │   │   └── AI-ACT-ANNEX-III-MAPPING.md
+│   │   └── 90-DEPLOYMENT/              ⭐
+│   │       ├── ROADMAP-30-60-90.md     ← Ce document
+│   │       ├── CHARTER-GOUVERNANCE.md  ← Rôles, cadences, escalade
+│   │       └── CHANGE-MANAGEMENT-TIPS.md ← Animation, communication
+│   └── 99-REGISTRE/
+│       ├── registre-sia.yaml
+│       ├── dashboard-template.csv
+│       └── archives/
+└── scripts/
+    ├── export-registre.py
+    └── validate-registre.py
+```
+
+---
+
 ## 💡 Conseils de Facilitation
 
 ### Pour Animer les Ateliers
@@ -368,4 +623,9 @@
 
 ---
 
-> 📌 **Conclusion** : Ce guide transforme la méthodologie EBIOS-RM IA "Usage-First" en un **plan d'action concret et réalisable** en 90 jours. L'approche itérative permet de démontrer rapidement la valeur tout en construisant une gouvernance durable.
+> 📌 **Conclusion** : Cette roadmap 30-60-90 transforme la méthodologie "Usage-First" en un **changement organisationnel concret et mesurable**.
+>
+> En 3 mois, on passe de :
+> *"On a une idée méthodologique"* → *"On a un système de gouvernance IA opérationnel, audit-ready et améliorable"*.
+>
+> L'approche progressive, l'ancrage métier et la boucle PDCA garantissent que la démarche crée de la valeur dès le premier mois, tout en construisant une base solide pour la maturité à long terme.
