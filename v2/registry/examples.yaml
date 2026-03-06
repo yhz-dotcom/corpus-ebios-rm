@@ -1,0 +1,347 @@
+# Registre SIA V2.0 — Exemples de Référence
+
+**Version** : 2.0.0 | **Schéma** : `../schema.json`
+
+---
+
+metadata:
+  version: "2.0.0"
+  schema_version: "2.0.0"
+  last_update: "2026-03-06"
+  owner: "Consultant EBIOS-RM IA"
+  review_frequency: "Quarterly"
+  active_entries: 4
+
+sia_entries:
+
+  # ============================================================================
+  # EXEMPLE 1 : Level 1 — Assistant rédaction (Conversationnel)
+  # ============================================================================
+  - sia_id: "SIA-COM-001"
+    
+    identification:
+      name: "Assistant rédaction emails internes"
+      description: "Génération de brouillons d'emails pour communication interne"
+      team: "Communication"
+      qualification_date: "2026-03-06"
+      qualified_by: ["Marie Dupont"]
+      version: "1.0"
+    
+    technical:
+      base_model: "GPT-4"
+      provider: "OpenAI"
+      interface: "ChatGPT Enterprise"
+      modified: false
+      model_version: "gpt-4-0125-preview"
+    
+    usage:
+      automation_level: "Conversational only"
+      impact: "None"
+      data_types: ["Internal non-sensitive"]
+      human_oversight: "Systematic review before send"
+      business_domain: "Communication"
+    
+    assessment:
+      ebios_level: "🟢 Level 1"
+      template_used: "template-level-1"
+      reference_file: "cases/case-1-conversational.md"
+      next_assessment: "2027-03-06"
+    
+    ai_act:
+      annex_iii: false
+      role: null
+    
+    gdpr:
+      applies: false
+    
+    governance:
+      business_owner: "Marie Dupont"
+      technical_owner: "IT Support"
+      status: "Active"
+      next_review: "2027-03-06"
+    
+    risk_summary:
+      primary_risk: "Data leakage through prompts"
+      key_measure: "Clear guidelines, DLP enabled"
+      incidents_reported: 0
+    
+    tags: ["communication", "writing-assistant", "internal", "level-1"]
+
+  # ============================================================================
+  # EXEMPLE 2 : Level 2 — Pré-sélection CV (Workflow avec exception Art. 6(3))
+  # ============================================================================
+  - sia_id: "SIA-RH-002"
+    
+    identification:
+      name: "Pré-sélection assistée de CV"
+      description: "Analyse CV et proposition liste courte avec justifications"
+      team: "Recrutement Tech"
+      qualification_date: "2026-03-06"
+      qualified_by: ["Sophie Laurent", "Alex Chen"]
+      version: "1.0"
+    
+    technical:
+      base_model: "Qwen3.5"
+      provider: "Alibaba Cloud"
+      interface: "API interne + interface web RH"
+      modified: false
+      model_version: "2025-12-01"
+    
+    usage:
+      automation_level: "Semi-automated"
+      impact: "High"
+      data_types: ["Personal data (GDPR)", "Professional data"]
+      human_oversight: "Systematic validation by recruiter"
+      business_domain: "Human Resources"
+    
+    assessment:
+      ebios_level: "🟡 Level 2"
+      template_used: "template-level-2"
+      reference_file: "cases/case-1-rh.md"
+      next_assessment: "2026-09-06"
+    
+    ai_act:
+      annex_iii: true
+      annex_iii_point: "4(a) - Recruitment"
+      role: "Deployer"
+      specific_obligations:
+        - "Human oversight systematic and documented"
+        - "No definitive automated elimination decision"
+    
+    gdpr:
+      applies: true
+      dpia_reference: "DPIA-HR-2024-003"
+      dpo_validated: true
+    
+    governance:
+      business_owner: "Sophie Laurent"
+      technical_owner: "Alex Chen"
+      oversight_committee: "Comité IA Mensuel"
+      status: "Active"
+      next_review: "2026-09-06"
+      reevaluation_triggers:
+        - "Model version change"
+        - "Fairness metrics alert"
+    
+    risk_summary:
+      priority_risks:
+        - id: "RISK-001"
+          name: "Gender/age bias in scoring"
+          mitigation: "Quarterly fairness audit"
+        - id: "RISK-002"
+          name: "Skill hallucination"
+          mitigation: "Cross-check by recruiter"
+      key_measures:
+        - "Fairness metrics: selection rate parity"
+        - "Alert if gender gap > 10%"
+      incidents_reported: 0
+      tracking_indicators:
+        - name: "Female selection rate"
+          target: "Within 5% of application rate"
+          measurement_method: "Monthly dashboard"
+    
+    tags: ["hr", "recruitment", "annex-iii", "art6-3-exception", "level-2"]
+
+  # ============================================================================
+  # EXEMPLE 3 : Level 3 — Scoring crédit (Décisionnel)
+  # ============================================================================
+  - sia_id: "SIA-FIN-003"
+    
+    identification:
+      name: "Scoring interne demandes crédit"
+      description: "Évaluation automatique des demandes de crédit avec variante LoRA"
+      team: "Risque Crédit"
+      qualification_date: "2026-03-06"
+      qualified_by: ["Comité IA", "Conformité"]
+      version: "1.0"
+    
+    technical:
+      base_model: "Qwen3.5"
+      provider: "Alibaba Cloud"
+      interface: "API interne scoring"
+      modified: true
+      technical_variant:
+        name: "qwen3.5-lora-credit-interne-v1"
+        method: "LoRA"
+        parameters:
+          rank: 16
+          alpha: 32
+        trained_percentage: "0.8%"
+        training_data:
+          source: "Historique interne anonymisé"
+          volume: 20000
+        tests:
+          - type: "Performance"
+            result: "+15% vs base"
+            status: "✅ OK"
+          - type: "Bias"
+            result: "Monitoring active"
+            status: "⚠️ Warning"
+        reversibility:
+          possible: true
+          rollback_time: "< 1 hour"
+      model_version: "qwen3.5-lora-credit-interne-v1.0"
+    
+    usage:
+      automation_level: "Automated with supervision"
+      impact: "Regulatory"
+      data_types: ["Personal data (GDPR)", "Financial data", "Critical business data"]
+      human_oversight: "Alert-based review (confidence < 80%)"
+      business_domain: "Financial Services"
+    
+    assessment:
+      ebios_level: "🔴 Level 3"
+      template_used: "template-level-3"
+      reference_file: "cases/case-2-finance.md"
+      next_assessment: "2026-06-06"
+    
+    ai_act:
+      annex_iii: true
+      annex_iii_point: "5 - Access to essential financial services"
+      role: "Provider (for own use)"
+      role_justification: |
+        Substantial fine-tuning on high-risk use case,
+        strictly internal use, not placed on market.
+        Company becomes Provider for own use.
+      ce_marking_required: false
+      ce_marking_justification: |
+        Strictly internal use, not placed on market.
+        System not provided to third parties.
+      specific_obligations:
+        - "Technical documentation of variant"
+        - "Risk management (full EBIOS-RM)"
+        - "Post-deployment monitoring"
+        - "Article 12 registry (this entry)"
+    
+    gdpr:
+      applies: true
+      dpia_reference: "DPIA-CREDIT-2026-v1.0"
+      dpo_validated: true
+    
+    governance:
+      business_owner: "Directeur Risques"
+      technical_owner: "Lead ML Engineer"
+      oversight_committee: "Comité IA Mensuel"
+      deployment_date: "2026-06-01"
+      status: "In development"
+      next_review: "2026-06-01"
+      reevaluation_triggers:
+        - "Model drift detection"
+        - "Regulatory change"
+        - "Incident reported"
+    
+    risk_summary:
+      priority_risks:
+        - id: "RISK-201"
+          name: "Systemic bias"
+          mitigation: "Pre-deployment testing + continuous monitoring"
+        - id: "RISK-202"
+          name: "Performance drift"
+          mitigation: "Monthly metrics alerts"
+        - id: "RISK-203"
+          name: "Prompt injection"
+          mitigation: "Filtering + sandboxing"
+        - id: "RISK-204"
+          name: "Insufficient explainability"
+          mitigation: "Minimum justifications generated"
+      key_measures:
+        - "Adversarial testing before each deployment"
+        - "Explainability: score justification per decision"
+        - "Strict versioning + output reproducibility"
+        - "Documented customer recourse procedure"
+      incidents_reported: 0
+      tracking_indicators:
+        - name: "Approval rate by segment"
+          target: "Gap < 5% vs human reference"
+          measurement_method: "Compliance dashboard"
+        - name: "Anomaly detection time"
+          target: "< 24h"
+          measurement_method: "Automated monitoring"
+    
+    tags: ["finance", "credit", "annex-iii", "provider", "lora", "level-3"]
+
+  # ============================================================================
+  # EXEMPLE 4 : Non qualifié — Prototype support
+  # ============================================================================
+  - sia_id: "SIA-EXP-004"
+    
+    identification:
+      name: "Prototype: Agent support technique autonome"
+      description: "POC for automatic level-1 ticket resolution"
+      team: "Innovation Lab"
+      qualification_date: "2026-03-06"
+      qualified_by: ["To be determined"]
+      version: "0.1"
+    
+    technical:
+      base_model: "Qwen3.5"
+      provider: "Alibaba Cloud"
+      interface: "Internal prototype"
+      modified: false
+      technical_variant: null
+    
+    usage:
+      automation_level: "Undefined (POC)"
+      impact: "Not evaluated"
+      data_types: ["To be determined"]
+      human_oversight: "To be defined"
+      business_domain: "Technical Support"
+    
+    assessment:
+      ebios_level: "⚪️ Unqualified"
+      template_used: null
+      reference_file: null
+    
+    ai_act:
+      annex_iii: "To be evaluated"
+      role: "To be determined"
+      specific_obligations: []
+    
+    gdpr:
+      applies: "To be evaluated"
+      dpia_reference: null
+    
+    governance:
+      business_owner: "To be appointed"
+      technical_owner: "Innovation Lab"
+      status: "Exploration"
+      next_review: "2026-04-06"
+      reevaluation_triggers:
+        - "End of POC phase"
+        - "Industrialization decision"
+    
+    risk_summary:
+      primary_risk: "Not evaluated - unqualified usage"
+      key_measure: "Do not use in production before qualification"
+      incidents_reported: 0
+    
+    tags: ["poc", "exploration", "unqualified", "support"]
+
+---
+
+# Notes sur les Exemples
+
+## Couverture
+
+| Exemple | Niveau | Cas Spécifique | Objectif Pédagogique |
+|:--------|:-------|:---------------|:---------------------|
+| SIA-COM-001 | 🟢 L1 | Conversationnel simple | Démarrage facile |
+| SIA-RH-002 | 🟡 L2 | Exception Art. 6(3) | Conformité réglementaire |
+| SIA-FIN-003 | 🔴 L3 | Provider + LoRA | Cas complexe |
+| SIA-EXP-004 | ⚪️ | Non qualifié | Gestion POC |
+
+## Utilisation
+
+```bash
+# Valider tous les exemples
+for f in examples/*.yaml; do
+    python ../tools/cli/sia-cli.py validate "$f"
+done
+
+# Exporter en CSV
+python ../tools/cli/sia-cli.py export registry.yaml --format csv
+```
+
+---
+
+*Registre SIA V2.0 — Exemples de Référence*
