@@ -72,38 +72,45 @@ Justification :
 
 ### Architecture Agent
 
-```
-┌─────────────────────────────────────────┐
-│           Interface Client              │
-│      (Chat, Voice, Mobile App)          │
-└─────────────────┬───────────────────────┘
-                  │
-┌─────────────────▼───────────────────────┐
-│         NLU + Intent Classification     │
-│    (Compréhension demande client)       │
-└─────────────────┬───────────────────────┘
-                  │
-        ┌─────────┴─────────┐
-        │                   │
-┌───────▼───────┐   ┌───────▼───────┐
-│  Résolution   │   │   Action      │
-│  Self-service │   │   Compte      │
-│  (KB, FAQ)    │   │   (API CRM)   │
-└───────┬───────┘   └───────┬───────┘
-        │                   │
-        └─────────┬─────────┘
-                  │
-┌─────────────────▼───────────────────────┐
-│    Évaluation Résolution / Escalade     │
-│   (Confiance, satisfaction, complexité) │
-└─────────────────┬───────────────────────┘
-                  │
-        ┌─────────┴─────────┐
-        │                   │
-┌───────▼───────┐   ┌───────▼───────┐
-│   Résolu      │   │   Escalade    │
-│   (Close)     │   │   (Humain)    │
-└───────────────┘   └───────────────┘
+```mermaid
+flowchart TB
+    subgraph Interface["Interface Client"]
+        IC[Chat / Voice / Mobile App]
+    end
+    
+    subgraph NLU["Compréhension"]
+        NL[NLU + Intent Classification]
+    end
+    
+    subgraph Resolution["Résolution"]
+        RS[Self-service<br/>KB, FAQ]
+        AC[Action Compte<br/>API CRM]
+    end
+    
+    subgraph Evaluation["Évaluation"]
+        EV[Évaluation Résolution / Escalade<br/>Confiance, satisfaction, complexité]
+    end
+    
+    subgraph Outcome["Résultat"]
+        RO[Résolu<br/>Close]
+        ES[Escalade<br/>Humain]
+    end
+    
+    IC --> NL
+    NL --> RS
+    NL --> AC
+    RS --> EV
+    AC --> EV
+    EV --> RO
+    EV --> ES
+    
+    style IC fill:#e3f2fd,stroke:#1565c0
+    style NL fill:#fff3e0,stroke:#ef6c00
+    style RS fill:#e8f5e9,stroke:#2e7d32
+    style AC fill:#f3e5f5,stroke:#7b1fa2
+    style EV fill:#fff9c4,stroke:#f57f17
+    style RO fill:#c8e6c9,stroke:#2e7d32
+    style ES fill:#ffcdd2,stroke:#b71c1c
 ```
 
 ### Sources Risque Spécifiques
@@ -119,20 +126,24 @@ Justification :
 
 ### Scénario Critique : Action Non Autorisée
 
-```
-Client demande "changer mon forfait"
-    │
-    ▼
-Agent comprend "augmenter" (intention incorrecte)
-    │
-    ▼
-Passe forfait €20 → €80 sans confirmation explicite
-    │
-    ▼
-Client mécontent, plainte, remboursement €60
-    │
-    ▼
-Médias sociaux + réputation
+```mermaid
+flowchart TB
+    C1[Client demande<br/>"changer mon forfait"]
+    A1[Agent comprend<br/>"augmenter"<br/>Intention incorrecte]
+    P1[Passe forfait<br/>€20 → €80<br/>Sans confirmation]
+    M1[Client mécontent<br/>Plainte<br/>Remboursement €60]
+    R1[Médias sociaux<br/>Réputation]
+    
+    C1 --> A1
+    A1 --> P1
+    P1 --> M1
+    M1 --> R1
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style A1 fill:#fff3e0,stroke:#ef6c00
+    style P1 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c
+    style R1 fill:#b71c1c,stroke:#000,color:#fff
 ```
 
 **Mesures**

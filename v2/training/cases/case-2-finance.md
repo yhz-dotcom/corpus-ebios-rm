@@ -109,20 +109,24 @@ variante_technique:
 
 ### Scénario Critique : Drift Économique
 
-```
-Crise économique inattendue (ex: pandémie)
-    │
-    ▼
-Modèle entraîné sur données "normales" obsolète
-    │
-    ▼
-Taux d'approbation chute de 45% à 12%
-    │
-    ▼
-Clients solvables refusés → Plaintes + Médias
-    │
-    ▼
-Sanction ACPR + Perte réputation
+```mermaid
+flowchart TB
+    C1[Crise économique inattendue<br/>ex: pandémie]
+    M1[Modèle entraîné sur données<br/>'normales' obsolète]
+    T1[Taux approbation chute<br/>45% → 12%]
+    P1[Clients solvables refusés<br/>Plaintes + Médias]
+    S1[Sanction ACPR<br/>Perte réputation]
+    
+    C1 --> M1
+    M1 --> T1
+    T1 --> P1
+    P1 --> S1
+    
+    style C1 fill:#fff3e0,stroke:#ef6c00
+    style M1 fill:#f3e5f5,stroke:#7b1fa2
+    style T1 fill:#ffcdd2,stroke:#b71c1c
+    style P1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style S1 fill:#b71c1c,stroke:#000,color:#fff
 ```
 
 **Mesures**
@@ -145,32 +149,40 @@ Sanction ACPR + Perte réputation
 
 ### Gouvernance Renforcée
 
-```
-                    ┌─────────────┐
-                    │  Direction  │
-                    │  Générale   │
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │  Comité     │
-                    │  Risques    │
-                    │  (Mensuel)  │
-                    └──────┬──────┘
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-   ┌────▼────┐      ┌─────▼─────┐     ┌─────▼─────┐
-   │  AI     │      │   DPO     │     │  RSSI     │
-   │ Officer │      │           │     │           │
-   │(Métier) │      │(RGPD)     │     │(Securité) │
-   └────┬────┘      └─────┬─────┘     └─────┬─────┘
-        │                 │                 │
-        └─────────────────┼─────────────────┘
-                          │
-                   ┌──────▼──────┐
-                   │  Équipe ML  │
-                   │  + Conformité│
-                   └─────────────┘
+```mermaid
+flowchart TB
+    subgraph Executive["Direction"]
+        DG[Direction Générale]
+    end
+    
+    subgraph Strategic["Stratégique"]
+        CR[Comité Risques<br/>Mensuel]
+    end
+    
+    subgraph Operational["Opérationnel"]
+        AI[AI Officer<br/>Métier]
+        DPO[DPO<br/>RGPD]
+        RSSI[RSSI<br/>Sécurité]
+    end
+    
+    subgraph Execution["Exécution"]
+        TEAM[Équipe ML<br/>+ Conformité]
+    end
+    
+    DG --> CR
+    CR --> AI
+    CR --> DPO
+    CR --> RSSI
+    AI --> TEAM
+    DPO --> TEAM
+    RSSI --> TEAM
+    
+    style DG fill:#e3f2fd,stroke:#1565c0
+    style CR fill:#fff3e0,stroke:#ef6c00
+    style AI fill:#e8f5e9,stroke:#2e7d32
+    style DPO fill:#f3e5f5,stroke:#7b1fa2
+    style RSSI fill:#ffcdd2,stroke:#b71c1c
+    style TEAM fill:#cfd8dc,stroke:#455a64
 ```
 
 ---

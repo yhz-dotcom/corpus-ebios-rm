@@ -155,22 +155,38 @@ flowchart TB
 
 #### 3.1 Scénario 1 : [Nom — Impact maximal]
 
-```
-Contexte : [Situation initiale]
-
-Déclencheur : [Événement déclencheur]
-    │
-    ▼
-[Étape 1 : Propagation technique]
-    │
-    ▼
-[Étape 2 : Impact métier]
-    │
-    ▼
-[Étape 3 : Impact réglementaire/réputation]
-    │
-    ▼
-[Impact final : Dommage maximal]
+```mermaid
+flowchart TB
+    subgraph Context["Contexte"]
+        C1[Situation initiale]
+    end
+    
+    subgraph Trigger["Déclencheur"]
+        T1[Événement déclencheur]
+    end
+    
+    subgraph Propagation["Propagation"]
+        P1[Étape 1 : Propagation technique]
+        P2[Étape 2 : Impact métier]
+        P3[Étape 3 : Impact réglementaire/réputation]
+    end
+    
+    subgraph Final["Impact Final"]
+        F1[Dommage maximal]
+    end
+    
+    C1 --> T1
+    T1 --> P1
+    P1 --> P2
+    P2 --> P3
+    P3 --> F1
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style T1 fill:#fff3e0,stroke:#ef6c00
+    style P1 fill:#f3e5f5,stroke:#7b1fa2
+    style P2 fill:#ffcdd2,stroke:#b71c1c
+    style P3 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
 ```
 
 | Évaluation | Valeur |
@@ -183,11 +199,73 @@ Déclencheur : [Événement déclencheur]
 
 #### 3.2 Scénario 2 : [Nom — Probabilité élevée]
 
-[Structure identique]
+```mermaid
+flowchart TB
+    subgraph Context["Contexte"]
+        C1[Situation initiale]
+    end
+    
+    subgraph Trigger["Déclencheur"]
+        T1[Événement déclencheur]
+    end
+    
+    subgraph Propagation["Propagation"]
+        P1[Étape 1 : Propagation]
+        P2[Étape 2 : Impact]
+    end
+    
+    subgraph Final["Impact Final"]
+        F1[Dommage significatif]
+    end
+    
+    C1 --> T1
+    T1 --> P1
+    P1 --> P2
+    P2 --> F1
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style T1 fill:#fff3e0,stroke:#ef6c00
+    style P1 fill:#f3e5f5,stroke:#7b1fa2
+    style P2 fill:#ffcdd2,stroke:#b71c1c
+    style F1 fill:#ef5350,stroke:#000,color:#fff
+```
+
+[Structure identique — adapter selon contexte]
 
 #### 3.3 Scénario 3 : [Nom — Cas limite]
 
-[Structure identique]
+```mermaid
+flowchart TB
+    subgraph Context["Contexte"]
+        C1[Situation initiale]
+    end
+    
+    subgraph Trigger["Déclencheur"]
+        T1[Événement déclencheur]
+    end
+    
+    subgraph Propagation["Propagation"]
+        P1[Étape 1 : Propagation]
+        P2[Étape 2 : Impact]
+    end
+    
+    subgraph Final["Impact Final"]
+        F1[Dommage modéré mais révélateur]
+    end
+    
+    C1 --> T1
+    T1 --> P1
+    P1 --> P2
+    P2 --> F1
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style T1 fill:#fff3e0,stroke:#ef6c00
+    style P1 fill:#f3e5f5,stroke:#7b1fa2
+    style P2 fill:#ffcc80,stroke:#ef6c00
+    style F1 fill:#ffa726,stroke:#000,color:#fff
+```
+
+[Structure identique — adapter selon contexte]
 
 ---
 
@@ -229,31 +307,39 @@ Déclencheur : [Événement déclencheur]
 
 #### 5.1 Gouvernance Renforcée
 
-```
-                    ┌─────────────┐
-                    │  Board /    │
-                    │  Direction  │
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │  Comité IA  │ ← Revue trimestrielle
-                    │  (Stratège) │
-                    └──────┬──────┘
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-   ┌────▼────┐      ┌─────▼─────┐     ┌─────▼─────┐
-   │  AI     │      │   DPO     │     │  RSSI     │
-   │ Officer │      │           │     │           │
-   │(Opér.)  │      │(Privacy)  │     │(Security) │
-   └────┬────┘      └─────┬─────┘     └─────┬─────┘
-        │                 │                 │
-        └─────────────────┼─────────────────┘
-                          │
-                   ┌──────▼──────┐
-                   │  Équipe     │
-                   │  Projet     │
-                   └─────────────┘
+```mermaid
+flowchart TB
+    subgraph Executive["Direction"]
+        B[Board / Direction Générale]
+    end
+    
+    subgraph Strategic["Stratégique"]
+        C[Comité IA<br/>Revue trimestrielle]
+    end
+    
+    subgraph Operational["Opérationnel"]
+        A[AI Officer<br/>Opérationnel]
+        D[DPO<br/>Privacy]
+        R[RSSI<br/>Sécurité]
+    end
+    
+    subgraph Execution["Exécution"]
+        T[Équipe Projet]
+    end
+    
+    B --> C
+    C --> A
+    C --> D
+    C --> R
+    A --> T
+    D --> T
+    R --> T
+    
+    style B fill:#e3f2fd,stroke:#1565c0
+    style C fill:#fff3e0,stroke:#ef6c00
+    style A fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#f3e5f5,stroke:#7b1fa2
+    style R fill:#ffcdd2,stroke:#b71c1c
 ```
 
 #### 5.2 Plan d'Action Détaillé
