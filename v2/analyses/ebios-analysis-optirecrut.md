@@ -179,7 +179,7 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    C1["Classification interne<br/>"Limited risk" erronée"]
+    C1["Classification interne<br/>Limited risk erronée"]
     --> D1["Déploiement sans<br/>conformité haut risque"]
     --> A1["Audit autorité<br/>2026-2027"]
     --> N1["Non-conformité<br/>Art. 8-15 détectée"]
