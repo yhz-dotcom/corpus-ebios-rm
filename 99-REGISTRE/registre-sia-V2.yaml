@@ -686,3 +686,110 @@ changelog:
       incidents_signales: 0
     
     tags: ["prototype", "poc", "support", "non-qualifie", "exploration"]
+
+  # ---------------------------------------------------------------------------
+  # Mise à jour SIA-EXP-004 : POC / Expérimentation
+  # ---------------------------------------------------------------------------
+  - sia_id: "SIA-EXP-004-UPDATED"
+    
+    identification:
+      nom_usage: "Prototype : Agent de support technique autonome"
+      description: "POC pour résolution automatique de tickets niveau 1"
+      equipe_responsable: "Innovation Lab"
+      date_qualification: "2026-03-06"
+      qualifié_par: "À nommer"
+    
+    technique:
+      modele_base: "Qwen3.5"
+      provider_modele: "Alibaba Cloud"
+      interface: "Prototype interne"
+      modification_modele: null
+      variante_technique: null
+    
+    usage:
+      niveau_automatisation: "Non défini (POC)"
+      impact_sortie: "Non évalué"
+      donnees_manipulees: ["À qualifier"]
+      supervision_humaine: "À définir"
+      domaine_metier: "Support technique"
+    
+    qualification:
+      niveau_ebios: "⚪️ Non qualifié"
+      template_utilise: null
+      fiche_reference: null
+    
+    ai_act:
+      annex_iii: "À évaluer"
+      role: "À qualifier"
+      obligations_specifiques: []
+    
+    rgpd:
+      concerne: "À évaluer"
+      aipd_reference: null
+    
+    gouvernance:
+      responsable_metier: "À nommer"
+      responsable_technique: "Innovation Lab"
+      date_deploiement: null
+      statut: "POC / Expérimentation"
+      prochaine_revue: "2026-04-06"
+    
+    declencheurs_reevaluation:
+      - "Fin de phase POC"
+      - "Décision de industrialisation"
+    
+    risques_synthese:
+      risque_principal: "Non évalué - usage non qualifié"
+      mesure_cle: "Ne pas utiliser en production avant qualification"
+      incidents_signales: 0
+    
+    tags: ["poc", "expérimentation", "non-qualifié", "support"]
+
+# =============================================================================
+# UTILITAIRES : Vues filtrées (pour requêtes YAML / scripts)
+# =============================================================================
+
+views:
+  par_niveau:
+    light: "${sia_entries[?niveau_ebios == '🟢 Light']}"
+    standard: "${sia_entries[?niveau_ebios == '🟡 Standard']}"
+    renforce: "${sia_entries[?niveau_ebios == '🔴 Renforcé']}"
+    non_qualifie: "${sia_entries[?niveau_ebios == '⚪️ Non qualifié']}"
+  
+  par_conformite:
+    annex_iii: "${sia_entries[?ai_act.annex_iii == true]}"
+    rgpd_concerne: "${sia_entries[?rgpd.concerne == true]}"
+    provider_role: "${sia_entries[?ai_act.role == 'Provider' || ai_act.role == 'Provider (for own use)']}"
+  
+  par_statut:
+    actif: "${sia_entries[?statut == 'Actif']}"
+    en_test: "${sia_entries[?statut == 'En test pilote']}"
+    en_developpement: "${sia_entries[?statut == 'En développement']}"
+    poc: "${sia_entries[?statut == 'POC / Expérimentation']}"
+    archive: "${sia_entries[?statut == 'Archivé']}"
+
+# =============================================================================
+# INSTRUCTIONS D'USAGE
+# =============================================================================
+
+instructions:
+  ajouter: |
+    1. Copier un bloc exemple ci-dessus
+    2. Remplir au minimum : sia_id, identification, qualification.niveau_ebios
+    3. Lier la fiche EBIOS-RM correspondante dans fiche_reference
+  
+  mettre_a_jour: |
+    1. Changer statut / prochaine_revue à chaque revue
+    2. Incrémenter la version des fiches liées si modification
+    3. Archiver les entrées obsolètes (statut: "Archivé")
+  
+  requeter: |
+    # Utiliser yq / jq pour filtrer :
+    yq '.sia_entries[] | select(.ai_act.annex_iii == true)' registre-sia-V2.yaml
+    
+    # Ou avec les vues prédéfinies :
+    yq '.views.par_niveau.renforce' registre-sia-V2.yaml
+  
+  exporter: |
+    # Pour reporting : convertir en CSV/JSON via script Python
+    # Pour audit : générer un PDF avec les entrées "Actif" + liens vers fiches
