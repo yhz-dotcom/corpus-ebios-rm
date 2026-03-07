@@ -1,6 +1,6 @@
 # Corpus EBIOS-RM IA — Récapitulatif Final
 
-**Version** : 53.0 | **Date** : Mars 2026 | **Statut** : Opérationnel
+**Version** : 57.0 | **Date** : Mars 2026 | **Statut** : Opérationnel
 
 ---
 
@@ -8,17 +8,17 @@
 
 | Métrique | Valeur |
 |:---|:---|
-| **Cas d'étude** | **53** |
-| **Executive summaries** | 46 |
-| **Secteurs couverts** | **28+** |
+| **Cas d'étude** | **57** |
+| **Executive summaries** | 50 |
+| **Secteurs couverts** | **31+** |
 | **Types d'acteurs** | Privé, public, militaire, CHU, parquet, médias, énergie, police, agriculture, gaming, éducation |
-| **Types de risque** | **50+** |
-| **Populations vulnérables** | **45+** |
-| **Technologies à risque** | **40+** |
+| **Types de risque** | **60+** |
+| **Populations vulnérables** | **55+** |
+| **Technologies à risque** | **50+** |
 | **Classifications AI Act** | **Toutes** (High-Risk, Prohibited, Excluded, Borderline) |
-| **Régimes réglementaires** | AI Act, RGPD, DSA, NIS2, CER, MDR |
-| **Commits GitHub** | **63+** |
-| **Taille corpus** | ~1,100,000 bytes |
+| **Régimes réglementaires** | AI Act, RGPD, DSA, NIS2, CER, MDR, droit international |
+| **Commits GitHub** | **68+** |
+| **Taille corpus** | ~1,300,000 bytes |
 
 ---
 
@@ -44,8 +44,9 @@
 |:---|:---|
 | Médias/Publicité | 8 |
 | Gaming/Divertissement | 2 |
-| Finance/Assurance | 3 |
+| Finance/Assurance | 6 |
 | LegalTech | 1 |
+| Cybersécurité | 1 |
 
 ### Secteurs Traditionnels
 | Secteur | Cas |
@@ -67,8 +68,8 @@
 
 | Classification | Nombre | Exemples |
 |:---|:---:|:---|
-| 🔴 **HIGH-RISK** | 35+ | GridMind, CareCoord, LearnAdapt, LexiNexus, TriageFlow |
-| 🚫 **PROHIBITED** | 12+ | NarrativeFlow, LifeGuard, PlayBalance, SurveilEye, PsychoLoot |
+| 🔴 **HIGH-RISK** | 40+ | GridMind, CareCoord, LearnAdapt, LexiNexus, TriageFlow, MedRisk |
+| 🚫 **PROHIBITED** | 14+ | NarrativeFlow, LifeGuard, PlayBalance, SurveilEye, PsychoLoot, EcoCredit |
 | ⚪ **EXCLUDED** | 3 | MilSelect, ForceSelect, AegisDrone |
 | ⚠️ **BORDERLINE** | 3 | HybridRecruit, PENSION-DAO, NEURO-BOOST |
 
@@ -167,7 +168,7 @@ corpus-ebios-rm/
 |:---|:---|:---:|:---|
 | v1.0 | Fév 2026 | 40 | Secteurs traditionnels |
 | v2.0 | Mar 2026 | 13 | Infrastructure critique, services publics |
-| **v2.1** | **Mar 2026** | **53** | **Gaming, police prédictive, triage hospitalier** |
+| **v2.1** | **Mar 2026** | **57** | **Insurance, green finance, cyber defense** |
 
 ---
 
