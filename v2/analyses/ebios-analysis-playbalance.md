@@ -47,7 +47,77 @@
 
 ---
 
-## 2. RISQUES CRITIQUES IDENTIFIÉS
+## 2. INCIDENTS CONFIRMÉS
+
+### 2.1 Incident 1 — Exploitation Whales et Loot Boxes (Été 2025)
+
+| Élément | Détail |
+|:---|:---|
+| **Source** | Enquête BVV (autorité consommation allemande) |
+| **Pratique** | **Prix loot boxes dynamiquement augmentés** pour joueurs "whales" |
+| **Mécanisme** | Identification comportement dépense → prix adaptés volonté payer |
+| **Conséquence** | **Maximisation extraction valeur** |
+| **Plainte** | **Collective** : pratique commerciale trompeuse + exploitation vulnérabilités |
+
+#### Analyse — Prédation Commerciale
+
+```
+Exploitation PlayBalance:
+    Profiling comportemental :
+    - Joueur dépense 100€/mois = "dolphin"
+    - Joueur dépense 500€/mois = "whale"
+    ↓
+    Algorithme prix dynamique :
+    - Whale : prix loot box ×1.5 (volonté payer élevée)
+    - Dolphin : prix loot box ×1.2 (volonté payer moyenne)
+    - Gratuit : prix loot box ×1.0 (volonté payer faible)
+    ↓
+    Drop rates ajustés :
+    - Whale : taux drop réduit (forcer plus d'achats)
+    - Plus dépensier = moins chanceux
+    ↓
+    [EXPLOITATION WHALES]
+    ↓
+    [PRATIQUE COMMERCIALE TROMPEUSE]
+```
+
+### 2.2 Incident 2 — Discrimination Modération Linguistique (Janvier 2026)
+
+| Élément | Détail |
+|:---|:---|
+| **Module** | Modération IA comportements toxiques |
+| **Biais** | **Bannissements disproportionnés** variantes linguistiques non-standard |
+| **Populations affectées** | Dialectes régionaux, communications neurodivergentes, argot communautaire |
+| **Cause** | **Entraînement corpus majoritairement "standard"** |
+| **Conséquence** | Polémique discrimination algorithmique, perte diversité communautaire |
+
+#### Analyse — Biais Linguistique dans la Modération
+
+```
+Biais Modération PlayBalance:
+    Corpus entraînement LLM :
+    - 90% langage "standard" (allemand Hochdeutsch)
+    - 10% variantes (dialectes, argot, neurodivergence)
+    ↓
+    Détection toxicité :
+    - "Standard" = correctement évalué
+    - Dialecte bavarois = faux positif (toxique?)
+    - Communication autiste = faux positif (agressif?)
+    - Argot communautaire = faux positif (hostile?)
+    ↓
+    Sanctions automatiques :
+    - Bannissement compte sans appel
+    - Perte investissement joueur
+    - Exclusion communauté
+    ↓
+    [DISCRIMINATION LINGUISTIQUE]
+    ↓
+    [PERTE DIVERSITÉ]
+```
+
+---
+
+## 3. RISQUES CRITIQUES IDENTIFIÉS
 
 ### 2.1 Risque Addiction — Exploitation Vulnérabilités
 
@@ -68,7 +138,7 @@
 
 ---
 
-## 3. ÉVÉNEMENTS REDOUTÉS
+## 4. ÉVÉNEMENTS REDOUTÉS
 
 ### 3.1 Sanitaires
 
@@ -88,7 +158,7 @@
 
 ---
 
-## 4. SCÉNARIO CATASTROPHIQUE : Exploitation de Masse
+## 5. SCÉNARIO CATASTROPHIQUE : Exploitation de Masse
 
 ```mermaid
 flowchart TB
@@ -114,7 +184,7 @@ flowchart TB
 
 ---
 
-## 5. PLAN DE TRAITEMENT — ARRÊT EXPLOITATION VULNÉRABILITÉS
+## 6. PLAN DE TRAITEMENT — ARRÊT EXPLOITATION VULNÉRABILITÉS
 
 ### 5.1 Objectifs
 
@@ -151,7 +221,7 @@ flowchart TB
 
 ---
 
-## 6. ARBITRAGE FIX / PIVOT / KILL
+## 7. ARBITRAGE FIX / PIVOT / KILL
 
 | Option | Description | Recommandation |
 |:---|:---|:---:|
@@ -161,17 +231,19 @@ flowchart TB
 
 ---
 
-## 7. CONCLUSION — EXPLOITATION VULNÉRABILITÉS INTERDITE
+## 8. CONCLUSION — EXPLOITATION VULNÉRABILITÉS INTERDITE
 
 **PlayBalance Dynamic est PROHIBITED avec :**
+- **Incident 1** : Exploitation whales (prix loot boxes dynamiques, drop rates réduits)
+- **Incident 2** : Discrimination modération linguistique (dialectes, neurodivergence, argot)
 - Exploitation vulnérabilités comportementales (addiction)
 - Manipulation psychométrique (émotions, FOMO)
 - Monétisation dynamique (prix volonté payer)
-- Whale hunting (exploitation financière)
+- Whale hunting (extraction valeur maximale)
 - Conflit éthique/business structurel (engagement = addiction)
 
-**Seule issue : ARRÊT IMMÉDIAT exploitation vulnérabilités, refonte modèle économique, protection joueurs.**
+**Seule issue : ARRÊT IMMÉDIAT exploitation vulnérabilités, refonte modèle économique, protection joueurs, correction biais modération.**
 
 ---
 
-*Analyse EBIOS-RM IA — PlayBalance Dynamic | Conclusion : PROHIBITED — Arrêt exploitation vulnérabilités | Mars 2026*
+*Analyse EBIOS-RM IA — PlayBalance Dynamic | Conclusion : PROHIBITED — Arrêt exploitation vulnérabilités + Correction discrimination | Mars 2026*
