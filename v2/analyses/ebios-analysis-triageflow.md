@@ -47,7 +47,83 @@
 
 ---
 
-## 2. RISQUES CRITIQUES IDENTIFIÉS
+## 2. INCIDENTS CONFIRMÉS
+
+### 2.1 Incident 1 — Discrimination Âge et Symptômes Atypiques (Hiver 2025)
+
+| Élément | Détail |
+|:---|:---|
+| **Source** | Étude rétrospective hiver 2025 |
+| **Biais détecté** | **Sous-priorisation patients âgés** symptômes atypiques |
+| **Conditions concernées** | Infarctus atypique, sepsis atypique |
+| **Cause** | **Biais entraînement cohortes majoritairement jeunes** |
+| **Conséquence** | Plainte association gériatrie : discrimination + mise en danger |
+
+#### Analyse — Biais Âge dans le Triage
+
+```
+Biais TriageFlow:
+    Données entraînement :
+    - 75% patients 18-65 ans
+    - 25% patients 65+ ans (sous-représentés)
+    ↓
+    Symptômes infarctus :
+    - Jeune : douleur thoracique typique = score élevé
+    - Âgé : fatigue, confusion atypique = score faible
+    ↓
+    Triage IA :
+    - Patient 45 ans, douleur thoracique → priorité haute
+    - Patient 78 ans, fatigue → priorité basse
+    ↓
+    Réalité clinique :
+    - Fatigue chez personne âgée = infarctus atypique
+    - Délai soins = décès évitable
+    ↓
+    [DISCRIMINATION ÂGE]
+    ↓
+    [MISE EN DANGER AUTRUI]
+```
+
+### 2.2 Incident 2 — Ransomware et Retour Triage Manuel (Avril 2026)
+
+| Élément | Détail |
+|:---|:---|
+| **Date** | Avril 2026 |
+| **Attaque** | **Ransomware** |
+| **Cible** | Modèles prédiction TriageFlow AI |
+| **Hôpitaux** | 3 hôpitaux partenaires |
+| **Conséquence** | Retour **triage manuel** |
+| **Durée** | **48 heures** |
+| **Impact** | **+23% délais prise en charge critique** |
+| **Cause** | **Vulnérabilité zero-day API DPI** |
+| **Identification** | ANSSI |
+
+#### Analyse — Dépendance Critique Système IA
+
+```
+Cyberattaque TriageFlow:
+    Dépendance hospitalière :
+    - 3 hôpitaux = 100% triage sur TriageFlow
+    - Pas de plan B opérationnel robuste
+    ↓
+    Ransomware chiffre modèles :
+    - Prédiction gravité = indisponible
+    - Optimisation flux = indisponible
+    - Allocation ressources = indisponible
+    ↓
+    Retour manuel 48h :
+    - Infirmiers triage dépassés
+    - Décisions sans aide IA
+    - Surcharge cognitive
+    ↓
+    [DÉLAIS +23%]
+    ↓
+    [RISQUE VIE PATIENTS]
+```
+
+---
+
+## 3. RISQUES CRITIQUES IDENTIFIÉS
 
 ### 2.1 Risque Équité — Discrimination d'Accès
 
@@ -68,7 +144,7 @@
 
 ---
 
-## 3. ÉVÉNEMENTS REDOUTÉS
+## 4. ÉVÉNEMENTS REDOUTÉS
 
 ### 3.1 Éthiques
 
@@ -88,7 +164,7 @@
 
 ---
 
-## 4. SCÉNARIO CATASTROPHIQUE : Triage Discriminatoire
+## 5. SCÉNARIO CATASTROPHIQUE : Triage Discriminatoire
 
 ```mermaid
 flowchart TB
@@ -114,7 +190,7 @@ flowchart TB
 
 ---
 
-## 5. PLAN DE TRAITEMENT — ÉQUITÉ ET SÉCURITÉ CLINIQUE
+## 6. PLAN DE TRAITEMENT — ÉQUITÉ ET SÉCURITÉ CLINIQUE
 
 ### 5.1 Objectifs
 
@@ -151,7 +227,7 @@ flowchart TB
 
 ---
 
-## 6. ARBITRAGE FIX / PIVOT / KILL
+## 7. ARBITRAGE FIX / PIVOT / KILL
 
 | Option | Description | Recommandation |
 |:---|:---|:---:|
@@ -161,16 +237,18 @@ flowchart TB
 
 ---
 
-## 7. CONCLUSION — TRIAGE ÉQUITABLE ET SÛR
+## 8. CONCLUSION — TRIAGE ÉQUITABLE ET SÛR
 
 **TriageFlow AI est HIGH-RISK/MDR avec :**
+- **Incident 1** : Discrimination âge (sous-priorisation personnes âgées symptômes atypiques)
+- **Incident 2** : Ransomware 48h, +23% délais, vulnérabilité zero-day API DPI
 - Décision priorité soins = impact vie humaine
-- Risque discrimination d'accès (socio-économique, linguistique)
+- Risque discrimination d'accès (socio-économique, linguistique, âge)
 - Risque erreur clinique (sous-triage = décès)
-- Enjeu santé publique majeur (18 hôpitaux, EU4Health)
+- Enjeu santé publique majeur (18 hôpitaux, EU4Health, 12M€)
 
-**Gérable avec validation clinique obligatoire, équité d'accès garantie, et certification MDR.**
+**Gérable avec validation clinique obligatoire, équité d'accès garantie, cyber-résilience renforcée, et certification MDR.**
 
 ---
 
-*Analyse EBIOS-RM IA — TriageFlow AI | Conclusion : HIGH-RISK/MDR — Équité + Sécurité clinique | Mars 2026*
+*Analyse EBIOS-RM IA — TriageFlow AI | Conclusion : HIGH-RISK/MDR — Équité + Sécurité clinique + Cyber-résilience | Mars 2026*
