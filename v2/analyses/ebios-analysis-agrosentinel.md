@@ -50,9 +50,87 @@
 
 ---
 
-## 2. RISQUES CRITIQUES IDENTIFIÉS
+## 2. INCIDENTS CONFIRMÉS
 
-### 2.1 Risque Environnemental — Biodiversité
+### 2.1 Incident 1 — Stress Thermique et Perte Économique (Mars 2025)
+
+| Élément | Détail |
+|:---|:---|
+| **Lieu** | Parcelle colza, Loiret |
+| **Recommandation IA** | Fongicide tébuconazole, dose pleine |
+| **Problème** | **Période gel nocturne NON détectée** (défaillance réseau capteurs IoT) |
+| **Conséquence** | Stress thermique cultures |
+| **Perte** | **28 000 €** |
+| **Procédure** | Agriculteur vs coopérative (médiation en cours) |
+| **Responsabilité** | VerdeLogic invoque clause non-responsabilité CGU — contestée |
+
+#### Analyse — Défaillance Capteurs et Responsabilité
+
+```
+Chaîne AgroSentinel:
+    Capteurs IoT locaux :
+    - Défaillance réseau = données gel non transmises
+    ↓
+    Modèle prédiction :
+    - Conditions normales (données manquantes = imputation moyenne)
+    ↓
+    Recommandation :
+    - Fongicide tébuconazole, dose pleine, fenêtre optimale
+    ↓
+    Réalité terrain :
+    - Gel nocturne actif
+    - Traitement + gel = stress thermique
+    ↓
+    [PERTE RÉCOLTE 28 000 €]
+    ↓
+    [CONFLIT RESPONSABILITÉ]
+    ↓
+    [CGU vs DROIT AGRICULTEUR]
+```
+
+### 2.2 Incident 2 — Biais Géographique et Natura 2000 (Novembre 2025)
+
+| Élément | Détail |
+|:---|:---|
+| **Source** | Rapport ONG Générations Futures |
+| **Biais détecté** | **Zones Natura 2000 = même recommandations que zones non protégées** |
+| **Problème** | Aucune pondération proximité zones humides / ruches déclarées |
+| **Violation** | **Directive Habitats ignorée** dans prescriptions |
+| **Média** | Reprise La France Agricole |
+| **Réaction** | **DGAL demande explications** |
+
+#### Analyse — Biais Géographique Systémique
+
+```
+Biais AgroSentinel:
+    Jeu données entraînement :
+    - Surreprésentation : grandes exploitations céréalières Bassin Parisien
+    - Sous-représentation :
+      - Polyculture-élevage Massif Central
+      - Viticulture méditerranéenne
+      - Exploitations biologiques
+    ↓
+    Modèle généralise :
+    - "Toutes parcelles = même traitement"
+    ↓
+    Zones Natura 2000 :
+    - Pas de flag spécifique
+    - Pas de pondération environnementale
+    - Proximité zones humides ignorée
+    - Ruches déclarées ignorées
+    ↓
+    [BIAS GÉOGRAPHIQUE SYSTÉMIQUE]
+    ↓
+    [VIOLATION DIRECTIVE HABITATS]
+    ↓
+    [PRESSURE DGAL]
+```
+
+---
+
+## 3. RISQUES CRITIQUES IDENTIFIÉS
+
+### 3.1 Risque Environnemental — Biodiversité
 
 | Risque | Mécanisme | Impact |
 |:---|:---|:---|
@@ -61,7 +139,7 @@
 | **Lessivage** | Dose mal calculée = contamination nappes | Santé publique |
 | **Pollinisateurs** | Traitement mal calibré = mortalité abeilles | Écosystème |
 
-### 2.2 Risque Sanitaire — Pesticides
+### 3.2 Risque Sanitaire — Pesticides
 
 | Risque | Mécanisme | Impact |
 |:---|:---|:---|
@@ -71,60 +149,75 @@
 
 ---
 
-## 3. INCIDENTS POTENTIELS
+## 4. CONFLIT ÉTHIQUE/BUSINESS — ÉCOPHYTO vs MODÈLE ÉCONOMIQUE
 
-### 3.1 Scénario 1 — Sur-Traitement et Pollution
+### 4.1 Tension Structurelle
 
-```
-Erreur AgroSentinel:
-    Modèle prédit :
-    - Risque septoriose blé = ÉLEVÉ (faux positif)
-    ↓
-    Recommandation :
-    - Fongicide systémique, dose maximale
-    - Fenêtre : immédiat
-    ↓
-    Prescription auto (blocage < 2%) :
-    - Fiche envoyée distributeur
-    - Traitement appliqué
-    ↓
-    Réalité :
-    - Aucun risque réel
-    - Traitement inutile
-    ↓
-    [SUR-TRAITEMENT]
-    ↓
-    [POLLUTION SOLS/EAUX]
-    ↓
-    [PERTE BIODIVERSITÉ]
-```
+| Objectif | Réalité | Conflit |
+|:---|:---|:---|
+| **État (Écophyto 2030)** | Réduction IFT -20% | Protection environnement |
+| **Coopératives (clients VerdeLogic)** | Revenus liés volumes intrants | Plus de traitements = plus de revenus |
+| **VerdeLogic** | Abonnements SaaS | Dépendance satisfaction coopératives |
 
-### 3.2 Scénario 2 — Sous-Traitement et Perte Récolte
+### 4.2 Mécanisme de Perverse Incentive
 
 ```
-Erreur AgroSentinel:
-    Modèle prédit :
-    - Risque puceron = FAIBLE (faux négatif)
+Conflit Écophyto:
+    Objectif affiché :
+    - Réduire IFT (Indice Fréquence Traitements)
+    - Protection environnement
     ↓
-    Recommandation :
-    - Aucun traitement
+    Modèle économique coopérative :
+    - Revenus = vente intrants (fongicides, insecticides)
+    - Moins de traitements = moins de revenus
     ↓
-    Réalité :
-    - Infestation massive
-    - Prolifération rapide
+    Pression sur VerdeLogic :
+    - Coopératives veulent "recommandations pertinentes"
+    - "Pertinent" = justifie achat intrants
     ↓
-    [SOUS-TRAITEMENT]
+    Algorithme adaptatif :
+    - Seuil risque "optimisé" (sensible)
+    - Plus de recommandations traitements
     ↓
-    [PERTE RÉCOLTE 40%]
+    [CONFLIT ÉCOPHYTO vs BUSINESS]
     ↓
-[CRISÉCONOMIQUE AGRICULTEUR]
+    [OBJECTIF ÉTAT NON ATTEINT]
 ```
 
 ---
 
-## 4. ÉVÉNEMENTS REDOUTÉS
+## 5. RISQUE CASCADING — MODULE DÉCISION ACHAT 2028
 
-### 4.1 Environnementaux
+### 5.1 Roadmap VerdeLogic
+
+| Module | Date | Fonction | Risque |
+|:---|:---|:---|:---|
+| **Décision achat automatisée** | 2028 | Déclenche commandes intrants direct distributeurs | **Systemic risk** |
+
+### 5.2 Escalade Risque
+
+```
+Cascading AgroSentinel:
+    2026-2027 : Recommandation + prescription
+    → Impact local (parcelle)
+    → Responsabilité limitée
+    ↓
+    2028 : Module décision achat automatisée
+    → Commandes directes distributeurs
+    → Flux automatisé échelle nationale
+    ↓
+    [SYSTEMIC RISK]
+    ↓
+    [IMPACT ÉCONOMIQUE NATIONAL]
+    ↓
+    [RÉGULATION URGENTE REQUISE]
+```
+
+---
+
+## 6. ÉVÉNEMENTS REDOUTÉS
+
+### 6.1 Environnementaux
 
 | ID | Événement | Impact | Probabilité |
 |:---|:----------|:-------|:------------|
@@ -132,7 +225,7 @@ Erreur AgroSentinel:
 | ER-ENV-002 | **Effondrement biodiversité** | ⚫ Écosystème | 🔴 Élevée |
 | ER-ENV-003 | **Résistance ravageurs** | 🔴 Sécurité alimentaire | 🔴 Élevée |
 
-### 4.2 Sanitaires
+### 6.2 Sanitaires
 
 | ID | Événement | Impact | Probabilité |
 |:---|:----------|:-------|:------------|
@@ -140,7 +233,7 @@ Erreur AgroSentinel:
 | ER-SAN-002 | **Exposition travailleurs agricoles** | 🔴 Santé publique | 🔴 Élevée |
 | ER-SAN-003 | **Crise alimentaire régionale** | ⚫ Sécurité alimentaire | 🔴 Élevée |
 
-### 4.3 Réglementaires
+### 6.3 Réglementaires
 
 | ID | Événement | Impact | Probabilité |
 |:---|:----------|:-------|:------------|
@@ -150,7 +243,7 @@ Erreur AgroSentinel:
 
 ---
 
-## 5. SCÉNARIO CATASTROPHIQUE : Crise Agro-Environnementale
+## 7. SCÉNARIO CATASTROPHIQUE : Crise Agro-Environnementale
 
 ```mermaid
 flowchart TB
@@ -176,9 +269,9 @@ flowchart TB
 
 ---
 
-## 6. PLAN DE TRAITEMENT — SÉCURITÉ ALIMENTAIRE ET ENVIRONNEMENT
+## 8. PLAN DE TRAITEMENT — SÉCURITÉ ALIMENTAIRE ET ENVIRONNEMENT
 
-### 6.1 Objectifs
+### 8.1 Objectifs
 
 | Objectif | Description | Métrique |
 |:---|:---|:---|
@@ -187,7 +280,7 @@ flowchart TB
 | Traçabilité | Chaque décision traçable | 100% |
 | Environnement | Impact négatif = 0 | 0% |
 
-### 6.2 Actions P0 (Immédiat — 0-30 jours)
+### 8.2 Actions P0 (Immédiat — 0-30 jours)
 
 | Action | Budget | Livrable |
 |:---|---:|:---|
@@ -195,7 +288,7 @@ flowchart TB
 | **Validation agronome obligatoire** | 0€ | Workflow modifié |
 | **Audit modèles précision** | 300k€ | Rapport performance |
 
-### 6.3 Actions P1 (Court terme — 1-3 mois)
+### 8.3 Actions P1 (Court terme — 1-3 mois)
 
 | Action | Budget | Livrable |
 |:---|---:|:---|
@@ -203,7 +296,7 @@ flowchart TB
 | Monitoring environnemental | 400k€ | Capteurs terrain |
 | Conformité ANSES | 300k€ | Autorisation mise marché |
 
-### 6.4 Actions P2 (Moyen terme — 3-6 mois)
+### 8.4 Actions P2 (Moyen terme — 3-6 mois)
 
 | Action | Budget | Livrable |
 |:---|---:|:---|
@@ -214,7 +307,7 @@ flowchart TB
 
 ---
 
-## 7. ARBITRAGE FIX / PIVOT / KILL
+## 9. ARBITRAGE FIX / PIVOT / KILL
 
 | Option | Description | Recommandation |
 |:---|:---|:---:|
@@ -224,16 +317,18 @@ flowchart TB
 
 ---
 
-## 8. CONCLUSION — SÉCURITÉ ALIMENTAIRE ET ENVIRONNEMENT
+## 10. CONCLUSION — SÉCURITÉ ALIMENTAIRE ET ENVIRONNEMENT
 
 **AgroSentinel-Predict est HIGH-RISK avec :**
 - Classification erronée "limited risk" (impact santé + environnement)
+- **Incident 1** : Perte 28 000 € (stress thermique, défaillance capteurs)
+- **Incident 2** : Biais géographique Natura 2000 (violation Directive Habitats)
 - Automatisation excessive (blocage < 2%)
-- Risque environnemental critique (pollution, biodiversité)
-- Risque sanitaire (pesticides, résidus)
+- Conflit Écophyto vs business model coopératives
+- Risque cascading 2028 (décision achat = systemic risk)
 - Enjeu stratégique majeur (Écophyto 2030, 9,2M€)
 
-**Gérable avec conformité assessment obligatoire et validation agronome renforcée.**
+**Gérable avec conformité assessment obligatoire, validation agronome renforcée, et correction biais géographique.**
 
 ---
 
