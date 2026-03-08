@@ -18,7 +18,7 @@ def check_rgpd_dpia(filepath):
     """Vérifie si RGPD/DPIA est présent"""
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
-    return 'DPIA' in content or 'Art. 35' in content
+    return 'DPIA' in content or 'Art. 35' in content or 'RGPD' in content or 'Art. 9' in content or 'Art. 8' in content
 
 def check_mermaid(filepath):
     """Vérifie si diagramme Mermaid est présent"""
