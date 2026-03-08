@@ -7,6 +7,7 @@
 ## 📋 SYNTHÈSE EXÉCUTIVE — INCIDENTS 2025
 
 | Élément | Valeur |
+| **RGPD** | Données personnelles traitées | 🔴 **DPIA requise** |
 |:---|:---|
 | **Incident 1** | "Vol de pluie" → sécheresse record région voisine |
 | **Incident 2** | Crash drone Natura 2000 → pollution sels d'argent |

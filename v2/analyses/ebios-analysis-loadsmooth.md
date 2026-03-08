@@ -37,7 +37,8 @@
 
 | Article | Critère | Application LoadSmooth | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 2** | Infrastructure critique énergie | ✅ Gestion réseau électrique national | 🔴 **HIGH-RISK** |
+| **Annexe III point 2** | Infrastructure critique énergie | ✅ Gestion réseau électrique national |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | **Safety component** | Modification état physique réseau | ✅ Transformateurs, compensateurs | 🔴 **CRITIQUE** |
 | Classification interne | "High-risk de toute évidence" | ✅ Correcte | 🔴 **CONFIRMÉE** |
 

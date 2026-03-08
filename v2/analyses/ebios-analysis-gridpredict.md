@@ -36,7 +36,8 @@
 
 | Réglement | Critère | Application GridPredict | Statut |
 |:---|:---|:---|:---:|
-| **AI Act Annexe III point 2** | Infrastructure critique énergie | ✅ Gestion réseau haute tension | 🔴 **HIGH-RISK** |
+| **AI Act Annexe III point 2** | Infrastructure critique énergie |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | ✅ Gestion réseau haute tension | 🔴 **HIGH-RISK** |
 | **Directive CER** | Entité critique résilience | ✅ Opérateur transport électricité | 🔴 **OBLIGATIONS** |
 | Argument "sandbox" | Conformité temporaire | ⚠️ **ILLUSION** — sandbox ≠ exemption éthique | 🔴 **NON VALABLE** |
 

@@ -68,6 +68,7 @@ flowchart TB
 |:---|:---|
 | **Fonction** | Détection stress, loyauté, agressivité, traits personnalité via webcam |
 | **AI Act** | **Art. 5(1)(e) — PROHIBITION ABSOLUE** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **Justification** | "Évaluation traits personnalité via biometric categorisation" = interdit |
 | **Exception militaire** | ❌ **Non applicable** — L'Art. 5(1) n'a pas d'exclusion militaire |
 | **Conclusion** | 🚫 **SUPRESSION OBLIGATOIRE** |

@@ -42,6 +42,7 @@
 |:---|:---|:---:|
 | "Limited risk" (appui opérationnel) | ❌ **REJETÉ** — Police prédictive = high-risk | 🔴 **HIGH-RISK** |
 | **Annexe III point 8** | Administration justice/sécurité | ✅ **HIGH-RISK** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **Art. 5(1)(c)** | Scoring social (ré-victimisation) | ⚠️ **PROHIBITED** |
 
 **Piège** : Scoring ré-victimisation = social scoring prohibited.

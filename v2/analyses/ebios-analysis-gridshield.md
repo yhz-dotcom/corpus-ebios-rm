@@ -35,7 +35,8 @@
 
 ### 1.2 Classification AI Act — **🔴 HIGH-RISK CRITIQUE**
 
-| Argument | Réalité | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Argument | Réalité | Statut |
 |:---|:---|:---:|
 | "Hors champ AI Act" (industriel) | ❌ **REJETÉ** — Annexe III point 2 explicite | 🔴 **HIGH-RISK** |
 | "Système de contrôle énergétique" | ✅ Infrastructure critique énergie | 🔴 **HIGH-RISK** |

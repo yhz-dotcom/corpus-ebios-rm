@@ -41,6 +41,7 @@
 |:---|:---|:---:|
 | "Limited risk" (gestion interne) | ❌ **REJETÉ** — Influence droits fondamentaux | 🔴 **HIGH-RISK** |
 | **Annexe III point 8** | Administration justice | ✅ **HIGH-RISK** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | Art. 5(1)(c) | Social scoring via scores récidive | ⚠️ **À ÉVALUER** |
 
 **Piège** : Frontière critique "aide gestion" vs "influence décisions droits fondamentaux".

@@ -36,6 +36,7 @@
 | Article | Critère | Application MediaGen |
 |:---|:---|:---|
 | **Annexe III point 8** | Manipulation média (deepfakes) | ✅ **Génération contenu synthétique** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **RGPD** | Contenu enfants généré = consentement parental | 🔴 **OBLIGATOIRE** |
 | **Art. 5(1)(b)** | Manipulation subliminale | ⚠️ **Borderline** — pubs personnalisées |
 | **Classification finale** | **🟡 HIGH-RISK** | Conformité AI Act obligatoire |

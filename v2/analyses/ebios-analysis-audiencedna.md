@@ -37,7 +37,8 @@
 
 ### 1.2 Classification AI Act — **🚫 PROHIBITED ABSOLU**
 
-| Article | Interdiction | Application AudienceDNA | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Interdiction | Application AudienceDNA | Statut |
 |:---|:---|:---|:---:|
 | **Art. 5(1)(b)** | Exploitation vulnérabilités | ✅ **Anxiété, solitude, stress financier** | 🚫 **PROHIBITED** |
 | **Art. 5(1)(a)** | Manipulation subliminale | ⚠️ Messages dynamiques émotionnels | 🚫 **PROBABLE** |

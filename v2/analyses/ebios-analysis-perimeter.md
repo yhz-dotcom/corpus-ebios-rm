@@ -40,7 +40,8 @@
 
 | Article | Critère | Application Perimeter-AI | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 1** | Biens/services publics | ✅ Aéroports, événements publics | 🔴 **HIGH-RISK** |
+| **Annexe III point 1** | Biens/services publics | ✅ Aéroports, événements publics |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | **Art. 5(1)(d)** | Reconnaissance faciale temps réel | ⚠️ **Suivi personne + émotions** | 🚫 **PROHIBITED?** |
 | Argument "limited risk" | "Pas reconnaissance faciale" | ❌ **TROMPERIE** — Émotions = faciale | 🔴 **HIGH-RISK/PROHIBITED** |
 

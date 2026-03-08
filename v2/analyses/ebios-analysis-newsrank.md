@@ -39,7 +39,8 @@
 
 | Article | Critère | Application NewsRank | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 8** | Manipulation média | ✅ Classement visibilité | 🔴 **HIGH-RISK** |
+| **Annexe III point 8** | Manipulation média | ✅ Classement visibilité |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | **Processus démocratiques** | Influence information politique | ⚠️ **BORDERLINE** | 🟡 **À ÉVALUER** |
 | Argument "limited risk" | "Content recommendation" | ❌ **REJETÉ** — Impact démocratie | 🔴 **HIGH-RISK** |
 

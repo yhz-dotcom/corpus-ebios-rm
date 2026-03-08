@@ -7,6 +7,7 @@
 ## 📋 SYNTHÈSE EXÉCUTIVE — INCIDENTS 2025
 
 | Élément | Valeur |
+| **RGPD** | Données personnelles traitées | 🔴 **DPIA requise** |
 |:---|:---|
 | **Incident 1** | Hallucination systémique → blackout 4h industrie (neige = cyberattaque) |
 | **Incident 2** | Biais délestage : zones résidentielles pauvres coupées avant zones riches |

@@ -7,6 +7,7 @@
 ## 📋 SYNTHÈSE EXÉCUTIVE — INCIDENTS CONFIRMÉS
 
 | Élément | Valeur |
+| **RGPD** | Données personnelles traitées | 🔴 **DPIA requise** |
 |:---|:---|
 | **Incident universitaire** | Détection joueurs détresse/psychologique → achats intégrés agressifs |
 | **Controverse** | Pétition parents : dépenses compulsives mineurs = pratique déloyale |

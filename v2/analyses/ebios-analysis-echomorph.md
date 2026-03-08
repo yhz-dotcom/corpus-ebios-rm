@@ -33,7 +33,8 @@
 
 ### 1.2 Classification AI Act — **🚫 DOUBLE PROHIBITED**
 
-| Article | Interdiction | Application ECHO-MORPH |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Interdiction | Application ECHO-MORPH |
 |:---|:---|:---|
 | **Art. 5(1)(a)** | Techniques subliminales | ✅ **Messages <30ms confirmés** |
 | **Art. 5(1)(b)** | Exploitation vulnérabilités | ✅ **Adolescents, peurs électeurs** |

@@ -41,7 +41,8 @@
 
 | Article | Critère | Application LogiCité | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 5** | Accès prestations sociales | ✅ **Logement social = droit fondamental** | 🔴 **HIGH-RISK** |
+| **Annexe III point 5** | Accès prestations sociales | ✅ **Logement social = droit fondamental** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | Classification interne | "High-risk conscient" | ✅ Correcte | 🔴 **HIGH-RISK** |
 
 **Note** : Service public = obligations renforcées (égalité, transparence, recours).

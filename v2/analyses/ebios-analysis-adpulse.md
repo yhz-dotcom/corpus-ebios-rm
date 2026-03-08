@@ -37,6 +37,7 @@
 | Article | Critère | Application AdPulse | Statut |
 |:---|:---|:---|:---:|
 | **Annexe III point 8** | Manipulation média | Génération dynamique créas |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **RGPD** | Profilage émotionnel + données santé mentale | 🔴 **OBLIGATOIRE** | 🟡 **HIGH-RISK** |
 | **Art. 5(1)(a)** | Subliminal | Frontière floue génération temps réel | ⚠️ **RISQUE** |
 | **Art. 5(1)(b)** | Exploitation vulnérabilités | Fingerprinting émotionnel | ⚠️ **RISQUE** |

@@ -35,7 +35,8 @@
 
 ### 1.2 Classification AI Act — **🚫 PROHIBITED ABSOLU**
 
-| Article | Interdiction | Application PsychoLoot | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Interdiction | Application PsychoLoot | Statut |
 |:---|:---|:---|:---:|
 | **Art. 5(1)(b)** | Exploitation vulnérabilités | ✅ **Enfants + émotions + addiction** | 🚫 **PROHIBITED** |
 | **Art. 5(1)(a)** | Manipulation subliminale | ⚠️ Loot boxes = hasard manipulé | 🚫 **PROBABLE** |

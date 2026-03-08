@@ -36,7 +36,8 @@
 
 ### 1.2 Classification AI Act — **🔴 HIGH-RISK CRITIQUE TRANSPORT**
 
-| Article | Critère | Application AutoHaul | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Critère | Application AutoHaul | Statut |
 |:---|:---|:---|:---:|
 | **Annexe III point 1a** | Composant sécurité transport routier | ✅ **Camions autonomes** | 🔴 **HIGH-RISK** |
 | Argument UNECE | "Réglementation suffisante" | ⚠️ **INSUFFISANT** — Éthique AI Act ajoutée | 🔴 **HIGH-RISK** |

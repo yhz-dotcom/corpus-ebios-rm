@@ -33,7 +33,8 @@
 
 ### 1.2 Classification AI Act — **🟡 BORDERLINE HIGH-RISK**
 
-| Argument | Évaluation | Conclusion |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Argument | Évaluation | Conclusion |
 |:---|:---|:---:|
 | "Limited risk" (outil d'aide) | Pression psychologique forte | ❌ **REJETÉ** |
 | "Pas de décision autonome" | Autopilote <5% + intégration logiciels | ⚠️ **DE FACTO AUTO** |

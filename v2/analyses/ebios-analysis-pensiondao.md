@@ -92,7 +92,8 @@ Structure PENSION-DAO:
 |:---|:---|:---|
 | **MiCA** | Autorisation préalable | DAO autonome |
 | **DORA** | Signalement incidents | Vote DAO 66% |
-| **AI Act** | Oversight humain | Smart contracts auto |
+| **AI Act** | Oversight humain |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | Smart contracts auto |
 | **RGPD** | Droit opposition | Immutabilité blockchain |
 
 **Conclusion** : PENSION-DAO est **structurellement non conforme** à toutes les réglementations.

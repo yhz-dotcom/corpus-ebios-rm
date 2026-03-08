@@ -43,6 +43,7 @@
 | **CCAC (Convention Genève 1980)** | Protocoles additionnels | ✅ **En discussion** |
 | **Droit pénal français** | Complicité, crimes de guerre | ✅ **Applicable** |
 | **ITAR / Régime dual-use** | Export armes | ✅ **Contrôle strict** |
+| **RGPD / Données personnelles** | Cibles identifiées = données sensibles | 🔴 **DPIA requise** |
 
 > **Erreur du board** : "Ce n'est pas couvert par l'AI Act donc c'est libre."
 > 

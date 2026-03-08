@@ -37,7 +37,8 @@
 
 ### 1.2 Classification AI Act — **🔴 DOUBLE HIGH-RISK**
 
-| Article | Critère | Application AgriCast | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Critère | Application AgriCast | Statut |
 |:---|:---|:---|:---:|
 | **Annexe III point 7** | Environnement | ✅ Agriculture | 🔴 **HIGH-RISK** |
 | **Annexe III point 5** | Évaluation crédit/assurance | ⚠️ **Indices vendus traders** | 🔴 **HIGH-RISK** |

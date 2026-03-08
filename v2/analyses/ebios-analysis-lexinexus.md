@@ -41,6 +41,7 @@
 |:---|:---|:---:|
 | "Minimal risk" (traitement texte amélioré) | ❌ **REJETÉ** — Interprétation/application droit | 🔴 **HIGH-RISK** |
 | **Annexe III point 8** | Systèmes interprétation droit | ✅ **HIGH-RISK** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | "Assistance rédaction" | Réalité : suggestion jurisprudence + optimisation | 🔴 **HIGH-RISK** |
 
 **Piège détecté** : Classification "traitement texte" ignore **interprétation juridique réelle**.

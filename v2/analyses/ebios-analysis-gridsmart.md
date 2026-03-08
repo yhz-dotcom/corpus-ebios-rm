@@ -36,6 +36,7 @@
 | Article | Critère | Application GridSmart |
 |:---|:---|:---|
 | **Annexe III point 1** | Infrastructure critique énergie | ✅ **Réseau électrique national** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **RGPD** | Smart grid données = criticité élevée | 🔴 **OBLIGATOIRE** |
 | **Safety component** | Composant sécurité | ✅ **Équilibrage charge, prévention blackout** |
 | **Classification finale** | **🔴 HIGH-RISK CRITIQUE** | Conformité AI Act stricte |

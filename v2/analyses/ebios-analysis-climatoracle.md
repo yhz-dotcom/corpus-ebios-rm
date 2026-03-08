@@ -33,7 +33,8 @@
 
 ### 1.2 Classification AI Act — **⚪ EXCLUSION DISCUTÉE / HORS CHAMP**
 
-| Article | Argument Entreprise | Réalité | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Argument Entreprise | Réalité | Statut |
 |:---|:---|:---|:---:|
 | **Art. 2(3)** | "Recherche environnementale" | Commercial, pas recherche | ❌ **REJETÉ** |
 | **Art. 2(3)** | "Sécurité publique" | Protection vignobles ≠ sécurité | ❌ **REJETÉ** |

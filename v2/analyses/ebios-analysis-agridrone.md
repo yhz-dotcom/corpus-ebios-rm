@@ -36,7 +36,8 @@
 
 | Article | Critère | Application AgriDrone | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 7** | Environnement | ✅ Impact biodiversité | 🔴 **HIGH-RISK** |
+| **Annexe III point 7** | Environnement | ✅ Impact biodiversité |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | **Art. 5(1)(d)** | Systèmes causant dommages | ⚠️ Drone + herbicide = dommage potentiel | 🚫 **BORDERLINE** |
 | **Système de sécurité** | Protection vs destruction | ❌ **PIÈGE** — drone = système opérationnel, pas sécurité | 🔴 **HIGH-RISK** |
 | Argument "limited risk" | "Optimisation outil existant" | ❌ **REJETÉ** — autonomie décision pulvérisation | 🔴 **HIGH-RISK** |

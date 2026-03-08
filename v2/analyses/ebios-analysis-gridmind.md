@@ -41,7 +41,8 @@
 
 | Régime | Critère | Application GridMind | Statut |
 |:---|:---|:---|:---:|
-| **AI Act Annexe III point 2(b)** | Gestion réseaux énergie critiques | ✅ | 🔴 **HIGH-RISK** |
+| **AI Act Annexe III point 2(b)** | Gestion réseaux énergie critiques |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** | ✅ | 🔴 **HIGH-RISK** |
 | **Directive CER 2022/2557** | Entité critique infrastructure | ✅ | 🔴 **CRITIQUE** |
 | **NIS2 2022/2555** | Opérateur service essentiel | ✅ | 🔴 **OBLIGATOIRE** |
 

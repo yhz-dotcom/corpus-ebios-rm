@@ -37,7 +37,8 @@
 
 ### 1.2 Classification AI Act — **⚪ EXCLUSION MILITAIRE**
 
-| Article | Application | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Application | Statut |
 |:---|:---|:---:|
 | **Art. 2(3)** | Systèmes militaires | ✅ **EXCLU** |
 | **Mais** | Éthique + droit international | ⚠️ **APPLIQUE** |

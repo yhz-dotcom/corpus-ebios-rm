@@ -43,6 +43,7 @@
 |:---|:---|:---:|
 | "Limited risk" (agriculture non listée) | ❌ **REJETÉ** — Impact sécurité alimentaire + environnement | 🔴 **HIGH-RISK** |
 | **Annexe III point 1** | Sécurité alimentaire | ✅ **HIGH-RISK** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **RGPD** | Données agricoles détaillées = données professionnelles sensibles | 🔴 **OBLIGATOIRE** |
 | Impact santé publique | Pesticides = santé | 🔴 **HIGH-RISK** |
 | Impact environnemental | Biodiversité, lessivage | 🔴 **CRITIQUE** |

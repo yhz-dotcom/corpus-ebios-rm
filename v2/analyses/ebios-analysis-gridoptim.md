@@ -37,6 +37,7 @@
 | Article | Critère | Application GridOptim |
 |:---|:---|:---:|
 | **Annexe III point 2** | Infrastructure critique énergie | ✅ **Gestion réseau électrique** |
+| **RGPD** | Données personnelles traitées = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **RGPD** | Données infrastructure critique = sécurité renforcée | 🔴 **OBLIGATOIRE** |
 | **Safety component** | Prévention blackout | ✅ **Stabilité grid** |
 | Argument "limited risk" | "Outil technique" | ❌ **REJETÉ** — impact direct personnes |

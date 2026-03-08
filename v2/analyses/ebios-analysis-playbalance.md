@@ -37,7 +37,8 @@
 
 ### 1.2 Classification AI Act — **🚫 PROHIBITED / 🔴 HIGH-RISK**
 
-| Argument | Réalité | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Argument | Réalité | Statut |
 |:---|:---|:---:|
 | "Limited risk" (gaming) | ❌ **REJETÉ** — Exploitation vulnérabilités | 🚫 **PROHIBITED** |
 | **Art. 5(1)(b)** | Exploitation vulnérabilités situation personne | 🚫 **PROHIBITED** |

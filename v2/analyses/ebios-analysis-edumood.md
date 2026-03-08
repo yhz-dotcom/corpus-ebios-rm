@@ -34,7 +34,8 @@
 
 ### 1.2 Classification AI Act — **🚫 PROHIBITED ABSOLU**
 
-| Article | Interdiction | Application EduMood |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Interdiction | Application EduMood |
 |:---|:---|:---|
 | **Art. 5(1)(e)** | Reconnaissance émotions en éducation | ✅ **Déploiement exact** |
 | Exception pédagogique | ❌ N'existe pas | Non applicable |

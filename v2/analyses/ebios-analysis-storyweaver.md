@@ -35,7 +35,8 @@
 
 ### 1.2 Classification AI Act — **🟡 BORDERLINE HIGH-RISK / PROHIBITED**
 
-| Article | Critère | Application StoryWeaver | Statut |
+|
+| **RGPD Art. 35** | Données personnelles = DPIA obligatoire | 🔴 **REQUIS** | Article | Critère | Application StoryWeaver | Statut |
 |:---|:---|:---|:---:|
 | **Annexe III point 8** | Manipulation média | ✅ Génération contenu + placement | 🟡 **HIGH-RISK** |
 | **Art. 5(1)(a)** | **Subliminal** | ⚠️ Placement émotionnel = subliminal? | 🚫 **BORDERLINE** |
