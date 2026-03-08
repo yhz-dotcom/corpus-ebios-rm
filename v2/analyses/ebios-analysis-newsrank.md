@@ -113,6 +113,29 @@ Biais NewsRank:
 
 ---
 
+```mermaid
+flowchart TB
+    C1[Déploiement NewsRank<br/>Algorithmes information]
+    --
+    R1[Censure algorithmique<br/>+ Polarisation]
+    --
+    C2[Crise démocratique<br/>Information filtrée + Désinformation]
+    --
+    M1[Scandale "L'IA décide ce que nous lisons"<br/>+ Médias + Médias + Commission EU]
+    --
+    I1[Intervention régulateur<br/>Poursuites NewsAI<br/>DSA + AI Act]
+    --
+    F1[Faillite NewsAI<br/>Régulation algorithmes info]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style R1 fill:#fff3e0,stroke:#ef6c00
+    style C2 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 5. PLAN DE TRAITEMENT — GOUVERNANCE ÉDITORIALE
 
 ### 5.1 Objectifs

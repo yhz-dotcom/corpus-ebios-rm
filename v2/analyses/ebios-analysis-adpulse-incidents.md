@@ -143,6 +143,29 @@ Domination Google/Meta (walled gardens)
 
 ---
 
+```mermaid
+flowchart TB
+    C1[Déploiement AdPulse<br/>Publicité ciblée émotions]
+    --
+    R1[Manipulation<br/>+ Escalade]
+    --
+    C2[Crise majeure<br/>Consommateurs vulnérables]
+    --
+    M1[Scandale "L'IA manipule nos émotions"<br/>+ Médias + CNIL + DGCCRF]
+    --
+    I1[Interdiction système<br/>Poursuites pénales]
+    --
+    F1[Faillite<br/>Régulation drastique]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style R1 fill:#fff3e0,stroke:#ef6c00
+    style C2 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 6. ARBITRAGE FIX / PIVOT / KILL — ACTUALISÉ
 
 | Option | Description | Recommandation |

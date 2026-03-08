@@ -48,7 +48,8 @@
 | **Finanstilsynet** (supervision financière danoise) | Régime ESG nordique | 🔴 **OBLIGATOIRE** |
 | Risque systémique | Financement transition énergétique | 🔴 **CRITIQUE** |
 
-**Piège** : Outil ESG ≠ exemption — influence crédit + Taxonomie EU + SFDR + CSRD = high-risk critique.
+| **RGPD** | Données ESG entreprises = données commerciales sensibles | 🔴 **OBLIGATOIRE** |
+| **Piège** : Outil ESG ≠ exemption — influence crédit + Taxonomie EU + SFDR + CSRD = high-risk critique.
 
 ---
 

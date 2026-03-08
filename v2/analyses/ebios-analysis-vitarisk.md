@@ -41,6 +41,7 @@
 |:---|:---|:---:|
 | "High-Risk reconnu" | ✅ Assurance santé | 🔴 **HIGH-RISK** |
 | **Annexe III point 2** | Assurance | ✅ **HIGH-RISK** |
+| **RGPD Art. 35** | Données santé + comportement = DPIA obligatoire | 🔴 **OBLIGATOIRE** |
 | **Art. 5(1)(c)** | Scoring social comportement | 🚫 **PROHIBITED** |
 | Tarification "juste" | ❌ Proxies socio-économiques | 🚫 **DISCRIMINATION** |
 

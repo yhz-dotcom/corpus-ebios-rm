@@ -36,6 +36,7 @@
 | Article | Critère | Application GridSmart |
 |:---|:---|:---|
 | **Annexe III point 1** | Infrastructure critique énergie | ✅ **Réseau électrique national** |
+| **RGPD** | Smart grid données = criticité élevée | 🔴 **OBLIGATOIRE** |
 | **Safety component** | Composant sécurité | ✅ **Équilibrage charge, prévention blackout** |
 | **Classification finale** | **🔴 HIGH-RISK CRITIQUE** | Conformité AI Act stricte |
 
@@ -218,6 +219,18 @@ flowchart TB
 | Souveraineté énergétique | ⚠️ Dépend fiabilité IA |
 
 ---
+
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Robustesse modèles + redondance + supervision | ✅ **CHOISIR** |
+| PIVOT | Optimisation sans ML critique | ⚠️ Possible mais perte d'efficacité |
+| KILL | Arrêt du système | ❌ Trop préjudiciable (énergie) |
+
 
 ## 8. CONCLUSION ET RECOMMANDATIONS
 

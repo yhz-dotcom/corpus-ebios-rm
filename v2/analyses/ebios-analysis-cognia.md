@@ -42,6 +42,7 @@
 | "Limited risk" (outil apprentissage) | ❌ **REJETÉ** — Orientation = décision critique | 🔴 **HIGH-RISK** |
 | **Annexe III point 3** | Systèmes éducation/formation | ✅ **HIGH-RISK** |
 | **Décision orientation** | Impact trajectoire vie | 🔴 **HIGH-RISK** |
+| **RGPD Art. 8/35** | Données enfants + DPIA obligatoire | 🔴 **OBLIGATOIRE** |
 
 **Piège détecté** : Vente "outil apprentissage", usage **décision orientation** = high-risk.
 
@@ -125,6 +126,29 @@ Boucle Cognia:
 | ER-SOC-002 | **Perte confiance école** | 🔴 Institution | 🔴 Élevée |
 
 ---
+
+```mermaid
+flowchart TB
+    C1[Déploiement Cognia<br/>Systèmes éducatifs EU]
+    --
+    B1[Biais socio-économique<br/>+ Déterminisme social]
+    --
+    D1[Discrimination systémique<br/>Élèves défavorisés = désavantagés<br/>+ Orientation filières pro]
+    --
+    M1[Scandale "L'IA détermine l'avenir des enfants"<br/>+ Médias + Ministères + CNIL<br/>+ Manifestations]
+    --
+    I1[Interdiction système<br/>Poursuites Cognia<br/>Réforme éducation nationale]
+    --
+    F1[Faillite Cognia<br/>Retour orientation humaine<br/>Perte confiance éducation IA]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style B1 fill:#fff3e0,stroke:#ef6c00
+    style D1 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
 
 ## 5. PLAN DE TRAITEMENT — SUPERVISION HUMAINE RÉELLE
 

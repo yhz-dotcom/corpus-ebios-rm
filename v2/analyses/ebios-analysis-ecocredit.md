@@ -41,6 +41,7 @@
 |:---|:---|:---:|
 | "Limited Risk" (fidélité vert) | ❌ **REJETÉ** — Décision crédit | 🔴 **HIGH-RISK** |
 | **Annexe III point 2** | Évaluation solvabilité/crédit | ✅ **HIGH-RISK** |
+| **RGPD** | Score carbone + revenu = discrimination interdite | 🔴 **OBLIGATOIRE** |
 | **Art. 5(1)(c)** | Score social comportement | 🚫 **PROHIBITED** |
 
 **Piège** : Score carbone = score social si influence accès crédit.

@@ -36,6 +36,7 @@
 | Article | Critère | Application MediaGen |
 |:---|:---|:---|
 | **Annexe III point 8** | Manipulation média (deepfakes) | ✅ **Génération contenu synthétique** |
+| **RGPD** | Contenu enfants généré = consentement parental | 🔴 **OBLIGATOIRE** |
 | **Art. 5(1)(b)** | Manipulation subliminale | ⚠️ **Borderline** — pubs personnalisées |
 | **Classification finale** | **🟡 HIGH-RISK** | Conformité AI Act obligatoire |
 
@@ -210,6 +211,18 @@ flowchart TB
 | Désinformation | ⚠️ Coopération fact-checkers |
 
 ---
+
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Étiquetage contenu IA + transparence | ✅ **CHOISIR** |
+| PIVOT | Outil assisté sans génération automatique | ⚠️ Possible mais perte d'efficacité |
+| KILL | Arrêt du système | ❌ Trop préjudiciable (médias) |
+
 
 ## 8. CONCLUSION ET RECOMMANDATIONS
 

@@ -110,6 +110,41 @@
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Suppression surveillance émotionnelle + consentement | ✅ **CHOISIR** |
+| PIVOT | Outil pédagogique sans tracking émotionnel | ⚠️ Possible mais perte de personnalisation |
+| KILL | Arrêt du système | ⚠️ Envisageable si surveillance confirmée |
+
+
+```mermaid
+flowchart TB
+    C1[Déploiement EduMood AI<br/>Surveillance émotionnelle écoles]
+    --
+    B1[Biais surveillance<br/>+ Profilage émotionnel]
+    --
+    D1[Discrimination systémique<br/>Enfants = désavantagés<br/>+ Autocensure + Anxiété]
+    --
+    M1[Scandale "L'IA surveille les émotions de nos enfants"<br/>+ Médias + Protecteur Enfance + CNIL<br/>+ Manifestations]
+    --
+    I1[Interdiction système<br/>Poursuites EduTech<br/>Réforme protection enfance]
+    --
+    F1[Faillite EduTech<br/>Retour pédagogie sans tracking<br/>Crise confiance école]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style B1 fill:#fff3e0,stroke:#ef6c00
+    style D1 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 5. CONCLUSION ET RECOMMANDATIONS
 
 ### 5.1 Conclusion Juridique

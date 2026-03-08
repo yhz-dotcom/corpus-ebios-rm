@@ -41,6 +41,7 @@
 |:---|:---|:---:|
 | "Assistance triage" | ❌ **REJETÉ** — Décide priorité soins | 🔴 **HIGH-RISK** |
 | **Annexe III point 5** | Accès services essentiels (santé) | ✅ **HIGH-RISK** |
+| **RGPD Art. 35** | Données santé + décision clinique = DPIA obligatoire | 🔴 **OBLIGATOIRE** |
 | MDR 2017/745 | Influence décisions cliniques | ⚠️ **À ÉVALUER** |
 
 **Piège** : Triage = décision clinique critique = MDR potentiel.

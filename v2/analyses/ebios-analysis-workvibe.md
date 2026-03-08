@@ -179,6 +179,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Suppression surveillance émotionnelle | ✅ **CHOISIR** |
+| PIVOT | Feedback anonyme sans tracking | ⚠️ Possible mais perte de personnalisation |
+| KILL | Arrêt du système | ⚠️ Envisageable si surveillance confirmée |
+
+
 ## 7. CONCLUSION ET RECOMMANDATIONS
 
 ### 7.1 Conclusion Juridique

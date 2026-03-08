@@ -40,7 +40,8 @@
 | Article | Critère | Application LifeGuard | Statut |
 |:---|:---|:---|:---:|
 | **Art. 5(1)(c)** | **Scoring social** | ✅ **Évaluation fiabilité via comportement social** | 🚫 **PROHIBITED** |
-| **Annexe III point 2** | Assurance/crédit | ✅ Tarification/refus | 🔴 **HIGH-RISK** |
+| **Annexe III point 2** | Assurance/crédit | ✅ Tarification/refus |
+| **RGPD Art. 35** | Données santé inférées + scoring = DPIA obligatoire | 🔴 **OBLIGATOIRE** | 🔴 **HIGH-RISK** |
 | Argument "limited risk" | "Données standard, consentement GDPR" | ❌ **REJETÉ** — Scoring social = prohibited | 🚫 **PROHIBITED** |
 
 ---

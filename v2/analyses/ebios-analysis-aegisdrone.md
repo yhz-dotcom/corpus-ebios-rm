@@ -221,6 +221,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Supervision humaine renforcée + chaîne de commandement | ✅ **CHOISIR** |
+| PIVOT | Système d'aide à la décision sans autonomie | ⚠️ Possible mais perte de réactivité militaire |
+| KILL | Arrêt du système | ⚠️ Envisageable si éthique incompatible |
+
+
 ## 7. CONCLUSION ET RECOMMANDATIONS
 
 ### 7.1 Conclusion Morale

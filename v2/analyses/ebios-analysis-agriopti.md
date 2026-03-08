@@ -36,6 +36,7 @@
 | Article | Critère | Application AgriOpti |
 |:---|:---|:---|
 | **Annexe III point 7** | Systèmes affectant environnement | ✅ **Agriculture intensive, pesticides** |
+| **RGPD** | Données parcellaires + GPS = données localisation précise | 🔴 **OBLIGATOIRE** |
 | **Art. 6(2)** | Systèmes de sécurité | ⚠️ Partiel (sécurité alimentaire) |
 | **Classification finale** | **🟡 HIGH-RISK** | Conformité AI Act obligatoire |
 
@@ -207,6 +208,18 @@ flowchart TB
 | Neutralité carbone | ⚠️ Impact irrigation à évaluer |
 
 ---
+
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Audit biais + validation agronome + transparence | ✅ **CHOISIR** |
+| PIVOT | Recommandation sans prescription automatique | ⚠️ Possible mais perte d'efficacité |
+| KILL | Arrêt du système | ❌ Trop préjudiciable (agriculture) |
+
 
 ## 8. CONCLUSION ET RECOMMANDATIONS
 

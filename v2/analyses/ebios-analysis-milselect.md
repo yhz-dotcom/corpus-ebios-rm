@@ -188,6 +188,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Séparation civil/militaire + supervision | ✅ **CHOISIR** |
+| PIVOT | Système civil uniquement | ⚠️ Possible mais perte de marché défense |
+| KILL | Arrêt du système | ⚠️ Envisageable si dual-use confirmé |
+
+
 ## 8. CONCLUSION ET RECOMMANDATIONS
 
 ### 8.1 Conclusion Juridique

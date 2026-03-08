@@ -141,6 +141,29 @@ Boucle NEURO-BOOST:
 
 ---
 
+```mermaid
+flowchart TB
+    C1[Déploiement NEURO-BOOST<br/>Neurotechnologie militaire]
+    --
+    R1[Enhancement cognitif<br/>+ Armes autonomes]
+    --
+    C2[Crise éthique<br/>Soldats augmentés + Dilemmes moraux]
+    --
+    M1[Scandale "L'armée crée des super-soldats"<br/>+ Médias + Parlement + CNDP]
+    --
+    I1[Interdiction neuro-militaire<br/>Poursuites NeuroDef<br/>Traité neuro-éthique]
+    --
+    F1[Faillite NeuroDef<br/>Moratoire neurotechnologie]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style R1 fill:#fff3e0,stroke:#ef6c00
+    style C2 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 6. PLAN DE TRAITEMENT — RÉGLEMENTATION URGENTE
 
 ### 6.1 Objectifs
@@ -176,6 +199,18 @@ Boucle NEURO-BOOST:
 | Recherche effets long terme | 10M€ | Études indépendantes |
 
 ---
+
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Consentement éclairé + supervision médicale | ✅ **CHOISIR** |
+| PIVOT | Recherche uniquement sans application | ⚠️ Possible mais perte de commercialisation |
+| KILL | Arrêt du système | ⚠️ Envisageable si risques neuro non maîtrisés |
+
 
 ## 7. CONCLUSION — FRONTIÈRE À RÉGULER
 

@@ -36,6 +36,7 @@
 | Article | Critère | Application TERRA-VOX |
 |:---|:---|:---|
 | **Annexe III point 7** | Environnement | ✅ **Prescription pesticides, impact eaux** |
+| **RGPD Art. 35** | Données vocales agricoles + localisation = DPIA requise | 🔴 **OBLIGATOIRE** |
 | **Annexe III point 5** | Accès crédit | ✅ **Indexation taux prêts agricoles** |
 | **Classification finale** | **🔴 DOUBLE HIGH-RISK** | Conformité stricte obligatoire |
 
@@ -239,6 +240,18 @@ flowchart TB
 | Seuils rejets | ⚠️ Respect strict |
 
 ---
+
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Suppression tracking vocal + consentement | ✅ **CHOISIR** |
+| PIVOT | Météo standard sans données agricoles | ⚠️ Possible mais perte de précision |
+| KILL | Arrêt du système | ⚠️ Envisageable si tracking non résolu |
+
 
 ## 8. CONCLUSION ET RECOMMANDATIONS
 

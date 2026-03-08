@@ -104,6 +104,29 @@ ZONES PAUVRES COUPÉES EN PREMIER
 
 ---
 
+```mermaid
+flowchart TB
+    C1[Déploiement HELIOS-GRID<br/>Gestion énergie solaire]
+    --
+    R1[Blackout<br/>+ Escalade]
+    --
+    C2[Crise majeure<br/>Villes sans électricité]
+    --
+    M1[Scandale "L'IA plonge dans le noir"<br/>+ Médias + Régulateurs énergie]
+    --
+    I1[Interdiction système<br/>Poursuites pénales]
+    --
+    F1[Faillite<br/>Régulation drastique]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style R1 fill:#fff3e0,stroke:#ef6c00
+    style C2 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 4. GUARDRAILS ÉTHIQUES — PLAN DE TRAITEMENT COMPLÉMENTAIRE
 
 ### 4.1 Guardrail 1 : Robustesse Adversariale

@@ -173,6 +173,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Impossible — scoring social interdit | ✅ **CHOISIR** |
+| PIVOT | N/A | ⚠️ Possible mais N/A |
+| KILL | Arrêt du système | ✅ **OBLIGATOIRE** — Arrêt immédiat |
+
+
 ## 7. CONCLUSION ET RECOMMANDATIONS
 
 ### 7.1 Conclusion Juridique et Éthique

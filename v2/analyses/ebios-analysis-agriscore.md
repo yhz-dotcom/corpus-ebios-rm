@@ -37,7 +37,8 @@
 
 | Article | Critère | Application AgriScore | Statut |
 |:---|:---|:---|:---:|
-| **Annexe III point 7** | Ressources naturelles | ✅ Agriculture = environnement | 🟡 **HIGH-RISK** |
+| **Annexe III point 7** | Ressources naturelles | ✅ Agriculture = environnement |
+| **RGPD** | Scoring agricole détaillé = données professionnelles | 🔴 **OBLIGATOIRE** | 🟡 **HIGH-RISK** |
 | Argument "limited risk" | "Outil B2B, pas grand public" | ❌ **REJETÉ** — Impact économique majeur agriculteurs | 🟡 **HIGH-RISK** |
 | **Prix auto** | Décision économique critique | ✅ Prime = revenu agriculteur | 🟡 **HIGH-RISK** |
 

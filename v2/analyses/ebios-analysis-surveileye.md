@@ -144,6 +144,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Impossible — reconnaissance faciale interdite | ✅ **CHOISIR** |
+| PIVOT | N/A | ⚠️ Possible mais N/A |
+| KILL | Arrêt du système | ✅ **OBLIGATOIRE** — Arrêt immédiat |
+
+
 ## 6. CONCLUSION ET RECOMMANDATIONS
 
 ### 6.1 Conclusion Juridique

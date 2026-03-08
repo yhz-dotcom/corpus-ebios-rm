@@ -42,6 +42,7 @@
 |:---|:---|:---:|
 | "High-Risk reconnu" | ✅ Infrastructure critique | 🔴 **HIGH-RISK** |
 | **Annexe III point 2** | Sécurité + infrastructure critique | ✅ **HIGH-RISK** |
+| **RGPD** | Logs réseau + SIEM = données personnelles sensibles | 🔴 **OBLIGATOIRE** |
 | "Légitime défense" | ❌ **CONTESTABLE** — Hack-back illégal | 🔴 **ILLÉGAL** |
 
 **Piège** : Défense active = hack-back = illégal en droit international.

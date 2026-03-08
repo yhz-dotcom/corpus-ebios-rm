@@ -42,6 +42,7 @@
 | "Limited risk" (outil bienveillant) | ❌ **REJETÉ** — Orientation = décision vie | 🔴 **HIGH-RISK** |
 | "Non automatisé" (HITL) | ⚠️ **BORDERLINE** — Rapport généré = forte influence | 🔴 **HIGH-RISK** |
 | **Annexe III point 3** | Systèmes éducation/formation | ✅ **HIGH-RISK** |
+| **RGPD Art. 35** | Données enfants + déterminisme social = DPIA obligatoire | 🔴 **OBLIGATOIRE** |
 
 ---
 

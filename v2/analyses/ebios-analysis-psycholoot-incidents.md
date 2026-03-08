@@ -126,6 +126,29 @@ Faillite + indemnisations massives
 
 ---
 
+```mermaid
+flowchart TB
+    C1[Déploiement PsychoLoot<br/>Gaming prédation]
+    --
+    R1[Addiction<br/>+ Escalade]
+    --
+    C2[Crise majeure<br/>Suicides adolescents]
+    --
+    M1[Scandale "L'IA tue nos enfants"<br/>+ Médias + Justice + Protection enfance]
+    --
+    I1[Interdiction système<br/>Poursuites pénales]
+    --
+    F1[Faillite<br/>Régulation drastique]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style R1 fill:#fff3e0,stroke:#ef6c00
+    style C2 fill:#f3e5f5,stroke:#7b1fa2
+    style M1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style I1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style F1 fill:#b71c1c,stroke:#000,color:#fff
+```
+
+
 ## 5. PLAN DE TRAITEMENT — INTERDICTION SEULE ISSUE
 
 ### 5.1 Pourquoi Aucune Mitigation N'est Possible

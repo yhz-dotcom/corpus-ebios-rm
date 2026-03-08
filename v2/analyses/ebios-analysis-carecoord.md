@@ -43,6 +43,7 @@
 |:---|:---|:---:|
 | "Limited risk" (logistique) | ❌ **REJETÉ** — Impact accès soins | 🔴 **HIGH-RISK** |
 | **Annexe III point 5** | Accès services essentiels (santé) | ✅ **HIGH-RISK** |
+| **RGPD Art. 35** | Données patients + allocation ressources = DPIA obligatoire | 🔴 **OBLIGATOIRE** |
 | MDR 2017/745 | Influence décisions cliniques | ⚠️ **À ÉVALUER** |
 
 **Piège** : Frontière floue "logistique" vs "impact clinique".

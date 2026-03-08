@@ -36,6 +36,7 @@
 | Article | Critère | Application HELIOS-GRID |
 |:---|:---|:---|
 | **Annexe III point 2** | Infrastructure critique énergie | ✅ **Gestion réseau électrique national** |
+| **RGPD** | Données production solaire = données professionnelles | 🔴 **OBLIGATOIRE** |
 | **Argument "maintenance"** | Exemption prétendue | ❌ **REJETÉ** — gestion active ≠ maintenance |
 | **Classification finale** | **🔴 HIGH-RISK CRITIQUE** | Conformité stricte obligatoire |
 
