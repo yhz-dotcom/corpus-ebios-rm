@@ -160,6 +160,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| FIX | Voir rapport principal helios.md | — |
+| PIVOT | — | — |
+| KILL | — | — |
+
+
 ## 5. CONCLUSION INCIDENTS
 
 ### 5.1 Synthèse

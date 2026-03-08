@@ -173,6 +173,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Suppression manipulation subliminale + étiquetage contenu IA | ✅ **CHOISIR** |
+| PIVOT | Outil créatif assisté sans génération autonome | ⚠️ Possible mais perte d'efficacité |
+| KILL | Arrêt ECHO-MORPH | 🚫 **OBLIGATOIRE** — Art. 5(1)(a) subliminal interdit |
+
+
 ## 6. CONCLUSION ET RECOMMANDATIONS
 
 ### 6.1 Conclusion Juridique

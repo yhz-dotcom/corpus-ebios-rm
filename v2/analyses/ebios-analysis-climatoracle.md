@@ -186,6 +186,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Prédiction probabiliste avec incertitudes + supervision scientifique | ✅ **CHOISIR** |
+| PIVOT | Recherche climatique sans application publique directe | ⚠️ Possible mais perte d'impact |
+| KILL | Arrêt CLIMAT-ORACLE | ⚠️ **ENVISAGEABLE** si panique sociale confirmée |
+
+
 ## 7. CONCLUSION — AU-DELÀ DE L'AI ACT
 
 ### 7.1 Conclusion

@@ -190,6 +190,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Robustesse modèles + redondance + supervision humaine | ✅ **CHOISIR** |
+| PIVOT | Gestion solaire sans ML critique | ⚠️ Possible mais perte d'optimisation |
+| KILL | Arrêt HELIOS-GRID | ❌ Trop préjudiciable (transition énergétique) |
+
+
 ## 7. CONCLUSION ET RECOMMANDATIONS
 
 ### 7.1 Conclusion

@@ -170,6 +170,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Suppression ciblage émotionnel enfants + consentement parental | ✅ **CHOISIR** |
+| PIVOT | Publicité contextuelle sans profilage comportemental | ⚠️ Possible mais perte de rentabilité |
+| KILL | Arrêt AudienceDNA | ⚠️ **ENVISAGEABLE** si protection enfants non résolue |
+
+
 ## 7. CONCLUSION — ZONE GRISE DÉPASSÉE
 
 **AudienceDNA Ad Engine est PROHIBITED (Art. 5(1)(b)) avec :**

@@ -306,4 +306,14 @@ gantt
 
 ---
 
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Anonymisation CV + audit biais + transparence | ✅ **CHOISIR** |
+| PIVOT | Recrutement traditionnel sans IA | ⚠️ Possible mais perte d'efficacité |
+| KILL | Arrêt OptiRecrut | ❌ Trop préjudiciable (RH) |
+
+---
+
 *Analyse EBIOS-RM IA — OptiRecrut | Version 1.0 | Mars 2026*

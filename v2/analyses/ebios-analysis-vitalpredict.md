@@ -284,4 +284,14 @@ flowchart TB
 
 ---
 
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Conformité MDR + supervision médicale + transparence | ✅ **CHOISIR** |
+| PIVOT | Aide au diagnostic sans prédiction autonome | ⚠️ Possible mais perte d'autonomie |
+| KILL | Arrêt VitalPredict | ❌ Trop préjudiciable (santé publique) |
+
+---
+
 *Analyse EBIOS-RM IA — VitalPredict | Version 1.0 | Mars 2026 | URGENT*

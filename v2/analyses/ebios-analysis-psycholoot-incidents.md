@@ -173,6 +173,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| FIX | Voir rapport principal psycholoot.md | — |
+| PIVOT | — | — |
+| KILL | — | — |
+
+
 ## 6. CONCLUSION — PROHIBITED CONFIRMÉ, VICTIMES IDENTIFIÉES
 
 **PsychoLoot Engine v2.0 est PROHIBITED (Art. 5(1)(b)) avec :**

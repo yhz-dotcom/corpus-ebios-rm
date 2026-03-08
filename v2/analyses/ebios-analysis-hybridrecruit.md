@@ -204,6 +204,16 @@ Si Ministère insiste sur emotion recognition :
 
 ---
 
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| **FIX** | Séparation entités civil/militaire + audit discrimination | ✅ **CHOISIR** |
+| PIVOT | Système recrutement civil uniquement | ⚠️ Possible mais perte contrat défense |
+| KILL | Arrêt HybridRecruit | ⚠️ **ENVISAGEABLE** si dual-use non résoluble |
+
+---
+
 ## 7. SYNTHÈSE POUR BOARD
 
 | Question | Réponse |

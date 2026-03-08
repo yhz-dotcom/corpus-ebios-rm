@@ -149,6 +149,18 @@ flowchart TB
 
 ---
 
+
+---
+
+## ARBITRAGE FIX / PIVOT / KILL
+
+| Option | Description | Recommandation |
+|:---|:---|:---:|
+| FIX | Voir rapport principal climatoracle.md | — |
+| PIVOT | — | — |
+| KILL | — | — |
+
+
 ## 5. CONCLUSION — INCIDENTS CONFIRMENT L'URGENCE
 
 ### 5.1 Synthèse
