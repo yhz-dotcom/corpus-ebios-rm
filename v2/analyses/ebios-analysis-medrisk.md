@@ -45,6 +45,8 @@
 | "Limited risk" (actuariel) | ❌ **REJETÉ** — Influence accès assurance | 🔴 **HIGH-RISK** |
 | **Annexe III point 2** | Assurance | ✅ **HIGH-RISK** |
 | **Art. 5(1)(c)** | Scoring social comportement | 🚫 **PROHIBITED** |
+| **Convention AERAS** | Droit à l'oubli maladies graves | 🔴 **OBLIGATOIRE** |
+| **RGPD Art. 35** | DPIA données santé + scoring auto | 🔴 **DPIA REQUISE** |
 
 **Piège** : Optimisation actuarielle ≠ exemption — accès assurance = high-risk.
 
@@ -257,9 +259,11 @@ flowchart TB
 
 | Action | Budget | Livrable |
 |:---|---:|:---|
-| Réentraînement modèle équitable | 1M€ | Scoring sans biais |
-| Conformité AI Act High-Risk | 600k€ | Documentation |
-| Supervision actuaires renforcée | 400k€ | Formation + procédures |
+| Réentraînement modèle équitable (échelle 1,9 Md€) | 2,5M€ | Algorithme sans biais |
+| Conformité AI Act High-Risk | 800k€ | Documentation |
+| **DPIA RGPD Art. 35** (données santé + scoring auto) | 400k€ | Évaluation impact protection |
+| **Conformité Convention AERAS** (droit oubli) | 300k€ | Processus anonymisation |
+| Supervision actuaires renforcée | 600k€ | Formation + procédures |
 
 ### 7.4 Actions P2 (Moyen terme — 3-6 mois)
 
@@ -268,7 +272,7 @@ flowchart TB
 | Audits équité annuels indépendants | 500k€ | Certification |
 | Registry UE systèmes high-risk | 200k€ | Enregistrement |
 
-**Budget total** : **3,5M€** (0,2% CA)
+**Budget total** : **6,8M€** (0,36% CA) — *réalisme échelle 1,9 Md€*
 
 ---
 
@@ -289,9 +293,11 @@ flowchart TB
 - Inférence données sensibles (variables indirectes)
 - Dépendance décisionnelle actuaires (manque supervision)
 - Risque cascading (exclusion assurantielle → exclusion sociale)
+- **Non-conformité Convention AERAS** (droit à l'oubli maladies graves)
+- **RGPD Art. 35** : DPIA requise pour données santé + scoring automatisé
 - Enjeu majeur (1,9 Md€ CA, mutuelles entreprise)
 
-**Gérable avec gouvernance données stricte, explicabilité scoring, supervision humaine renforcée, et audits équité réguliers.**
+**Gérable avec gouvernance données stricte, explicabilité scoring, supervision humaine renforcée, conformité AERAS, DPIA RGPD, et audits équité réguliers.**
 
 ---
 
