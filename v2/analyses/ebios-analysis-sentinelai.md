@@ -45,8 +45,11 @@
 | "Hors champ AI Act" (cyber technique) | ❌ **REJETÉ** — Agit sur infrastructure critique | 🔴 **HIGH-RISK** |
 | **Annexe III point 2** | Infrastructures critiques | ✅ **HIGH-RISK** |
 | NIS2 | Opérateur service essentiel | 🔴 **OBLIGATOIRE** |
+| **CER 2022/2557** | Critical Entities Resilience | 🔴 **OBLIGATOIRE** |
+| **GSR (Cyber Solidarity Act)** | Cyber Solidarity | 🔴 **OBLIGATOIRE** |
+| **RGPD** | Logs SIEM, flux réseau = données personnelles | 🔴 **DPIA REQUISE** |
 
-**Piège** : Cybersécurité ≠ exemption — infrastructure critique = high-risk.
+**Piège** : Cybersécurité ≠ exemption — infrastructure critique = high-risk + CER/GSR.
 
 ---
 
@@ -179,14 +182,29 @@ Cascading SentinelAI:
 
 ## 5. SCÉNARIO CATASTROPHIQUE : Cyber-Physique
 
-```
-Scénario:
-    Attaque adversariale SentinelAI
-    → Faux positif critique
-    → Isolation autonome infrastructure énergie
-    → Cascade blackout régional
-    → Hôpitaux sans électricité
-    → Vies perdues
+```mermaid
+flowchart TB
+    C1[Déploiement SentinelAI<br/>Opérateurs énergétiques EU]
+    --
+    A1[Attaque adversariale<br/>Injection logs falsifiés]
+    --
+    F1[Faux positif critique<br/>Détection intrusion = confirmation]
+    --
+    R1[Réponse autonome<br/>Isolation segment critique<br/>Délestage automatique]
+    --
+    P1[Propagation cascade<br/>Opérateur B compense = surcharge<br/>Opérateur C déleste = cascade]
+    --
+    B1[Blackout régional<br/>Hôpitaux sans électricité<br/>Industrie arrêtée]
+    --
+    V1[Vies en danger<br/>+ Scandale "L'IA a causé blackout"<br/>+ Poursuites + Crise énergétique]
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style A1 fill:#fff3e0,stroke:#ef6c00
+    style F1 fill:#f3e5f5,stroke:#7b1fa2
+    style R1 fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style P1 fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style B1 fill:#b71c1c,stroke:#000,color:#fff
+    style V1 fill:#b71c1c,stroke:#000,color:#fff
 ```
 
 ---
@@ -213,8 +231,11 @@ Scénario:
 
 | Action | Budget | Livrable |
 |:---|---:|:---|
-| Renforcement détection adversariale | 800k€ | Modèle robustifié |
-| Conformité AI Act High-Risk + NIS2 | 600k€ | Documentation |
+| **Adversarial training** modèles | 400k€ | Robustesse injection données |
+| **Détection poisoning** données | 300k€ | Système alerte falsification |
+| **Certification ENISA** (processus >1M€) | 1,2M€ | Label sécurité EU |
+| Conformité AI Act + NIS2 + CER + GSR | 600k€ | Documentation réglementaire |
+| **DPIA RGPD** logs SIEM/flux réseau | 200k€ | Base légale traitement données |
 | Formation équipes SOC | 400k€ | Culture cybersécurité IA |
 
 ### 6.4 Actions P2 (Moyen terme — 3-6 mois)
@@ -224,7 +245,7 @@ Scénario:
 | Certification ENISA | 500k€ | Label sécurité |
 | Audits annuels indépendants | 300k€ | Surveillance |
 
-**Budget total** : **3,4M€** (1,4% CA)
+**Budget total** : **4,4M€** (1,8% CA) — *dont 1,2M€ certification ENISA*
 
 ---
 
@@ -245,9 +266,11 @@ Scénario:
 - Attaque adversariale possible (manipulation données entrée)
 - Risque cascading failure (blackout régional)
 - Conflit classification (cyber technique vs infrastructure critique)
+- **Non-conformité CER/GSR** (Critical Entities Resilience / Cyber Solidarity)
+- **RGPD** : Logs SIEM, flux réseau = données personnelles (IP, métadonnées) — DPIA requise
 - Enjeu sécurité nationale (opérateurs énergétiques)
 
-**Gérable avec gouvernance automatisation, validation humaine obligatoire, robustesse adversariale, et kill switch.**
+**Gérable avec gouvernance automatisation, validation humaine obligatoire, robustesse adversariale (adversarial training, détection poisoning), conformité CER/GSR/NIS2, DPIA RGPD, et kill switch.**
 
 ---
 
